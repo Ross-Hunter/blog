@@ -14,7 +14,7 @@ activate :blog do |blog|
   blog.taglink = "tag/{tag}.html"
   # blog.layout = "layout"
   # blog.summary_separator = /(READMORE)/
-  blog.summary_length = 500
+  blog.summary_length = 400
   # blog.year_link = "{year}.html"
   # blog.month_link = "{year}/{month}.html"
   # blog.day_link = "{year}/{month}/{day}.html"
@@ -33,7 +33,7 @@ set :casper, {
   blog: {
     url: 'http://www.ross-hunter.com',
     name: 'Ross-Hunter',
-    description: 'Doing softwarez',
+    description: 'Doing the whole "software" thing.',
     date_format: '%d %B %Y',
     navigation: true,
     logo: nil # Optional
@@ -43,7 +43,7 @@ set :casper, {
     bio: 'Ross does things with computers sometimes',
     location: 'Grand Rapids, MI',
     website: 'http://www.ross-hunter.com',
-    gravatar_email: "qwert302@gmail.com"
+    gravatar_email: "ross-hunter@ross-hunter.com"
   },
   navigation: {
     "Home" => "/",
