@@ -14,7 +14,7 @@ activate :blog do |blog|
   blog.taglink = "tag/{tag}.html"
   # blog.layout = "layout"
   # blog.summary_separator = /(READMORE)/
-  # blog.summary_length = 250
+  blog.summary_length = 500
   # blog.year_link = "{year}.html"
   # blog.month_link = "{year}/{month}.html"
   # blog.day_link = "{year}/{month}/{day}.html"
@@ -40,13 +40,14 @@ set :casper, {
   },
   author: {
     name: 'Ross Hunter',
-    bio: nil, # Optional
-    location: nil, # Optional
-    website: "http://www.ross-hunter.com", # Optional
+    bio: 'Ross does things with computers sometimes',
+    location: 'Grand Rapids, MI',
+    website: 'http://www.ross-hunter.com',
     gravatar_email: "qwert302@gmail.com"
   },
   navigation: {
     "Home" => "/",
+    "Bio" => "/ross-hunter",
     "GitHub" => "https://github.com/ross-hunter",
     "Twitter" => "https://twitter.com/ross_hunter",
     "LinkedIn" => "https://www.linkedin.com/profile/view?id=26528250&trk=tab_pro&locale=en_US",
@@ -68,7 +69,7 @@ ready do
     end
   end
 
-  proxy "/author/#{blog_author.name.parameterize}.html", '/author.html', ignore: true
+  # proxy "/author/#{blog_author.name.parameterize}.html", '/author.html', ignore: true
 end
 
 ###
