@@ -3,50 +3,50 @@ title: Math Is Not Necessary for Software Development
 date: 2014-01-14
 layout: post
 ---
-<h3>As a developer, written communication and reading comprehension are more valuable than math proficiency.</h3>
+### As a developer, written communication and reading comprehension are more valuable than math proficiency.
 
-<p>Sometimes, I tweet. When I tweet, sometimes people agree with me. One such occasion happened recently when I said this.</p>
+Sometimes, I tweet. When I tweet, sometimes people agree with me. One such occasion happened recently when I said this.
 
-<blockquote class="twitter-tweet" data-conversation="none" lang="en"><p>Modern software development has way more to do with reading comprehension and written communication than math.</p>&mdash; Ross Hunter (@Ross_Hunter) <a href="https://twitter.com/Ross_Hunter/statuses/406866849238749184">November 30, 2013</a></blockquote>
+<blockquote class="twitter-tweet" data-conversation="none" lang="en">Modern software development has way more to do with reading comprehension and written communication than math.&mdash; Ross Hunter (@Ross_Hunter) <a href="https://twitter.com/Ross_Hunter/statuses/406866849238749184">November 30, 2013</a></blockquote>
 
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-<p>This was part of a string of tweets that was kicked off by seeing the following image tweeted by <a href="https://twitter.com/SaraJChipps">Sara Chipps</a>.</p>
+This was part of a string of tweets that was kicked off by seeing the following image tweeted by <a href="https://twitter.com/SaraJChipps">Sara Chipps</a>.
 
 <img src="http://www.mutuallyhuman.com/assets/posts/2013/12/job_growth.png">
 
-<p>I think the main thing to take away from that image is that if you are looking for a new career and you aren't involved computer science or mathematics, you should be, and I hope my post here encourages you to get involved, especially if math has been scaring you away. It also means we should be providing more and better training for these jobs - but that's another post entirely.</p>
+I think the main thing to take away from that image is that if you are looking for a new career and you aren't involved computer science or mathematics, you should be, and I hope my post here encourages you to get involved, especially if math has been scaring you away. It also means we should be providing more and better training for these jobs - but that's another post entirely.
 
-<p>So here's my question about that chart, why are computer science and mathematics combined? Why are computer science and mathematics *always* combined? In my day-to-day as a developer I rarely do what I would call *math*. Now admittedly, computer science is different than software development, but I don't think laypeople know that. I don't think that high school kids who are deciding what do do with their lives know that. Our industry desperately needs more talented developers - and it turns out that the skills that make a good mathematician don't necessarily line up with the skills that make a good software developer.</p>
+So here's my question about that chart, why are computer science and mathematics combined? Why are computer science and mathematics *always* combined? In my day-to-day as a developer I rarely do what I would call *math*. Now admittedly, computer science is different than software development, but I don't think laypeople know that. I don't think that high school kids who are deciding what do do with their lives know that. Our industry desperately needs more talented developers - and it turns out that the skills that make a good mathematician don't necessarily line up with the skills that make a good software developer.
 
-<h3>Logic > Math</h3>
+### Logic > Math
 
-<p>People who are good at math are good at breaking problems down into parts, recognizing patterns, and applying known formulae to those parts to arrive at *the one right answer*. This skill will definitely help you solve some problems in software development. However, in software we are constantly running into interesting new problems that don't have a singular *right answer*. This is where we get to use our creativity to create solutions. Rarely in math are you coming up with a new way to solve a problem, but in software development you do that all the time!</p>
+People who are good at math are good at breaking problems down into parts, recognizing patterns, and applying known formulae to those parts to arrive at *the one right answer*. This skill will definitely help you solve some problems in software development. However, in software we are constantly running into interesting new problems that don't have a singular *right answer*. This is where we get to use our creativity to create solutions. Rarely in math are you coming up with a new way to solve a problem, but in software development you do that all the time!
 
 <blockquote>If you don't like math because it is repetitive and boring, look into software development!</blockquote>
 
-<p>Modern tools have abstracted away (almost) all of the ugly 1s and 0s from software development. Modern developers can focus on crafting a solid system, and (for the most part) not have to worry about things like memory management, endianness and other computer science gobbeldy-gook. Sometimes it is fun to deal with low-level stuff like that - but you don't need to understand it to build a CRUD app.</p>
+Modern tools have abstracted away (almost) all of the ugly 1s and 0s from software development. Modern developers can focus on crafting a solid system, and (for the most part) not have to worry about things like memory management, endianness and other computer science gobbeldy-gook. Sometimes it is fun to deal with low-level stuff like that - but you don't need to understand it to build a CRUD app.
 
-<p>Certain types of software development do require quite a bit of math: statistical/financial software, and games involving physics - for example. However, these require math because that is the *thing* that the software does, it's not simply a fact of building software. When we do need math, we have code libraries and computers to help us!</p>
+Certain types of software development do require quite a bit of math: statistical/financial software, and games involving physics - for example. However, these require math because that is the *thing* that the software does, it's not simply a fact of building software. When we do need math, we have code libraries and computers to help us!
 
 <blockquote>The majority of code for something like Facebook or Twitter probably involves very little math.</blockquote>
 
-<p>The math that we do use everyday in software development is called <a href="http://en.wikipedia.org/wiki/Mathematical_logic">Mathematical Logic</a>. In particular, software development involves a lot of <a href="http://en.wikipedia.org/wiki/Boolean_algebra">Boolean Algebra</a>. Known broadly as Discrete Math, it was one of my favorite classes in college, and I would recommend it to anyone, even if you aren't really a fan of numbers (also, take an Astronomy class!). I was blown away by this whole new type of thinking. If you are unfamiliar with discrete math, evaluating "`if true and false`" won't make any sense to you - but software developers deal with statements like this all the time.</p>
+The math that we do use everyday in software development is called <a href="http://en.wikipedia.org/wiki/Mathematical_logic">Mathematical Logic</a>. In particular, software development involves a lot of <a href="http://en.wikipedia.org/wiki/Boolean_algebra">Boolean Algebra</a>. Known broadly as Discrete Math, it was one of my favorite classes in college, and I would recommend it to anyone, even if you aren't really a fan of numbers (also, take an Astronomy class!). I was blown away by this whole new type of thinking. If you are unfamiliar with discrete math, evaluating "`if true and false`" won't make any sense to you - but software developers deal with statements like this all the time.
 
-<h3>Written Communication && Reading Comprehension</h3>
+### Written Communication && Reading Comprehension
 
-<p>Taking the idea in your head and writing code to make it happen is clearly an important part of being a software developer. However, if you are doing custom development for a client, you need to start by being able to take their idea and get it into your brain. You need to be able to ask the right questions, and understand what they are telling you, and a *ton* of that happens through written communication like email. Effective communication is a requirement.</p>
+Taking the idea in your head and writing code to make it happen is clearly an important part of being a software developer. However, if you are doing custom development for a client, you need to start by being able to take their idea and get it into your brain. You need to be able to ask the right questions, and understand what they are telling you, and a *ton* of that happens through written communication like email. Effective communication is a requirement.
 
-<p>Writing code is like writing in another language, so language skills are extremely important! Not only do you need to understand what people before you have written in code, you need to write code in such a way that those who come after you can understand what you were trying to say. With enough experience, writing code that you and the computer understand is relatively easy - writing code that you, the computer, and *future you* understand is a whole 'nother story. But it's not even just future you, when other developers get involved, they will need to be able to understand the code.</p>
+Writing code is like writing in another language, so language skills are extremely important! Not only do you need to understand what people before you have written in code, you need to write code in such a way that those who come after you can understand what you were trying to say. With enough experience, writing code that you and the computer understand is relatively easy - writing code that you, the computer, and *future you* understand is a whole 'nother story. But it's not even just future you, when other developers get involved, they will need to be able to understand the code.
 
-<p>Interestingly, some of the worst code can come out of very smart people thinking they're being clever. Smart people can write really complex code in a complicated way and understand it. Smart people aren't bothered by an `x` for a variable name because they can hold the whole system in their head and they remember what all those variables represent. A very smart person doesn't need to write any comments, the code is obvious to them!</p>
+Interestingly, some of the worst code can come out of very smart people thinking they're being clever. Smart people can write really complex code in a complicated way and understand it. Smart people aren't bothered by an `x` for a variable name because they can hold the whole system in their head and they remember what all those variables represent. A very smart person doesn't need to write any comments, the code is obvious to them!
 
-<p>Someone lacking superhuman mental capacity forgets what `x` is supposed to represent and so they name it something meaningful like `target_value`. This person gets lost in the middle of a 300 line function and thinks "Can I break this up into smaller parts so I stop getting so confused?" In the long run this person will be able to create better software as a system grows and the interactions become too big for *anyone* to hold in their head all at once.</p>
+Someone lacking superhuman mental capacity forgets what `x` is supposed to represent and so they name it something meaningful like `target_value`. This person gets lost in the middle of a 300 line function and thinks "Can I break this up into smaller parts so I stop getting so confused?" In the long run this person will be able to create better software as a system grows and the interactions become too big for *anyone* to hold in their head all at once.
 
-<h3>If Only I Had Known Then...</h3>
+### If Only I Had Known Then...
 
-<p>I really wish high school Ross had read this blog post. High school Ross was good at math, but didn't really enjoy it. High-school Ross was even better at language arts, but he wanted to get a good job <*zing*>. I was turned off from getting involved in software because I didn't want to do math and I didn't think my skillset matched.</p>
+I really wish high school Ross had read this blog post. High school Ross was good at math, but didn't really enjoy it. High-school Ross was even better at language arts, but he wanted to get a good job <*zing*>. I was turned off from getting involved in software because I didn't want to do math and I didn't think my skillset matched.
 
-<p>I was also told that great white whale of a lie that we have all heard, that all IT jobs have been shipped overseas - refer to the job growth chart above to see how that is working out!</p>
+I was also told that great white whale of a lie that we have all heard, that all IT jobs have been shipped overseas - refer to the job growth chart above to see how that is working out!
 
-<p><em>Originally posted on the <a href="http://www.mutuallyhuman.com/blog/2014/01/14/math-is-not-necessary-for-software-development/">MHS Blog</a></em></p>
+<em>Originally posted on the <a href="http://www.mutuallyhuman.com/blog/2014/01/14/math-is-not-necessary-for-software-development/">MHS Blog</a></em>
