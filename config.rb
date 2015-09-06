@@ -42,7 +42,7 @@ set :casper, {
     name: 'Ross Hunter',
     bio: 'I do things with computers sometimes',
     location: 'Grand Rapids, MI',
-    website: 'http://www.ross-hunter.com',
+    website: 'http://ross-hunter.com',
     gravatar_email: "ross-hunter@ross-hunter.com"
   },
   navigation: {
