@@ -2,6 +2,7 @@
 title: Tips for Novice Developers (and why you should become a rubyist)
 date: 2013-08-06
 layout: post
+cover: noob.jpg
 ---
 ### Work Locally
 
