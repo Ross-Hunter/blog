@@ -15,3 +15,5 @@ gem 'redcarpet', '~> 3.3.2'
 gem 'nokogiri', '~> 1.6.6.2'
 
 gem "middleman-favicon-maker", "~> 3.7"
+
+gem 'middleman-deploy', '~> 1.0'
