@@ -63,3 +63,16 @@ cover: 'bg.png'
         %section.post
           %h2= fourth_article.title
           %p #{read_next_summary(fourth_article, 19)}&hellip;
+  %aside.read-next.next
+    - if fifth_article = blog.articles[4]
+      - attributes = { href: fifth_article.url }.merge(cover(fifth_article))
+      %a.read-next-story{attributes}
+        %section.post
+          %h2= fifth_article.title
+          %p #{read_next_summary(fifth_article, 19)}&hellip;
+    - if sixth_article = blog.articles[5]
+      - attributes = { href: sixth_article.url }.merge(cover(sixth_article))
+      %a.read-next-story.prev{attributes}
+        %section.post
+          %h2= sixth_article.title
+          %p #{read_next_summary(sixth_article, 19)}&hellip;
