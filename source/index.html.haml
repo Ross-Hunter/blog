@@ -63,7 +63,7 @@ cover: 'bg.png'
         %section.post
           %h2= fourth_article.title
           %p #{read_next_summary(fourth_article, 19)}&hellip;
-  %aside.read-next.next
+  %aside.read-next.next.last
     - if fifth_article = blog.articles[4]
       - attributes = { href: fifth_article.url }.merge(cover(fifth_article))
       %a.read-next-story{attributes}

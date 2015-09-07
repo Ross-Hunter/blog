@@ -48,6 +48,15 @@ pre.highlight {
 .read-next.next {
   margin-top: 0;
   .read-next-story .post:before {
+      content: "You won't believe this one";
+  }
+
+  .read-next-story.prev .post:before {
+      content: "Gotta read something";
+  }
+}
+.read-next.next.last {
+  .read-next-story .post:before {
       content: "Why not this one?";
   }
 
