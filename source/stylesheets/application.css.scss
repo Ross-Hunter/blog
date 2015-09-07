@@ -29,3 +29,44 @@ pre.highlight {
   height: 42px;
   box-shadow: 0px 0px 2px white;
 }
+
+
+.read-next-story .post:before {
+  content: "Here's one"
+}
+
+.read-next-story.prev .post:before {
+    content: "This one's good too";
+}
+
+.read-next.next {
+  margin-top: 0;
+  .read-next-story .post:before {
+      content: "Why not this one?";
+  }
+
+  .read-next-story.prev .post:before {
+      content: "OK, one more";
+  }
+}
+
+.read-next-story.no-cover {
+  background-image: url('/images/bg.png');
+  background-repeat: repeat-x;
+}
+
+.page-title a {
+  color: white;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.home-template .page-title {
+  animation: none;
+}
+
+.home-template .page-description {
+  animation-delay: 0.1s;
+}
