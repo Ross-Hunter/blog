@@ -11,11 +11,11 @@ My first piece of advice is to set up a command line alias for Sublime and open 
 
 OS X alias placed in profile (.bash\_profile, .zshrc, .bash\_rc)
 
-<code>alias slime='open -a "Sublime Text 2"'</code>
+    alias slime='open -a "Sublime Text 2"'
 
 ### Search Across Open Project
 
-<code>["super+t"]</code> opens a fuzzy finder that allows you to very quickly switch between files based on the filename. <code>["super+shift+f"]</code> opens the find in folders display. This is incredibly useful for discovering where a method or variable is being used, or where it is defined. <code>["super+alt+f"]</code> opens the find & replace dialog.
+`["super+t"]` opens a fuzzy finder that allows you to very quickly switch between files based on the filename. `["super+shift+f"]` opens the find in folders display. This is incredibly useful for discovering where a method or variable is being used, or where it is defined. `["super+alt+f"]` opens the find & replace dialog.
 
 <em>Learn Regular Expressions!</em> - This will make the search so much more powerful. You don't have to become a regex master, but some simple things like understanding capturing groups for find & replace will save you a lot of time when doing code refactoring. Sublime uses the Boost Syntax for regex.
 
@@ -23,8 +23,8 @@ OS X alias placed in profile (.bash\_profile, .zshrc, .bash\_rc)
 
 First I suggest figuring out a window management system that works for you. If you are on Windows 7 or Ubuntu, the built in window snapping works pretty well. The default window management on OS X is not great, so I like to use a program like Better Touch Tool to allow me to quickly maximize windows to the left, right, or full-screen. I then add to my Key Bindings - User file settings to quickly hide and expand the sidebar and gutter.
 
-<code>{ "keys": ["ctrl+s"], "command": "toggle\_side\_bar" }, 
-{ "keys": ["ctrl+1"], "command": "toggle\_setting", "args": {"setting": "gutter"} },</code>
+    { "keys": ["ctrl+s"], "command": "toggle\_side\_bar" }, 
+    { "keys": ["ctrl+1"], "command": "toggle\_setting", "args": {"setting": "gutter"} },
 
 I use these combined with the side-by-side pane view ["super+alt+2"] in order to most efficiently use my screen real-estate.
 
@@ -34,12 +34,12 @@ You may want to spend some time perusing the Settings - Default file available f
 
 Here are some settings that I suggest adding to the Settings - User file
 
-<code>"bold\_folder\_labels": true, # makes the sidebar a little easier to understand
-"caret\_style": "phase", # looks cool :p
-"highlight\_line": true, # adds a subtle highlight to the current line
-"translate\_tabs\_to\_spaces": true, # in general this is good practice
-"trim\_trailing\_white\_space\_on\_save": true, # trims trailing whitespace
-"scroll\_past\_end": true # I don't like to work at the very bottom of my screen</code>
+    "bold_folder_labels": true, # makes the sidebar a little easier to understand
+    "caret_style": "phase", # looks cool :p
+    "highlight_line": true, # adds a subtle highlight to the current line
+    "translate_tabs_to_spaces": true, # in general this is good practice
+    "trim_trailing_white_space_on_save": true, # trims trailing whitespace
+    "scroll_past_end": true # I don't like to work at the very bottom of my screen
 
 ### Install Packages
 
@@ -59,16 +59,16 @@ First install Package Manager if you don't already have it. Then, use the comman
 
 ### Misc. Tips
 
-<code>["ctrl+d"]</code> selects the word the caret is on. Pressing again selects the next instance of that word and allows you to simply type and replace all the selected words. This can be much faster for simple uses than find and replace.
+`["ctrl+d"]` selects the word the caret is on. Pressing again selects the next instance of that word and allows you to simply type and replace all the selected words. This can be much faster for simple uses than find and replace.
 
-<code>["ctrl+g"]</code> opens up a "go to line" panel. Very useful for big files.
+`["ctrl+g"]` opens up a "go to line" panel. Very useful for big files.
 
 Map caps lock to control - Why is caps lock a huge button right next to your pinky, but control is a tiny button down at the bottom? Google how to map keys for your OS.
 
-<code>["super+shift+v"]</code> is default the command for paste and indent. Some folks may want this to be the default behavior - simply add this to the Key Bindings - User file to swap the keybindings.
+`["super+shift+v"]` is default the command for paste and indent. Some folks may want this to be the default behavior - simply add this to the Key Bindings - User file to swap the keybindings.
 
-<code>{ "keys": ["super+v"], "command": "paste\_and\_indent" },
-{ "keys": ["super+shift+v"], "command": "paste" },</code>
+    { "keys": ["super+v"], "command": "paste_and_indent" },
+    { "keys": ["super+shift+v"], "command": "paste" },
 
 ### In conclusion
 
