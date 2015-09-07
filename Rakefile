@@ -14,7 +14,7 @@ end
 task c: :clean
 
 task :server do
-  sh "DEPLOYMENT_TARGET=development bundle exec middleman server"
+  sh "bundle exec middleman server"
 end
 task s: :server
 
