@@ -2,6 +2,7 @@
 title: ActiveRecord Associations & You
 date: 2014-06-12
 layout: post
+tags: rails, db
 ---
 I love abstraction. It's great to compartmentalize complexity and keep your application modular. SQL is not that. Relying on SQL strings in your code ties your implementation directly to the type, structure, and even the version of your database. ActiveRecord (the ORM behind Rails) is great for letting us focus on our application and not worry so much about the database particulars.
 

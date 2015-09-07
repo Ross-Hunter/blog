@@ -3,6 +3,7 @@ title: (Over)simplify Your Code
 date: 2014-04-25
 layout: post
 cover: simple.jpg
+tags: code
 ---
 One of my eureka moments as a developer came when my programming pair suggested I separate some very simple math in the body of a method into another method. At the time it seemed like overkill to create an entirely new method when the operation was so simple. Wouldn't that make it *more* complicated? But I quickly realized the benefits outweighed the cost.
 

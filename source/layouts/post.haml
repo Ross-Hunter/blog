@@ -16,7 +16,7 @@
           %time.post-date{datetime: current_article.date.strftime('%Y-%m-%d')}
             = current_article.date.strftime(blog_settings.date_format)
           - if tags?
-            on #{tags}
+            #{tags}
 
       %section.post-content= yield
 

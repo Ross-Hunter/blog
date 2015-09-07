@@ -2,6 +2,7 @@
 title: The End of an Era - Good Riddance
 date: 2012-01-02
 layout: post
+tags: life
 ---
 So this is one of those personal blog entries that is really written more for myself than for any audience. I have not posted in a while and have been thinking that I really should put something up here. I have a couple interesting code things that have been rattling around in my head, and those will make it here or to <a href="http://blog.rapiddg.com">Rapid Development Group's Blog</a> in the near future. However today I will talk about how my life has changed drastically in 2011, <em>&lt;sarcasm&gt;and provide some advice for those of you who haven't quite gotten it all figured out yet like I have &lt;/sarcasm&gt;</em>.
 

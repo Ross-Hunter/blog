@@ -9,15 +9,21 @@ pre.highlight {
   }
 }
 
+.no-cover .main-header-content.inner {
+  background: none;
+}
+
 .main-header-content.inner {
   background: rgba(0,0,0,.8);
   border-radius: 10px;
   padding: 1em;
 }
 
+.no-cover.main-header,
 .no-cover.post-head.main-header {
   height: 200px;
   background-image: url('/images/bg.png');
+  background-color: transparent;
 }
 
 .nav-closed .no-cover .menu-button {

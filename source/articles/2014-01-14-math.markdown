@@ -3,6 +3,7 @@ title: Math Is Not Necessary for Software Development
 date: 2014-01-14
 layout: post
 cover: math.jpg
+tags: code
 ---
 ### As a developer, written communication and reading comprehension are more valuable than math proficiency.
 

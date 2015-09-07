@@ -2,6 +2,7 @@
 title: Rounded Corners and More! CSS3 PIE Makes Developing for IE Suck Less.
 date: 2010-11-16
 layout: post
+tags: code, css
 ---
 OK, so we all know how much IE sucks. Well I just stumbled across a neat little trick that makes IE suck less. It's called <a href="http://css3pie.com">Progressive Internet Explorer (PIE)</a>. It's a simple and very effective way to use some advanced CSS features and have them actually work inside of Internet Explorer. PIE supports the following CSS3 features in IE 6-8:
 

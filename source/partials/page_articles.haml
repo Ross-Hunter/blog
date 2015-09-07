@@ -11,7 +11,7 @@
         = link_to '&raquo;', article, class: 'read-more'
     %footer.post-meta
       - if tags?(article)
-        on #{tags(article)}
+        #{tags(article)}
       %time.post-date{datetime: article.date.strftime('%Y-%m-%d')}
         = article.date.strftime(blog_settings.date_format)
 
