@@ -23,11 +23,11 @@
       %footer.post-footer
         - if gravatar?
           %figure.author-image
-            %a.img{href: '/ross-hunter', style: "background-image: url(#{gravatar})"}
+            %a.img{href: '/', style: "background-image: url(#{gravatar})"}
               %span.hidden #{blog_author.name}'s Picture
         %section.author
           %h4
-            %a{href: '/ross-hunter'}= blog_author.name
+            %a{href: '/'}= blog_author.name
 
           %p
           - if blog_author.bio.present?
