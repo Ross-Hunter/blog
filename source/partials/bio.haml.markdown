@@ -1,4 +1,4 @@
-My name is Ross Hunter, I'm a pretty cool web dude and I've been making stuff happen on the internet in some form since the turn of the century. I have done a couple different things in my day, but right now I am a Lead Product Engineer at <a target="_blank" href="http://www.modustri.com">Modustri</a> doing API, web and mobile stuff. It's awesome.
+My name is Ross Hunter, I'm a pretty cool web dude and I've been making stuff happen on the internet in some form since the turn of the century. I have done a couple different things in my day, but right now I am running my own software consulting company called [GreyVox](http://greyvox.com).
 
 Lately I have been doing a lot of Rails, Ember, and Objective C. In the past I have have done (non-Rails) Ruby, CoffeeScript, Python, Drupal, Angular and more. I've even dabbled in things like SEO and UX from time to time.
 
