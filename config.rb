@@ -51,8 +51,7 @@ set :casper, {
     "GitHub" => "https://github.com/ross-hunter",
     "Twitter" => "https://twitter.com/ross_hunter",
     "LinkedIn" => "https://www.linkedin.com/profile/view?id=26528250&trk=tab_pro&locale=en_US",
-    "Facebook" => "http://www.facebook.com/ross.hunter",
-    "Rdio" => "http://www.rdio.com/#/people/RossHunter/"
+    "Facebook" => "http://www.facebook.com/ross.hunter"
   }
 }
 
