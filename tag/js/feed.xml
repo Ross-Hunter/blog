@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Ross-Hunter: js</title>
+  <subtitle>Posts tagged with js</subtitle>
+  <id>http://www.ross-hunter.com</id>
+  <link href="http://www.ross-hunter.com"/>
+  <link href="http://www.ross-hunter.com/tag/js/feed.xml" rel="self"/>
+  <updated>2016-05-08T20:00:00-04:00</updated>
+  <author>
+    <name>Ross Hunter</name>
+  </author>
+  <entry>
+    <title>CoffeeScript jQuery Animated Scrolling Sidebar</title>
+    <link rel="alternate" href="http://www.ross-hunter.com/2012/06/03/floating-coffee-bar/"/>
+    <id>http://www.ross-hunter.com/2012/06/03/floating-coffee-bar/</id>
+    <published>2012-06-02T20:00:00-04:00</published>
+    <updated>2016-05-09T11:08:33-04:00</updated>
+    <author>
+      <name>Ross Hunter</name>
+    </author>
+    <summary type="html">I have been really getting into writing CoffeeScript lately, so I decided to revisit the jQuery floating sidebar I blogged about a while back. The logic is the same, other than using a named function to increase readability. The code is shrunk from 40 lines to 28 lines (with extra line breaks for readability). More importantly, I believe the code is easier to understand.
+The basic concept is to create</summary>
+  </entry>
+  <entry>
+    <title>Creating an Animated Floating Sidebar With jQuery</title>
+    <link rel="alternate" href="http://www.ross-hunter.com/2011/05/08/floating-jquery-bar/"/>
+    <id>http://www.ross-hunter.com/2011/05/08/floating-jquery-bar/</id>
+    <published>2011-05-07T20:00:00-04:00</published>
+    <updated>2016-05-09T11:08:33-04:00</updated>
+    <author>
+      <name>Ross Hunter</name>
+    </author>
+    <summary type="html">I finally got around to implementing a floating sidebar that contains all of my follow links contained in my header. Lots of sites have a floating sidebar, but I wanted mine to be a little different. First, the items in my sidebar come flying out of the header to the sidebar 
+when the user scrolls down past the header, instead of being fixed over on the side. You will also notice a nifty little elastic</summary>
+  </entry>
+  <entry>
+    <title>jQuery Masonry is Bad Ass</title>
+    <link rel="alternate" href="http://www.ross-hunter.com/2011/04/04/masonry/"/>
+    <id>http://www.ross-hunter.com/2011/04/04/masonry/</id>
+    <published>2011-04-03T20:00:00-04:00</published>
+    <updated>2016-05-09T11:08:33-04:00</updated>
+    <author>
+      <name>Ross Hunter</name>
+    </author>
+    <summary type="html">jQuery Masonry is a sweet layout plugin for jQuery. They describe it as “The flip side of CSS floats”. It aligns elements vertically then horizontally, minimizing the vertical gaps between elements of varying heights. I created my own sandbox for playing around with masonry.
+
+Like any layout, it has it’s time and place. I would consider this primarily an alternative layout, only to be used when trying</summary>
+  </entry>
+</feed>

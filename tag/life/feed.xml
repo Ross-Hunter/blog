@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Ross-Hunter: life</title>
+  <subtitle>Posts tagged with life</subtitle>
+  <id>http://www.ross-hunter.com</id>
+  <link href="http://www.ross-hunter.com"/>
+  <link href="http://www.ross-hunter.com/tag/life/feed.xml" rel="self"/>
+  <updated>2016-05-08T20:00:00-04:00</updated>
+  <author>
+    <name>Ross Hunter</name>
+  </author>
+  <entry>
+    <title>The End of an Era - Good Riddance</title>
+    <link rel="alternate" href="http://www.ross-hunter.com/2012/01/02/selling-out/"/>
+    <id>http://www.ross-hunter.com/2012/01/02/selling-out/</id>
+    <published>2012-01-01T19:00:00-05:00</published>
+    <updated>2016-05-09T11:08:33-04:00</updated>
+    <author>
+      <name>Ross Hunter</name>
+    </author>
+    <summary type="html">So this is one of those personal blog entries that is really written more for myself than for any audience. I have not posted in a while and have been thinking that I really should put something up here. I have a couple interesting code things that have been rattling around in my head, and those will make it here or to Rapid Development Group’s Blog in the near future. However today I will talk about</summary>
+  </entry>
+</feed>

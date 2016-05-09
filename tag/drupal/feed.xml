@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Ross-Hunter: drupal</title>
+  <subtitle>Posts tagged with drupal</subtitle>
+  <id>http://www.ross-hunter.com</id>
+  <link href="http://www.ross-hunter.com"/>
+  <link href="http://www.ross-hunter.com/tag/drupal/feed.xml" rel="self"/>
+  <updated>2016-05-08T20:00:00-04:00</updated>
+  <author>
+    <name>Ross Hunter</name>
+  </author>
+  <entry>
+    <title>Sending Emails with PDF attachments in Drupal 7</title>
+    <link rel="alternate" href="http://www.ross-hunter.com/2012/02/20/drupal-pdf-email/"/>
+    <id>http://www.ross-hunter.com/2012/02/20/drupal-pdf-email/</id>
+    <published>2012-02-19T19:00:00-05:00</published>
+    <updated>2016-05-09T11:08:33-04:00</updated>
+    <author>
+      <name>Ross Hunter</name>
+    </author>
+    <summary type="html">I wrote my first blog post on the company blog the other day. It was about the frustratingly poorly documented problem of sending emails with attachments in Drupal. I also add on a neat little trick for hijacking the print module to print pdf versions of content on the site, and pipe it directly into the attachment - no saving a copy of every pdf you generate on the site. Head on over there for the</summary>
+  </entry>
+</feed>

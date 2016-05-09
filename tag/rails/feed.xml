@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Ross-Hunter: rails</title>
+  <subtitle>Posts tagged with rails</subtitle>
+  <id>http://www.ross-hunter.com</id>
+  <link href="http://www.ross-hunter.com"/>
+  <link href="http://www.ross-hunter.com/tag/rails/feed.xml" rel="self"/>
+  <updated>2016-05-08T20:00:00-04:00</updated>
+  <author>
+    <name>Ross Hunter</name>
+  </author>
+  <entry>
+    <title>Index Your Foreign Keys</title>
+    <link rel="alternate" href="http://www.ross-hunter.com/2014/06/13/index-foreign-keys/"/>
+    <id>http://www.ross-hunter.com/2014/06/13/index-foreign-keys/</id>
+    <published>2014-06-12T20:00:00-04:00</published>
+    <updated>2016-05-09T11:08:33-04:00</updated>
+    <author>
+      <name>Ross Hunter</name>
+    </author>
+    <summary type="html">We add indexes to our database in order to speed up read operations. Basically, an index is a sorted copy of a particular set of columns the database uses to quickly look up the attributes of another table, most commonly, foreign keys of relations. There are several ways this can actually be implemented on the database; essentially, we tell the database which values we’ll be looking up most often and</summary>
+  </entry>
+  <entry>
+    <title>ActiveRecord Associations &amp; You</title>
+    <link rel="alternate" href="http://www.ross-hunter.com/2014/06/12/activerecord-associations/"/>
+    <id>http://www.ross-hunter.com/2014/06/12/activerecord-associations/</id>
+    <published>2014-06-11T20:00:00-04:00</published>
+    <updated>2016-05-09T11:08:33-04:00</updated>
+    <author>
+      <name>Ross Hunter</name>
+    </author>
+    <summary type="html">I love abstraction. It’s great to compartmentalize complexity and keep your application modular. SQL is not that. Relying on SQL strings in your code ties your implementation directly to the type, structure, and even the version of your database. ActiveRecord (the ORM behind Rails) is great for letting us focus on our application and not worry so much about the database particulars.
+
+However, understanding</summary>
+  </entry>
+  <entry>
+    <title>Better Rails Debugging with better_errors and jazz_hands</title>
+    <link rel="alternate" href="http://www.ross-hunter.com/2013/05/17/rails-debugging/"/>
+    <id>http://www.ross-hunter.com/2013/05/17/rails-debugging/</id>
+    <published>2013-05-16T20:00:00-04:00</published>
+    <updated>2016-05-09T11:08:33-04:00</updated>
+    <author>
+      <name>Ross Hunter</name>
+    </author>
+    <summary type="html">Go beyond the stacktrace with 2 gems that grant you debugging superpowers.
+
+Better Errors
+
+Does this screen look familiar? Do you notice anything wrong with this picture?
+
+
+
+That is correct, that is the default Rails error page and you are absolutely right, it is completely hideous and hurts to look at. It is begging to be improved.
+
+By answering these questions you have already proven yourself to</summary>
+  </entry>
+</feed>

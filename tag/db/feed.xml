@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Ross-Hunter: db</title>
+  <subtitle>Posts tagged with db</subtitle>
+  <id>http://www.ross-hunter.com</id>
+  <link href="http://www.ross-hunter.com"/>
+  <link href="http://www.ross-hunter.com/tag/db/feed.xml" rel="self"/>
+  <updated>2016-05-08T20:00:00-04:00</updated>
+  <author>
+    <name>Ross Hunter</name>
+  </author>
+  <entry>
+    <title>Index Your Foreign Keys</title>
+    <link rel="alternate" href="http://www.ross-hunter.com/2014/06/13/index-foreign-keys/"/>
+    <id>http://www.ross-hunter.com/2014/06/13/index-foreign-keys/</id>
+    <published>2014-06-12T20:00:00-04:00</published>
+    <updated>2016-05-09T11:08:33-04:00</updated>
+    <author>
+      <name>Ross Hunter</name>
+    </author>
+    <summary type="html">We add indexes to our database in order to speed up read operations. Basically, an index is a sorted copy of a particular set of columns the database uses to quickly look up the attributes of another table, most commonly, foreign keys of relations. There are several ways this can actually be implemented on the database; essentially, we tell the database which values we’ll be looking up most often and</summary>
+  </entry>
+  <entry>
+    <title>ActiveRecord Associations &amp; You</title>
+    <link rel="alternate" href="http://www.ross-hunter.com/2014/06/12/activerecord-associations/"/>
+    <id>http://www.ross-hunter.com/2014/06/12/activerecord-associations/</id>
+    <published>2014-06-11T20:00:00-04:00</published>
+    <updated>2016-05-09T11:08:33-04:00</updated>
+    <author>
+      <name>Ross Hunter</name>
+    </author>
+    <summary type="html">I love abstraction. It’s great to compartmentalize complexity and keep your application modular. SQL is not that. Relying on SQL strings in your code ties your implementation directly to the type, structure, and even the version of your database. ActiveRecord (the ORM behind Rails) is great for letting us focus on our application and not worry so much about the database particulars.
+
+However, understanding</summary>
+  </entry>
+</feed>

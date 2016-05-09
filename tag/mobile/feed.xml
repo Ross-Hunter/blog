@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Ross-Hunter: mobile</title>
+  <subtitle>Posts tagged with mobile</subtitle>
+  <id>http://www.ross-hunter.com</id>
+  <link href="http://www.ross-hunter.com"/>
+  <link href="http://www.ross-hunter.com/tag/mobile/feed.xml" rel="self"/>
+  <updated>2016-05-08T20:00:00-04:00</updated>
+  <author>
+    <name>Ross Hunter</name>
+  </author>
+  <entry>
+    <title>Open + Download Native Apps with a PhoneGap/Cordova Plugin</title>
+    <link rel="alternate" href="http://www.ross-hunter.com/2013/11/12/open-native-apps-phonegap/"/>
+    <id>http://www.ross-hunter.com/2013/11/12/open-native-apps-phonegap/</id>
+    <published>2013-11-11T19:00:00-05:00</published>
+    <updated>2016-05-09T11:08:33-04:00</updated>
+    <author>
+      <name>Ross Hunter</name>
+    </author>
+    <summary type="html">Are you working on a PhoneGap/Cordova app that needs to be able to communicate with other native applications? You may want to get the demo code, maybe give it a once over, and then continue reading.
+
+Note: This work was completed in a pre-PhoneGap 3.0.0 world. There is now a Plugin Specification Guide that should be adhered to. This code would need to be adapted to fit that structure.
+
+Prologue
+
+</summary>
+  </entry>
+</feed>

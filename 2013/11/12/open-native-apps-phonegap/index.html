@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ross-Hunter: Open + Download Native Apps with a PhoneGap/Cordova Plugin</title>
+<meta content='Are you working on a PhoneGap/Cordova app that needs to be able to communicate with other native applications? You may want to get the demo code...' name='description'>
+<meta charset='utf-8'>
+<meta content='width=device-width, initial-scale=1.0' name='viewport'>
+<meta content='IE=edge' http-equiv='X-UA-Compatible'>
+<meta content='True' name='HandheldFriendly'>
+<link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+<link href="../../../../images/images/favicon.ico" rel="icon" type="image/ico" />
+<link href="../../../../stylesheets/application-ec71be74.css" rel="stylesheet" />
+<link href='//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400' rel='stylesheet' type='text/css'>
+</head>
+<body class='post-template nav-closed'>
+<div class='nav'>
+<h3 class='nav-title'>Menu</h3>
+<a class='nav-close' href='#'>
+<span class='hidden'>Close</span>
+</a>
+<ul>
+<li class='nav-home' role='presentation'>
+<a href='/'>Home</a>
+</li>
+<li class='nav-blog' role='presentation'>
+<a href='/blog/'>Blog</a>
+</li>
+<li class='nav-github' role='presentation'>
+<a href='https://github.com/ross-hunter'>GitHub</a>
+</li>
+<li class='nav-twitter' role='presentation'>
+<a href='https://twitter.com/ross_hunter'>Twitter</a>
+</li>
+<li class='nav-linkedin' role='presentation'>
+<a href='https://www.linkedin.com/profile/view?id=26528250&amp;trk=tab_pro&amp;locale=en_US'>LinkedIn</a>
+</li>
+<li class='nav-facebook' role='presentation'>
+<a href='http://www.facebook.com/ross.hunter'>Facebook</a>
+</li>
+</ul>
+<a class='subscribe-button icon-feed' href='/feed.xml'>Subscribe</a>
+</div>
+<span class='nav-cover'></span>
+
+<div class='site-wrapper'>
+<header class='main-header post-head' style='background-image: url(../../../../images/plugins-16df4df0.jpg)'>
+<nav class='clearfix main-nav overlay'>
+<a class='menu-button icon-menu' href='#'>
+<span class='word'>Menu</span>
+</a>
+</nav>
+</header>
+<main class='content' role='main'>
+<article class='post'>
+<header class='post-header'>
+<h1 class='post-title'>Open + Download Native Apps with a PhoneGap/Cordova Plugin</h1>
+<section class='post-meta'>
+<time class='post-date' datetime='2013-11-12'>
+12 November 2013
+</time>
+<a href='/tag/code/'>code</a>, <a href='/tag/mobile/'>mobile</a>
+</section>
+</header>
+<section class='post-content'><p>Are you working on a PhoneGap/Cordova app that needs to be able to communicate with other native applications? You may want to get the <strong><a href="https://github.com/Ross-Hunter/external_app_launcher">demo code</a></strong>, maybe give it a once over, and then continue reading.</p>
+
+<p>Note: This work was completed in a pre-PhoneGap 3.0.0 world. There is now a <a href="http://cordova.apache.org/docs/en/edge/plugin_ref_spec.md.html">Plugin Specification Guide</a> that should be adhered to. This code would need to be adapted to fit that structure.</p>
+
+<h3>Prologue</h3>
+
+<p>Recently, we were brought in to add functionality to an existing PhoneGap app that had been created by an internal team. One new bit of functionality was to integrate with another 3rd party app. We wanted to be able to click a button in our PhoneGap app and have it open a native Android or iOS app if it was already installed. If the 3rd party app was not installed, we wanted to launch the appropriate marketplace to download the app.</p>
+
+<p>As anyone who has done any PhoneGap development knows, &ldquo;write once, deploy everywhere&rdquo; is a bigger lie than the cake. We decided that when we needed to write platform specific code we would keep it isolated to plugins and create a plugin for each platform that conformed to the same interface. Examples of plugins we implemented in this app include calendar, datepicker (Android only) and Google Analytics. Our process for these followed the same template as <em>ExternalAppLauncher</em>: a common interface in <em>lib</em> that references a Cordova Plugin that is defined in a platform specific javascript file. In the demo code, you&rsquo;ll notice a <em>Dependencies</em> folder for each platform, which is concatenated to the common codebase of the PhoneGap site by our build process. </p>
+
+<h3>Pretend we are building a web app</h3>
+
+<p>The folder structure represented in the demo code is a remnant of the original project we inherited. I have not done extensive PhoneGap development outside of this project, so I am not sure if those are PhoneGap/Cordova conventions or not, but they work.</p>
+
+<p>Being the good little OO developer that I am, I was hyper focused on keeping the same interface for our app code regardless of platform or environment. We abstracted Environment options into an Environment object and our platform specific code into Cordova plugins. So in our app, the actual call to open the external app is quite simple</p>
+
+<script src="https://gist.github.com/Ross-Hunter/7433959.js"></script>
+
+<p>Android uses the app identifier for both launching and finding the app in the Google Play store. iOS uses a <a href="https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/AdvancedAppTricks/AdvancedAppTricks.html#//apple_ref/doc/uid/TP40007072-CH7-SW50">custom url scheme</a>. for launching the native app, but in order to find it in the app store you need to know the app store url.</p>
+
+<p>In order to cover our bases, we defined an app options object in our Environment object like so:</p>
+
+<script src="https://gist.github.com/Ross-Hunter/7433984.js"></script>
+
+<h3>Going Native</h3>
+
+<p>Now let&rsquo;s move into the platform specific code. Basing my code off open-source examples, I created a plugin in Java for Android and in Objective-C for iOS. The basics of setting up a Cordova plugin for iOS and Android are outside the scope of this blog post but check out PhoneGap documentation for <a href="http://docs.PhoneGap.com/en/2.7.0/guide_plugin-development_android_index.md.html#Developing%20a%20Plugin%20on%20Android">Android</a> and <a href="http://docs.PhoneGap.com/en/2.7.0/guide_plugin-development_ios_index.md.html#Developing%20a%20Plugin%20on%20iOS">iOS</a>, if you&rsquo;d like to know more. PhoneGap&rsquo;s documentation is pretty good. There are examples of how to do this in <a href="https://github.com/sbahal/external-app-launcher">just iOS</a>, but I found the information about Android was quite scattered.</p>
+
+<p>We wanted these 2 plugins to have the same external interface. Cordova enforces some of this for us by giving us the <a href="http://docs.PhoneGap.com/en/2.7.0/guide_plugin-development_index.md.html">cordova.exec()</a> method. The 2 methods I wanted to be able to pass through to the native code were <em>launchApp</em> and <em>launchMarket</em>. For Android, we passed an <em>androidAppId</em> as the argument for both <em>launchApp</em> and <em>launchMarket</em>, but in iOS we needed to pass <em>iosUrlScheme</em> for <em>launchApp</em> and <em>appStoreUrl</em> to <em>launchMarket</em>. Yay! We&rsquo;ve successfully isolated the platform specific code to plugins!</p>
+
+<p>Now for specifics on the native plugins. We leveraged the CDVPlugin and CordovaPlugin classes that we got from Cordova and implemented our two methods <em>launchApp</em> and <em>launchMarket</em>. Android adds some extra boilerplate, which required us to implement the <em>execute</em> method ourselves, but it&rsquo;s essentially just a controller method that calls the other methods. I chose to develop this solution such that instead of the plugin handling either launching the app or the market, the result of <em>launchApp</em> would return success or error back into our app. This allowed us to handle the state inside of our app instead of inside the plugin. On error, we launch our <em>_askToDownload</em> message. I am glad this code lives inside our app and not inside of a native plugin, as we won&rsquo;t need to update this code in 2 places when we want to change the confirmation message or any other behavior.</p>
+
+<h3>Epilogue</h3>
+
+<p>Personally, I am unhappy with PhoneGap/Cordova as a solution for mobile development. However, it does have its place where cross-platform is an immediate goal, budget is a consideration, and the app doesn&rsquo;t require too much functionality. I was surprised to find so many examples of PhoneGap developers who only develop for one platform - why aren&rsquo;t they doing native development?</p>
+
+<p>When I began working on this problem, I couldn&rsquo;t find a single example of how to launch an external app using PhoneGap that gave any consideration toward multiple platforms. Hopefully my post helps fill this void and you have found it useful.</p>
+
+<p><em>Originally posted on the <a href="http://www.mutuallyhuman.com/blog/2013/11/12/open-download-native-apps-with-a-phonegap-cordova-plugin/">MHS Blog</a></em></p>
+</section>
+<footer class='post-footer'>
+<figure class='author-image'>
+<a class='img' href='/' style='background-image: url(https://www.gravatar.com/avatar/99057d911bd664e8cde1a2995ee25401?size=68)'>
+<span class='hidden'>Ross Hunter's Picture</span>
+</a>
+</figure>
+<section class='author'>
+<h4>
+<a href='/'>Ross Hunter</a>
+</h4>
+<p></p>
+I do things with computers sometimes
+<div class='author-meta'>
+<span class='author-location icon-location'>Grand Rapids, MI</span>
+</div>
+</section>
+<section class='share'>
+<h4>Share this post</h4>
+<a class='icon-twitter' href='https://twitter.com/share?text=Open + Download Native Apps with a PhoneGap/Cordova Plugin&amp;amp;url=http://www.ross-hunter.com/2013/11/12/open-native-apps-phonegap/' onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+<span class='hidden'>Twitter</span>
+</a>
+<a class='icon-facebook' href='https://www.facebook.com/sharer/sharer.php?u=http://www.ross-hunter.com/2013/11/12/open-native-apps-phonegap/' onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+<span class='hidden'>Facebook</span>
+</a>
+<a class='icon-google-plus' href='https://plus.google.com/share?url=http://www.ross-hunter.com/2013/11/12/open-native-apps-phonegap/' onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+<span class='hidden'>Google+</span>
+</a>
+</section>
+</footer>
+</article>
+</main>
+<aside class='read-next'>
+<a class='read-next-story' href='/2013/08/06/tips-for-beginner-developers/' style='background-image: url(../../../../images/noob-d3dda5dc.jpg)'>
+<section class='post'>
+<h2>Tips for Novice Developers (and why you should become a rubyist)</h2>
+<p>Work Locally Working locally means that you have an instance of your web app running on your machine. You&hellip;</p>
+</section>
+</a>
+<a class='read-next-story prev' href='/2014/01/14/math/' style='background-image: url(../../../../images/math-ca764602.jpg)'>
+<section class='post'>
+<h2>Math Is Not Necessary for Software Development</h2>
+<p>As a developer, written communication and reading comprehension are more valuable than math proficiency. Sometimes, I tweet. When I&hellip;</p>
+</section>
+</a>
+</aside>
+
+<footer class='site-footer clearfix'>
+<section class='copyright'>
+<a href='/'>Ross-Hunter</a>
+&copy;
+2016
+</section>
+<section class='poweredby'>
+Based on the Casper theme powered by
+<a href='https://ghost.org' target='_blank'>Ghost</a>
+</section>
+</footer>
+</div>
+<script src="../../../../javascripts/application-2ee90952.js"></script>
+</body>
+</html>

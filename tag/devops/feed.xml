@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Ross-Hunter: devops</title>
+  <subtitle>Posts tagged with devops</subtitle>
+  <id>http://www.ross-hunter.com</id>
+  <link href="http://www.ross-hunter.com"/>
+  <link href="http://www.ross-hunter.com/tag/devops/feed.xml" rel="self"/>
+  <updated>2016-05-08T20:00:00-04:00</updated>
+  <author>
+    <name>Ross Hunter</name>
+  </author>
+  <entry>
+    <title>Installing PHP 5.4 on Centos 5.7</title>
+    <link rel="alternate" href="http://www.ross-hunter.com/2012/03/04/php-centos/"/>
+    <id>http://www.ross-hunter.com/2012/03/04/php-centos/</id>
+    <published>2012-03-03T19:00:00-05:00</published>
+    <updated>2016-05-09T11:08:33-04:00</updated>
+    <author>
+      <name>Ross Hunter</name>
+    </author>
+    <summary type="html">I am not what one would consider a sys admin. I do enjoy running my own VPS and mucking about with things like installing the newest version of PHP, but my knowledge doesn’t extend very far past yum and rpm. So using only those 2 tools I set out and succeeded in installing PHP 5.4.
+
+After what seemed like too much time trying to find a Centos 5 compatible package I found remi’s repository and installed</summary>
+  </entry>
+</feed>

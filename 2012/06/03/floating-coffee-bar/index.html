@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ross-Hunter: CoffeeScript jQuery Animated Scrolling Sidebar</title>
+<meta content='I have been really getting into writing CoffeeScript lately, so I decided to revisit the jQuery floating sidebar I blogged about a while back. T...' name='description'>
+<meta charset='utf-8'>
+<meta content='width=device-width, initial-scale=1.0' name='viewport'>
+<meta content='IE=edge' http-equiv='X-UA-Compatible'>
+<meta content='True' name='HandheldFriendly'>
+<link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+<link href="../../../../images/images/favicon.ico" rel="icon" type="image/ico" />
+<link href="../../../../stylesheets/application-ec71be74.css" rel="stylesheet" />
+<link href='//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400' rel='stylesheet' type='text/css'>
+</head>
+<body class='post-template nav-closed'>
+<div class='nav'>
+<h3 class='nav-title'>Menu</h3>
+<a class='nav-close' href='#'>
+<span class='hidden'>Close</span>
+</a>
+<ul>
+<li class='nav-home' role='presentation'>
+<a href='/'>Home</a>
+</li>
+<li class='nav-blog' role='presentation'>
+<a href='/blog/'>Blog</a>
+</li>
+<li class='nav-github' role='presentation'>
+<a href='https://github.com/ross-hunter'>GitHub</a>
+</li>
+<li class='nav-twitter' role='presentation'>
+<a href='https://twitter.com/ross_hunter'>Twitter</a>
+</li>
+<li class='nav-linkedin' role='presentation'>
+<a href='https://www.linkedin.com/profile/view?id=26528250&amp;trk=tab_pro&amp;locale=en_US'>LinkedIn</a>
+</li>
+<li class='nav-facebook' role='presentation'>
+<a href='http://www.facebook.com/ross.hunter'>Facebook</a>
+</li>
+</ul>
+<a class='subscribe-button icon-feed' href='/feed.xml'>Subscribe</a>
+</div>
+<span class='nav-cover'></span>
+
+<div class='site-wrapper'>
+<header class='main-header no-cover post-head'>
+<nav class='main-nav clearfix'>
+<a class='menu-button icon-menu' href='#'>
+<span class='word'>Menu</span>
+</a>
+</nav>
+</header>
+<main class='content' role='main'>
+<article class='post'>
+<header class='post-header'>
+<h1 class='post-title'>CoffeeScript jQuery Animated Scrolling Sidebar</h1>
+<section class='post-meta'>
+<time class='post-date' datetime='2012-06-03'>
+03 June 2012
+</time>
+<a href='/tag/code/'>code</a>, <a href='/tag/js/'>js</a>
+</section>
+</header>
+<section class='post-content'><p>I have been really getting into writing CoffeeScript lately, so I decided to revisit the jQuery floating sidebar I blogged about a while back. The logic is the same, other than using a named function to increase readability. The code is shrunk from 40 lines to 28 lines (with extra line breaks for readability). More importantly, I believe the code is easier to understand.</p>
+<p>The basic concept is to create function which I have called jitteryScroll that either scrolls the sidebar items, or returns them to the header if the scroll is at the top of the page. Then I define a function that fires on scroll and I use setTimeout in order to prevent the scroll function from overloading the browser (the scroll function fires like a machine gun when a user scrolls a page).</p>
+
+<script src="http://pastebin.com/embed_js.php?i=H7f1x28B"></script>
+
+<p>s
+Let me know if you have any questions or suggestions.</p>
+</section>
+<footer class='post-footer'>
+<figure class='author-image'>
+<a class='img' href='/' style='background-image: url(https://www.gravatar.com/avatar/99057d911bd664e8cde1a2995ee25401?size=68)'>
+<span class='hidden'>Ross Hunter's Picture</span>
+</a>
+</figure>
+<section class='author'>
+<h4>
+<a href='/'>Ross Hunter</a>
+</h4>
+<p></p>
+I do things with computers sometimes
+<div class='author-meta'>
+<span class='author-location icon-location'>Grand Rapids, MI</span>
+</div>
+</section>
+<section class='share'>
+<h4>Share this post</h4>
+<a class='icon-twitter' href='https://twitter.com/share?text=CoffeeScript jQuery Animated Scrolling Sidebar&amp;amp;url=http://www.ross-hunter.com/2012/06/03/floating-coffee-bar/' onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+<span class='hidden'>Twitter</span>
+</a>
+<a class='icon-facebook' href='https://www.facebook.com/sharer/sharer.php?u=http://www.ross-hunter.com/2012/06/03/floating-coffee-bar/' onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+<span class='hidden'>Facebook</span>
+</a>
+<a class='icon-google-plus' href='https://plus.google.com/share?url=http://www.ross-hunter.com/2012/06/03/floating-coffee-bar/' onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+<span class='hidden'>Google+</span>
+</a>
+</section>
+</footer>
+</article>
+</main>
+<aside class='read-next'>
+<a class='no-cover read-next-story' href='/2012/05/29/applescript-stereo/'>
+<section class='post'>
+<h2>Sending Emails with PDF attachments in Drupal 7</h2>
+<p>I wrote my first blog post on the company blog the other day. It was about the frustratingly poorly&hellip;</p>
+</section>
+</a>
+<a class='no-cover prev read-next-story' href='/2012/08/06/understand-path/'>
+<section class='post'>
+<h2>Understand Your True $PATH</h2>
+<p>I recently took some time to actually understand what the hell was going on in my terminal config file&hellip;</p>
+</section>
+</a>
+</aside>
+
+<footer class='site-footer clearfix'>
+<section class='copyright'>
+<a href='/'>Ross-Hunter</a>
+&copy;
+2016
+</section>
+<section class='poweredby'>
+Based on the Casper theme powered by
+<a href='https://ghost.org' target='_blank'>Ghost</a>
+</section>
+</footer>
+</div>
+<script src="../../../../javascripts/application-2ee90952.js"></script>
+</body>
+</html>

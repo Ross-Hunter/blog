@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ross-Hunter: Better Rails Debugging with better_errors and jazz_hands</title>
+<meta content='Go beyond the stacktrace with 2 gems that grant you debugging superpowers. Better Errors Does this screen look familiar? Do you notice anything ...' name='description'>
+<meta charset='utf-8'>
+<meta content='width=device-width, initial-scale=1.0' name='viewport'>
+<meta content='IE=edge' http-equiv='X-UA-Compatible'>
+<meta content='True' name='HandheldFriendly'>
+<link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+<link href="../../../../images/images/favicon.ico" rel="icon" type="image/ico" />
+<link href="../../../../stylesheets/application-ec71be74.css" rel="stylesheet" />
+<link href='//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400' rel='stylesheet' type='text/css'>
+</head>
+<body class='post-template nav-closed'>
+<div class='nav'>
+<h3 class='nav-title'>Menu</h3>
+<a class='nav-close' href='#'>
+<span class='hidden'>Close</span>
+</a>
+<ul>
+<li class='nav-home' role='presentation'>
+<a href='/'>Home</a>
+</li>
+<li class='nav-blog' role='presentation'>
+<a href='/blog/'>Blog</a>
+</li>
+<li class='nav-github' role='presentation'>
+<a href='https://github.com/ross-hunter'>GitHub</a>
+</li>
+<li class='nav-twitter' role='presentation'>
+<a href='https://twitter.com/ross_hunter'>Twitter</a>
+</li>
+<li class='nav-linkedin' role='presentation'>
+<a href='https://www.linkedin.com/profile/view?id=26528250&amp;trk=tab_pro&amp;locale=en_US'>LinkedIn</a>
+</li>
+<li class='nav-facebook' role='presentation'>
+<a href='http://www.facebook.com/ross.hunter'>Facebook</a>
+</li>
+</ul>
+<a class='subscribe-button icon-feed' href='/feed.xml'>Subscribe</a>
+</div>
+<span class='nav-cover'></span>
+
+<div class='site-wrapper'>
+<header class='main-header no-cover post-head'>
+<nav class='main-nav clearfix'>
+<a class='menu-button icon-menu' href='#'>
+<span class='word'>Menu</span>
+</a>
+</nav>
+</header>
+<main class='content' role='main'>
+<article class='post'>
+<header class='post-header'>
+<h1 class='post-title'>Better Rails Debugging with better_errors and jazz_hands</h1>
+<section class='post-meta'>
+<time class='post-date' datetime='2013-05-17'>
+17 May 2013
+</time>
+<a href='/tag/rails/'>rails</a>, <a href='/tag/code/'>code</a>
+</section>
+</header>
+<section class='post-content'><p>Go beyond the stacktrace with 2 gems that grant you debugging superpowers.</p>
+
+<h3>Better Errors</h3>
+
+<p>Does this screen look familiar? Do you notice anything wrong with this picture?</p>
+
+<p><img src="/images/default_error-25897550.png"></p>
+
+<p>That is correct, that is the default Rails error page and you are absolutely right, it is completely hideous and hurts to look at. It is begging to be improved.</p>
+
+<p>By answering these questions you have already proven yourself to be quite a smart cookie, my dear reader, so you probably can guess what a gem called <a href="https://github.com/charliesome/better_errors"><code>better_errors</code></a> does. However, you might not realize just how much of an improvement <code>better_errors</code> actually is.</p>
+
+<p><br>
+<aside>
+<header>Basic <code>better_errors</code> stats:</header>
+<ul>
+<li>Full stack trace</li>
+<li>Source code inspection for all stack frames (with highlighting)</li>
+<li>Local and instance variable inspection</li>
+<li>Live REPL on every stack frame</li>
+</ul>
+</aside>
+<br></p>
+
+<p><img src="/images/better_errors-f425e900.png"></p>
+
+<p>It is clearly more visually appealing, but it also provides much more detailed debug information, as well as providing a REPL for interacting with the code (assuming you have the separate <a href="https://github.com/banister/binding_of_caller">binding<em>of</em>caller</a> gem installed).</p>
+
+<p>One of my favorite parts of better_errors is that it filters application frames in the stacktrace, so when debugging you can focus (at least at first) on the code <em>you</em> are writing and less on the Rails internals. The flipside of that is that by showing you a little bit of code context, as well as local variables, instance variables, request info, and providing a REPL for the full stacktrace, it is much easier to examine those Rails internals and pick up on that Rails Magic™ going on.</p>
+
+<p>If you are debugging a Rails API, AJAX, want to investigate a non-critical error like missing images, or for any other reason don&rsquo;t access the error page directly at the time of the error <code>better_errors</code> provides a page accessible via the url &ldquo;/_<em>better</em>errors&rdquo; which contains the error page for the last error on the server.</p>
+
+<p>Another awesome part of <code>better_errors</code> is that it can open up files in your editor! It comes out of the box with support for textmate, but also supports for vim and a couple other editors. You can add Sublime Text by downloading <a href="https://github.com/asuth/subl-handler">sublime-handler</a> and configuring an initializer for <code>better_errors</code> that simply contains:</p>
+
+<p><code>BetterErrors.editor = :sublime if defined? BetterErrors</code></p>
+
+<p>The error page page is even responsive! This is an extremely polished gem and I simply can&rsquo;t live without it.</p>
+
+<h3>Jazz Hands</h3>
+
+<p>When I need to really get my mitts in there and dig around for debugging, I like to use <a href="https://github.com/nixme/jazz_hands"><code>jazz_hands</code></a>.</p>
+
+<aside>
+<header>`jazz_hands` is collection of gems built around the popular IRB replacement `pry`. It includes:</header>
+<ul>
+<li>Pry for a powerful shell alternative to IRB.</li>
+<li>Awesome Print for stylish pretty print.</li>
+<li>Hirb for tabular collection output.</li>
+<li>Pry Rails for additional commands (show-routes, show-models, show-middleware) in the rails console.</li>
+<li>Pry Doc to browse Ruby source, including C, directly from the console.</li>
+<li>Pry Git to teach the console about git. Diffs, blames, and commits on methods and classes, not just files.</li>
+<li>Pry Remote to connect remotely to a Pry console.</li>
+<li>Pry Debugger to turn the console into a simple debugger.</li>
+<li>Pry Stack Explorer to navigate the call stack and frames.</li>
+<li>Coolline and Coderay for syntax highlighting as you type. Optional. MRI 1.9.3/2.0.0 only</li>
+</ul>
+</aside>
+
+<p><br></p>
+
+<p>This is not intended to be an exhaustive tutorial on how to debug using <code>pry</code>, but suffice it to say I mostly interact with <code>pry</code> by setting breakpoints with <code>binding.pry</code> in my source code to launch the pry REPL in the terminal running my rails server. <code>better_errors</code> is great at catching exceptions and helping to isolate a problem by showing the stacktrace, but once you know the problem and need to experiment in order to figure out the solution, <code>pry</code> is a much more powerful tool than the REPL provided by <code>better_errors</code>.</p>
+
+<p>The part of the <code>jazz_hands</code> extension that I interact with the most is <code>awesome print</code>. This provides a prettier output in the REPL when getting descriptions of objects and variables. <code>pry-debugger</code> is also great for allowing you to step through the code right from the REPL. <code>pry-rails</code> is great and I find myself using the show-routes functionality frequently.</p>
+
+<p><img src="/images/jazz_hands-4727c167.png"></p>
+
+<p>I have found <code>pry-git</code> to be quite buggy and have not been able to use it successfully. The syntax highlighting as you type technically works, but oddly it causes my cursor to be offset by 10 or so characters to the right, so I don&rsquo;t use it.</p>
+
+<h3>In Conclusion</h3>
+
+<p>One of the best things about <a href="https://github.com/nixme/jazz_hands"><code>jazz_hands</code></a> and <a href="https://github.com/charliesome/better_errors"><code>better_errors</code></a> is that they are so simple to set up and have no downsides. These gems are my defaults and are in every single rails project I do. By giving you debugging superpowers these gems can not only be huge time-savers, but they can reduce your stress to add years to your life. Not every gem can say that!</p>
+
+<p><em>Originally posted on the <a href="http://www.mutuallyhuman.com/blog/2013/05/17/better-rails-debugging-with-better_errors-and-jazz_hands/">MHS Blog</a></em></p>
+</section>
+<footer class='post-footer'>
+<figure class='author-image'>
+<a class='img' href='/' style='background-image: url(https://www.gravatar.com/avatar/99057d911bd664e8cde1a2995ee25401?size=68)'>
+<span class='hidden'>Ross Hunter's Picture</span>
+</a>
+</figure>
+<section class='author'>
+<h4>
+<a href='/'>Ross Hunter</a>
+</h4>
+<p></p>
+I do things with computers sometimes
+<div class='author-meta'>
+<span class='author-location icon-location'>Grand Rapids, MI</span>
+</div>
+</section>
+<section class='share'>
+<h4>Share this post</h4>
+<a class='icon-twitter' href='https://twitter.com/share?text=Better Rails Debugging with better_errors and jazz_hands&amp;amp;url=http://www.ross-hunter.com/2013/05/17/rails-debugging/' onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+<span class='hidden'>Twitter</span>
+</a>
+<a class='icon-facebook' href='https://www.facebook.com/sharer/sharer.php?u=http://www.ross-hunter.com/2013/05/17/rails-debugging/' onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+<span class='hidden'>Facebook</span>
+</a>
+<a class='icon-google-plus' href='https://plus.google.com/share?url=http://www.ross-hunter.com/2013/05/17/rails-debugging/' onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+<span class='hidden'>Google+</span>
+</a>
+</section>
+</footer>
+</article>
+</main>
+<aside class='read-next'>
+<a class='no-cover read-next-story' href='/2012/10/18/configuring-sublime-text-2/'>
+<section class='post'>
+<h2>Configuring Sublime Text 2</h2>
+<p>I have been a (relatively) long time Sublime Text 2 user. Early 2011, I was running Ubuntu on my&hellip;</p>
+</section>
+</a>
+<a class='read-next-story prev' href='/2013/08/06/tips-for-beginner-developers/' style='background-image: url(../../../../images/noob-d3dda5dc.jpg)'>
+<section class='post'>
+<h2>Tips for Novice Developers (and why you should become a rubyist)</h2>
+<p>Work Locally Working locally means that you have an instance of your web app running on your machine. You&hellip;</p>
+</section>
+</a>
+</aside>
+
+<footer class='site-footer clearfix'>
+<section class='copyright'>
+<a href='/'>Ross-Hunter</a>
+&copy;
+2016
+</section>
+<section class='poweredby'>
+Based on the Casper theme powered by
+<a href='https://ghost.org' target='_blank'>Ghost</a>
+</section>
+</footer>
+</div>
+<script src="../../../../javascripts/application-2ee90952.js"></script>
+</body>
+</html>

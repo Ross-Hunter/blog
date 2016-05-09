@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Ross-Hunter: productivity</title>
+  <subtitle>Posts tagged with productivity</subtitle>
+  <id>http://www.ross-hunter.com</id>
+  <link href="http://www.ross-hunter.com"/>
+  <link href="http://www.ross-hunter.com/tag/productivity/feed.xml" rel="self"/>
+  <updated>2016-05-08T20:00:00-04:00</updated>
+  <author>
+    <name>Ross Hunter</name>
+  </author>
+  <entry>
+    <title>Configuring Sublime Text 2</title>
+    <link rel="alternate" href="http://www.ross-hunter.com/2012/10/18/configuring-sublime-text-2/"/>
+    <id>http://www.ross-hunter.com/2012/10/18/configuring-sublime-text-2/</id>
+    <published>2012-10-17T20:00:00-04:00</published>
+    <updated>2016-05-09T11:08:33-04:00</updated>
+    <author>
+      <name>Ross Hunter</name>
+    </author>
+    <summary type="html">I have been a (relatively) long time Sublime Text 2 user. Early 2011, I was running Ubuntu on my laptop and wasn’t happy with any text editors I was finding. I gazed longingly at TextMate on my colleagues’s Macbooks, but overall I was happy with my OS choice and wasn’t ready to make that leap. Then I discovered Sublime, and fell in love. Over time I have learned some things, and developed some methods</summary>
+  </entry>
+  <entry>
+    <title>Understand Your True $PATH</title>
+    <link rel="alternate" href="http://www.ross-hunter.com/2012/08/06/understand-path/"/>
+    <id>http://www.ross-hunter.com/2012/08/06/understand-path/</id>
+    <published>2012-08-05T20:00:00-04:00</published>
+    <updated>2016-05-09T11:08:33-04:00</updated>
+    <author>
+      <name>Ross Hunter</name>
+    </author>
+    <summary type="html">I recently took some time to actually understand what the hell was going on in my terminal config file (I use ZSH, but this post should apply to BASH as well). The thing that pushed me over the edge was that I was running into a situation where I had different versions of git that were being used in different situations. I was working on an Adobe Air app that was somehow using my system git, instead</summary>
+  </entry>
+  <entry>
+    <title>Sending Emails with PDF attachments in Drupal 7</title>
+    <link rel="alternate" href="http://www.ross-hunter.com/2012/05/29/applescript-stereo/"/>
+    <id>http://www.ross-hunter.com/2012/05/29/applescript-stereo/</id>
+    <published>2012-05-28T20:00:00-04:00</published>
+    <updated>2016-05-09T11:08:33-04:00</updated>
+    <author>
+      <name>Ross Hunter</name>
+    </author>
+    <summary type="html">I wrote my first blog post on the company blog the other day. It was about the frustratingly poorly documented problem of sending emails with attachments in Drupal. I also add on a neat little trick for hijacking the print module to print pdf versions of content on the site, and pipe it directly into the attachment - no saving a copy of every pdf you generate on the site. Head on over there for the</summary>
+  </entry>
+</feed>

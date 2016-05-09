@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Ross-Hunter: code</title>
+  <subtitle>Posts tagged with code</subtitle>
+  <id>http://www.ross-hunter.com</id>
+  <link href="http://www.ross-hunter.com"/>
+  <link href="http://www.ross-hunter.com/tag/code/feed.xml" rel="self"/>
+  <updated>2016-05-08T20:00:00-04:00</updated>
+  <author>
+    <name>Ross Hunter</name>
+  </author>
+  <entry>
+    <title>(Over)simplify Your Code</title>
+    <link rel="alternate" href="http://www.ross-hunter.com/2014/04/25/oversimplify-your-code/"/>
+    <id>http://www.ross-hunter.com/2014/04/25/oversimplify-your-code/</id>
+    <published>2014-04-24T20:00:00-04:00</published>
+    <updated>2016-05-09T11:08:33-04:00</updated>
+    <author>
+      <name>Ross Hunter</name>
+    </author>
+    <summary type="html">One of my eureka moments as a developer came when my programming pair suggested I separate some very simple math in the body of a method into another method. At the time it seemed like overkill to create an entirely new method when the operation was so simple. Wouldn’t that make it more complicated? But I quickly realized the benefits outweighed the cost.
+
+The first benefit is code reuse. This is rather</summary>
+  </entry>
+  <entry>
+    <title>Math Is Not Necessary for Software Development</title>
+    <link rel="alternate" href="http://www.ross-hunter.com/2014/01/14/math/"/>
+    <id>http://www.ross-hunter.com/2014/01/14/math/</id>
+    <published>2014-01-13T19:00:00-05:00</published>
+    <updated>2016-05-09T11:08:33-04:00</updated>
+    <author>
+      <name>Ross Hunter</name>
+    </author>
+    <summary type="html">As a developer, written communication and reading comprehension are more valuable than math proficiency.
+
+Sometimes, I tweet. When I tweet, sometimes people agree with me. One such occasion happened recently when I said this.
+
+Modern software development has way more to do with reading comprehension and written communication than math.— Ross Hunter (@Ross_Hunter) November 30, 2013
+
+
+
+
+This was part</summary>
+  </entry>
+  <entry>
+    <title>Open + Download Native Apps with a PhoneGap/Cordova Plugin</title>
+    <link rel="alternate" href="http://www.ross-hunter.com/2013/11/12/open-native-apps-phonegap/"/>
+    <id>http://www.ross-hunter.com/2013/11/12/open-native-apps-phonegap/</id>
+    <published>2013-11-11T19:00:00-05:00</published>
+    <updated>2016-05-09T11:08:33-04:00</updated>
+    <author>
+      <name>Ross Hunter</name>
+    </author>
+    <summary type="html">Are you working on a PhoneGap/Cordova app that needs to be able to communicate with other native applications? You may want to get the demo code, maybe give it a once over, and then continue reading.
+
+Note: This work was completed in a pre-PhoneGap 3.0.0 world. There is now a Plugin Specification Guide that should be adhered to. This code would need to be adapted to fit that structure.
+
+Prologue
+
+</summary>
+  </entry>
+  <entry>
+    <title>Tips for Novice Developers (and why you should become a rubyist)</title>
+    <link rel="alternate" href="http://www.ross-hunter.com/2013/08/06/tips-for-beginner-developers/"/>
+    <id>http://www.ross-hunter.com/2013/08/06/tips-for-beginner-developers/</id>
+    <published>2013-08-05T20:00:00-04:00</published>
+    <updated>2016-05-09T11:08:33-04:00</updated>
+    <author>
+      <name>Ross Hunter</name>
+    </author>
+    <summary type="html">Work Locally
+
+Working locally means that you have an instance of your web app running on your machine. You edit files directly on your machine, rather than uploading every change to the server.
+
+It is tempting to edit files directly on your shared server, but don’t do it! It is a very bad practice and will bite you over and over again if you let it become habit. You may start out thinking of a website</summary>
+  </entry>
+  <entry>
+    <title>Better Rails Debugging with better_errors and jazz_hands</title>
+    <link rel="alternate" href="http://www.ross-hunter.com/2013/05/17/rails-debugging/"/>
+    <id>http://www.ross-hunter.com/2013/05/17/rails-debugging/</id>
+    <published>2013-05-16T20:00:00-04:00</published>
+    <updated>2016-05-09T11:08:33-04:00</updated>
+    <author>
+      <name>Ross Hunter</name>
+    </author>
+    <summary type="html">Go beyond the stacktrace with 2 gems that grant you debugging superpowers.
+
+Better Errors
+
+Does this screen look familiar? Do you notice anything wrong with this picture?
+
+
+
+That is correct, that is the default Rails error page and you are absolutely right, it is completely hideous and hurts to look at. It is begging to be improved.
+
+By answering these questions you have already proven yourself to</summary>
+  </entry>
+  <entry>
+    <title>CoffeeScript jQuery Animated Scrolling Sidebar</title>
+    <link rel="alternate" href="http://www.ross-hunter.com/2012/06/03/floating-coffee-bar/"/>
+    <id>http://www.ross-hunter.com/2012/06/03/floating-coffee-bar/</id>
+    <published>2012-06-02T20:00:00-04:00</published>
+    <updated>2016-05-09T11:08:33-04:00</updated>
+    <author>
+      <name>Ross Hunter</name>
+    </author>
+    <summary type="html">I have been really getting into writing CoffeeScript lately, so I decided to revisit the jQuery floating sidebar I blogged about a while back. The logic is the same, other than using a named function to increase readability. The code is shrunk from 40 lines to 28 lines (with extra line breaks for readability). More importantly, I believe the code is easier to understand.
+The basic concept is to create</summary>
+  </entry>
+</feed>

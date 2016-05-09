@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ross-Hunter: Configuring Sublime Text 2</title>
+<meta content='I have been a (relatively) long time Sublime Text 2 user. Early 2011, I was running Ubuntu on my laptop and wasn&amp;rsquo;t happy with any text edi...' name='description'>
+<meta charset='utf-8'>
+<meta content='width=device-width, initial-scale=1.0' name='viewport'>
+<meta content='IE=edge' http-equiv='X-UA-Compatible'>
+<meta content='True' name='HandheldFriendly'>
+<link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+<link href="../../../../images/images/favicon.ico" rel="icon" type="image/ico" />
+<link href="../../../../stylesheets/application-ec71be74.css" rel="stylesheet" />
+<link href='//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400' rel='stylesheet' type='text/css'>
+</head>
+<body class='post-template nav-closed'>
+<div class='nav'>
+<h3 class='nav-title'>Menu</h3>
+<a class='nav-close' href='#'>
+<span class='hidden'>Close</span>
+</a>
+<ul>
+<li class='nav-home' role='presentation'>
+<a href='/'>Home</a>
+</li>
+<li class='nav-blog' role='presentation'>
+<a href='/blog/'>Blog</a>
+</li>
+<li class='nav-github' role='presentation'>
+<a href='https://github.com/ross-hunter'>GitHub</a>
+</li>
+<li class='nav-twitter' role='presentation'>
+<a href='https://twitter.com/ross_hunter'>Twitter</a>
+</li>
+<li class='nav-linkedin' role='presentation'>
+<a href='https://www.linkedin.com/profile/view?id=26528250&amp;trk=tab_pro&amp;locale=en_US'>LinkedIn</a>
+</li>
+<li class='nav-facebook' role='presentation'>
+<a href='http://www.facebook.com/ross.hunter'>Facebook</a>
+</li>
+</ul>
+<a class='subscribe-button icon-feed' href='/feed.xml'>Subscribe</a>
+</div>
+<span class='nav-cover'></span>
+
+<div class='site-wrapper'>
+<header class='main-header no-cover post-head'>
+<nav class='main-nav clearfix'>
+<a class='menu-button icon-menu' href='#'>
+<span class='word'>Menu</span>
+</a>
+</nav>
+</header>
+<main class='content' role='main'>
+<article class='post'>
+<header class='post-header'>
+<h1 class='post-title'>Configuring Sublime Text 2</h1>
+<section class='post-meta'>
+<time class='post-date' datetime='2012-10-18'>
+18 October 2012
+</time>
+<a href='/tag/productivity/'>productivity</a>
+</section>
+</header>
+<section class='post-content'><p>I have been a (relatively) long time Sublime Text 2 user. Early 2011, I was running Ubuntu on my laptop and wasn&rsquo;t happy with any text editors I was finding. I gazed longingly at TextMate on my colleagues&rsquo;s Macbooks, but overall I was happy with my OS choice and wasn&rsquo;t ready to make that leap. Then I discovered Sublime, and fell in love. Over time I have learned some things, and developed some methods that have made Sublime and I the best of friends.</p>
+
+<h3>Workflow</h3>
+
+<p>My first piece of advice is to set up a command line alias for Sublime and open all projects using the terminal. Once you get used to this workflow you will be more efficient. Using the terminal along with an alias, one simply needs to cd into the project and open the folder using &ldquo; slime . &rdquo; - the folder is now open in sublime in it&rsquo;s own window.</p>
+
+<p>OS X alias placed in profile (.bash_profile, .zshrc, .bash_rc)</p>
+<pre class="highlight plaintext"><code>alias slime='open -a "Sublime Text 2"'
+</code></pre>
+
+<h3>Search Across Open Project</h3>
+
+<p><code>[&quot;super+t&quot;]</code> opens a fuzzy finder that allows you to very quickly switch between files based on the filename. <code>[&quot;super+shift+f&quot;]</code> opens the find in folders display. This is incredibly useful for discovering where a method or variable is being used, or where it is defined. <code>[&quot;super+alt+f&quot;]</code> opens the find &amp; replace dialog.</p>
+
+<p><em>Learn Regular Expressions!</em> - This will make the search so much more powerful. You don&rsquo;t have to become a regex master, but some simple things like understanding capturing groups for find &amp; replace will save you a lot of time when doing code refactoring. Sublime uses the Boost Syntax for regex.</p>
+
+<h3>Window Management</h3>
+
+<p>First I suggest figuring out a window management system that works for you. If you are on Windows 7 or Ubuntu, the built in window snapping works pretty well. The default window management on OS X is not great, so I like to use a program like Better Touch Tool to allow me to quickly maximize windows to the left, right, or full-screen. I then add to my Key Bindings - User file settings to quickly hide and expand the sidebar and gutter.</p>
+<pre class="highlight json"><code><span class="p">{</span><span class="w"> </span><span class="nt">"keys"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"ctrl+s"</span><span class="p">],</span><span class="w"> </span><span class="nt">"command"</span><span class="p">:</span><span class="w"> </span><span class="s2">"toggle\_side\_bar"</span><span class="w"> </span><span class="p">}</span><span class="err">,</span><span class="w"> 
+</span><span class="p">{</span><span class="w"> </span><span class="nt">"keys"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"ctrl+1"</span><span class="p">],</span><span class="w"> </span><span class="nt">"command"</span><span class="p">:</span><span class="w"> </span><span class="s2">"toggle\_setting"</span><span class="p">,</span><span class="w"> </span><span class="nt">"args"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nt">"setting"</span><span class="p">:</span><span class="w"> </span><span class="s2">"gutter"</span><span class="p">}</span><span class="w"> </span><span class="p">}</span><span class="err">,</span><span class="w">
+</span></code></pre>
+
+<p>I use these combined with the side-by-side pane view [&ldquo;super+alt+2&rdquo;] in order to most efficiently use my screen real-estate.</p>
+
+<h3>Sublime Settings</h3>
+
+<p>You may want to spend some time perusing the Settings - Default file available from preferences. This will show you what settings are available. Do not make any changes to the defualt settings file, instead, add overrides to the Settings - User file.</p>
+
+<p>Here are some settings that I suggest adding to the Settings - User file</p>
+<pre class="highlight plaintext"><code>"bold_folder_labels": true, # makes the sidebar a little easier to understand
+"caret_style": "phase", # looks cool :p
+"highlight_line": true, # adds a subtle highlight to the current line
+"translate_tabs_to_spaces": true, # in general this is good practice
+"trim_trailing_white_space_on_save": true, # trims trailing whitespace
+"scroll_past_end": true # I don't like to work at the very bottom of my screen
+</code></pre>
+
+<h3>Install Packages</h3>
+
+<p>First install Package Manager if you don&rsquo;t already have it. Then, use the command pallette [&ldquo;super+shift+p&rdquo;] and type &ldquo;install package&rdquo; to activate the Package Manager. Here are some suggestions:</p>
+
+<p><em>Languages</em> - Install any languages you use on a regular basis that are not included in vanilla Sublime. Some languages are just the syntax, others may add snippets, or even build environments.</p>
+
+<p><em>SublimeLinter</em> - This package allows for realtime syntax checking - and can greatly reduce the amount of time you spend looking for bugs.</p>
+
+<p><em>Sidebar Enhancements</em> - This adds some extra file operations and functionality to the sidebar such as new folder, cut, copy, rename etc.</p>
+
+<p><em>Ruby Test</em> - Really easy way to run individual tests right from within sublime.</p>
+
+<p><em>FileDiffs</em> - This can be a really useful tool for diffing files. I use a tool like GitX to examine the source of past commits, copy the text to the clipboard, and then use FileDiffs to diff with my clipboard. It&rsquo;s not perfect, but I don&rsquo;t find myself needing to look at diffs in Sublime terribly often.</p>
+
+<p><em>Auto Semi-Colon</em> - Automatically moves ; outside of () while typing. [function(arg;) =&gt; function(arg);]</p>
+
+<h3>Misc. Tips</h3>
+
+<p><code>[&quot;ctrl+d&quot;]</code> selects the word the caret is on. Pressing again selects the next instance of that word and allows you to simply type and replace all the selected words. This can be much faster for simple uses than find and replace.</p>
+
+<p><code>[&quot;ctrl+g&quot;]</code> opens up a &ldquo;go to line&rdquo; panel. Very useful for big files.</p>
+
+<p>Map caps lock to control - Why is caps lock a huge button right next to your pinky, but control is a tiny button down at the bottom? Google how to map keys for your OS.</p>
+
+<p><code>[&quot;super+shift+v&quot;]</code> is default the command for paste and indent. Some folks may want this to be the default behavior - simply add this to the Key Bindings - User file to swap the keybindings.</p>
+<pre class="highlight json"><code><span class="p">{</span><span class="w"> </span><span class="nt">"keys"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"super+v"</span><span class="p">],</span><span class="w"> </span><span class="nt">"command"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paste_and_indent"</span><span class="w"> </span><span class="p">}</span><span class="err">,</span><span class="w">
+</span><span class="p">{</span><span class="w"> </span><span class="nt">"keys"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"super+shift+v"</span><span class="p">],</span><span class="w"> </span><span class="nt">"command"</span><span class="p">:</span><span class="w"> </span><span class="s2">"paste"</span><span class="w"> </span><span class="p">}</span><span class="err">,</span><span class="w">
+</span></code></pre>
+
+<h3>In conclusion</h3>
+
+<p>Sublime Text is fast becoming one of the most popular text-editors among web developers and designers and it&rsquo;s cross-platform design and package manager give it a leg up over TextMate.</p>
+
+<p>As a craftsmen it is important to understand and use our tools properly. Just as a painter needs to use the best paint and brushes - and understand how to use them - a developer should understand and use the best software tools available. For me, Sublime Text is the highest-quality brush available.</p>
+
+<h3>Update</h3>
+
+<p>NetTuts has produced a great Sublime Text 2 screencast series that includes many of my tips above, but dives even deeper. Very highly recommended if you are looking for even more tricks.</p>
+
+<p><em>Originally posted on the <a href="http://www.mutuallyhuman.com/blog/2012/10/18/configuring-sublime-text-2/">MHS Blog</a></em></p>
+</section>
+<footer class='post-footer'>
+<figure class='author-image'>
+<a class='img' href='/' style='background-image: url(https://www.gravatar.com/avatar/99057d911bd664e8cde1a2995ee25401?size=68)'>
+<span class='hidden'>Ross Hunter's Picture</span>
+</a>
+</figure>
+<section class='author'>
+<h4>
+<a href='/'>Ross Hunter</a>
+</h4>
+<p></p>
+I do things with computers sometimes
+<div class='author-meta'>
+<span class='author-location icon-location'>Grand Rapids, MI</span>
+</div>
+</section>
+<section class='share'>
+<h4>Share this post</h4>
+<a class='icon-twitter' href='https://twitter.com/share?text=Configuring Sublime Text 2&amp;amp;url=http://www.ross-hunter.com/2012/10/18/configuring-sublime-text-2/' onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+<span class='hidden'>Twitter</span>
+</a>
+<a class='icon-facebook' href='https://www.facebook.com/sharer/sharer.php?u=http://www.ross-hunter.com/2012/10/18/configuring-sublime-text-2/' onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+<span class='hidden'>Facebook</span>
+</a>
+<a class='icon-google-plus' href='https://plus.google.com/share?url=http://www.ross-hunter.com/2012/10/18/configuring-sublime-text-2/' onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+<span class='hidden'>Google+</span>
+</a>
+</section>
+</footer>
+</article>
+</main>
+<aside class='read-next'>
+<a class='no-cover read-next-story' href='/2012/08/06/understand-path/'>
+<section class='post'>
+<h2>Understand Your True $PATH</h2>
+<p>I recently took some time to actually understand what the hell was going on in my terminal config file&hellip;</p>
+</section>
+</a>
+<a class='no-cover prev read-next-story' href='/2013/05/17/rails-debugging/'>
+<section class='post'>
+<h2>Better Rails Debugging with better_errors and jazz_hands</h2>
+<p>Go beyond the stacktrace with 2 gems that grant you debugging superpowers. Better Errors Does this screen look familiar?&hellip;</p>
+</section>
+</a>
+</aside>
+
+<footer class='site-footer clearfix'>
+<section class='copyright'>
+<a href='/'>Ross-Hunter</a>
+&copy;
+2016
+</section>
+<section class='poweredby'>
+Based on the Casper theme powered by
+<a href='https://ghost.org' target='_blank'>Ghost</a>
+</section>
+</footer>
+</div>
+<script src="../../../../javascripts/application-2ee90952.js"></script>
+</body>
+</html>

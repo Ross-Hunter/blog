@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Ross-Hunter: css</title>
+  <subtitle>Posts tagged with css</subtitle>
+  <id>http://www.ross-hunter.com</id>
+  <link href="http://www.ross-hunter.com"/>
+  <link href="http://www.ross-hunter.com/tag/css/feed.xml" rel="self"/>
+  <updated>2016-05-08T20:00:00-04:00</updated>
+  <author>
+    <name>Ross Hunter</name>
+  </author>
+  <entry>
+    <title>Rounded Corners and More! CSS3 PIE Makes Developing for IE Suck Less.</title>
+    <link rel="alternate" href="http://www.ross-hunter.com/2010/11/16/css3-pie/"/>
+    <id>http://www.ross-hunter.com/2010/11/16/css3-pie/</id>
+    <published>2010-11-15T19:00:00-05:00</published>
+    <updated>2016-05-09T11:08:33-04:00</updated>
+    <author>
+      <name>Ross Hunter</name>
+    </author>
+    <summary type="html">OK, so we all know how much IE sucks. Well I just stumbled across a neat little trick that makes IE suck less. It’s called Progressive Internet Explorer (PIE). It’s a simple and very effective way to use some advanced CSS features and have them actually work inside of Internet Explorer. PIE supports the following CSS3 features in IE 6-8:
+
+
+border-radius
+
+box-shadow
+
+border-image
+
+multiple background images
+</summary>
+  </entry>
+</feed>
