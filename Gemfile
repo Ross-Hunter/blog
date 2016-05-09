@@ -18,4 +18,5 @@ gem 'nokogiri', '~> 1.6.6.2'
 
 gem "middleman-favicon-maker", "~> 3.7"
 
-gem 'middleman-deploy', '~> 1.0'
+# gem 'middleman-deploy', '~> 1.0'
+gem 'mgd'

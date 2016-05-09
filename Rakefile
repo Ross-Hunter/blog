@@ -24,5 +24,5 @@ end
 task b: :build
 
 task :deploy do
-  sh "bundle exec middleman deploy"
+  sh "bundle exec mgd"
 end
