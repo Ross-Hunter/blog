@@ -18,7 +18,7 @@ So a topic can simply be a reminder of existing process that was already decided
 
 This has decreased the overall time we spend in retro by a lot, and improved the quality of the time we do spend. Previously we had a tendency to fill the time allotted. Every retro had lots of moments of silence when the whole team was thinking of "pluses" or "deltas". Now we go through our topic list, and end when we run out of topics. If there are no topics posted, we simply don't hold a retro that week (that actually happened this week for the first time).
 
-One person records notes and projects/shares their screen, and the rest of the team puts away their computers and phones and pays attention. When a discussion leads to an action item (hopefully it does!), that is noted and assigned to someone if necessary. That is then posted back into that same slack channel.
+One person records notes and projects/shares their screen, and the rest of the team puts away their computers and phones and pays attention. When a discussion leads to an action item (hopefully it does!), that is noted and assigned to someone if necessary.
 
 - Look into developer dashboard for build statuses. - jason
 - Always strive to make your git commits be revertable units.
