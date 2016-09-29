@@ -15,7 +15,7 @@ Sometimes, I tweet. When I tweet, sometimes people agree with me. One such occas
 
 This was part of a string of tweets that was kicked off by seeing the following image tweeted by <a href="https://twitter.com/SaraJChipps">Sara Chipps</a>.
 
-<img src="http://www.mutuallyhuman.com/assets/posts/2013/12/job_growth.png">
+<img src="/images/job_growth.png">
 
 I think the main thing to take away from that image is that if you are looking for a new career and you aren't involved computer science or mathematics, you should be, and I hope my post here encourages you to get involved, especially if math has been scaring you away. It also means we should be providing more and better training for these jobs - but that's another post entirely.
 
