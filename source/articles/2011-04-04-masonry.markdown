@@ -3,6 +3,7 @@ title: jQuery Masonry is Bad Ass
 date: 2011-04-04
 layout: post
 tags: code, js
+id: 2
 ---
 <a href="http://desandro.com/resources/jquery-masonry/">jQuery Masonry</a> is a sweet layout plugin for jQuery. They describe it as "The flip side of CSS floats". It aligns elements vertically then horizontally, minimizing the vertical gaps between elements of varying heights. I created my own sandbox for playing around with masonry.
 

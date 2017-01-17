@@ -3,6 +3,7 @@ title: Creating an Animated Floating Sidebar With jQuery
 date: 2011-05-08
 layout: post
 tags: code, js
+id: 3
 ---
 <p>I finally got around to implementing a floating sidebar that contains all of my follow links contained in my header. Lots of sites have a floating sidebar, but I wanted mine to be a little different. First, the items in my sidebar come flying out of the header to the sidebar 
 when the user scrolls down past the header, instead of being fixed over on the side. You will also notice a nifty little elastic animation effect.</p>

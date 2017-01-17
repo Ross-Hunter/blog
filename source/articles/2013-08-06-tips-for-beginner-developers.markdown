@@ -4,6 +4,7 @@ date: 2013-08-06
 layout: post
 cover: noob.jpg
 tags: code
+id: 12
 ---
 ### Work Locally
 

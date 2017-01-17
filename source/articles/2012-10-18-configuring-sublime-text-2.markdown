@@ -3,6 +3,7 @@ title: Configuring Sublime Text 2
 date: 2012-10-18
 layout: post
 tags: productivity
+id: 10
 ---
 I have been a (relatively) long time Sublime Text 2 user. Early 2011, I was running Ubuntu on my laptop and wasn't happy with any text editors I was finding. I gazed longingly at TextMate on my colleagues's Macbooks, but overall I was happy with my OS choice and wasn't ready to make that leap. Then I discovered Sublime, and fell in love. Over time I have learned some things, and developed some methods that have made Sublime and I the best of friends.
 

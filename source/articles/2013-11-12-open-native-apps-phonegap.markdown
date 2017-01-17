@@ -4,6 +4,7 @@ date: 2013-11-12
 layout: post
 cover: plugins.jpg
 tags: code, mobile
+id: 13
 ---
 Are you working on a PhoneGap/Cordova app that needs to be able to communicate with other native applications? You may want to get the <strong><a href="https://github.com/Ross-Hunter/external_app_launcher">demo code</a></strong>, maybe give it a once over, and then continue reading.
 

@@ -4,6 +4,7 @@ date: 2014-01-14
 layout: post
 cover: math.jpg
 tags: code
+id: 14
 ---
 ### As a developer, written communication and reading comprehension are more valuable than math proficiency.
 

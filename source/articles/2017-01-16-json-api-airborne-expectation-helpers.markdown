@@ -3,6 +3,7 @@ title: JSON API Helpers for API Testing in Rails using Airborne
 date: 2017-01-16
 layout: post
 tags: api, rails
+id: 19
 ---
 I am a huge fan of the [Airborne](https://github.com/brooklynDev/airborne) gem for testing APIs. Airborne uses `rest_client` to make HTTP requests and provides the following properties for use in your tests.
 
@@ -37,7 +38,7 @@ Using these helpers a request spec might look something like this.
 describe 'widgets' do
     let(:user) { create :user }
     let(:widget_attributes) { { name: 'foo' } }
-    let(:widget_relations) { { 'organization' => { data: { id: organization.id } } } }
+    let(:widget_relations) { { 'organization' => { data: { id:  organization.id } } } }
 
     before :example do
         authenticate user

@@ -3,6 +3,7 @@ title: Better Rails Debugging with better_errors and jazz_hands
 date: 2013-05-17
 layout: post
 tags: rails, code
+id: 11
 ---
 Go beyond the stacktrace with 2 gems that grant you debugging superpowers.
 

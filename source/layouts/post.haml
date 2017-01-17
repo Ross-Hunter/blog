@@ -47,6 +47,11 @@
           %a.icon-google-plus{href: google_plus_url, onclick: "window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;"}
             %span.hidden Google+
 
+        %section.comments
+          = partial(:disqus,
+                      locals: { page_url: current_article.url,
+                                page_id: current_article.data.id })
+
   %aside.read-next
     - if prev_article = current_article.previous_article
       - attributes = { href: prev_article.url }.merge(cover(prev_article))

@@ -3,6 +3,7 @@ title: Installing PHP 5.4 on Centos 5.7
 date: 2012-03-04
 layout: post
 tags: devops
+id: 7
 ---
 I am not what one would consider a sys admin. I do enjoy running my own VPS and mucking about with things like installing the newest version of PHP, but my knowledge doesn't extend very far past yum and rpm. So using only those 2 tools I set out and succeeded in installing PHP 5.4.
 

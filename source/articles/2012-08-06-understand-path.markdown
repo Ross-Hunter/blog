@@ -2,7 +2,8 @@
 title: Understand Your True $PATH
 date: 2012-08-06
 layout: post
-tags: productivity
+tags: productivity, unix
+id: 9
 ---
 I recently took some time to actually understand what the hell was going on in my terminal config file (I use ZSH, but this post should apply to BASH as well). The thing that pushed me over the edge was that I was running into a situation where I had different versions of git that were being used in different situations. I was working on an Adobe Air app that was somehow using my system git, instead of the one I installed via <a href="http://mxcl.github.com/homebrew/">Homebrew</a>. I tracked the problem down to my PATH and then realized that I didn't fully understand the whole PATH thing as well as I should.
 

@@ -3,6 +3,7 @@ title: Topic Based Retro
 date: 2016-05-09
 layout: post
 tags: team, retro
+id: 18
 ---
 At [Modustri](http://modustri.com) we have always had weekly retrospectives amongst the dev team. We tried a couple different formats, but now we do a simple format that we call a "topic-based" retro.
 
