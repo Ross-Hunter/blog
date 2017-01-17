@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Ross-Hunter: api</title>
+  <subtitle>Posts tagged with api</subtitle>
+  <id>http://www.ross-hunter.com</id>
+  <link href="http://www.ross-hunter.com"/>
+  <link href="http://www.ross-hunter.com/tag/api/feed.xml" rel="self"/>
+  <updated>2017-01-15T19:00:00-05:00</updated>
+  <author>
+    <name>Ross Hunter</name>
+  </author>
+  <entry>
+    <title>JSON API Helpers for API Testing in Rails using Airborne</title>
+    <link rel="alternate" href="http://www.ross-hunter.com/2017/01/16/json-api-airborne-expectation-helpers/"/>
+    <id>http://www.ross-hunter.com/2017/01/16/json-api-airborne-expectation-helpers/</id>
+    <published>2017-01-15T19:00:00-05:00</published>
+    <updated>2017-01-16T21:19:46-05:00</updated>
+    <author>
+      <name>Ross Hunter</name>
+    </author>
+    <summary type="html">I am a huge fan of the Airborne gem for testing APIs. Airborne uses rest_client to make HTTP requests and provides the following properties for use in your tests.
+
+
+
+response - The HTTP response returned from the request
+
+headers - A symbolized hash of the response headers returned by the request
+
+body - The raw HTTP body returned from the request
+
+json_body - A symbolized hash representation of the JSON
+</summary>
+  </entry>
+</feed>
