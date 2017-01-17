@@ -92,7 +92,7 @@
 <pre class="highlight ruby"><code><span class="n">describe</span> <span class="s1">'widgets'</span> <span class="k">do</span>
     <span class="n">let</span><span class="p">(</span><span class="ss">:user</span><span class="p">)</span> <span class="p">{</span> <span class="n">create</span> <span class="ss">:user</span> <span class="p">}</span>
     <span class="n">let</span><span class="p">(</span><span class="ss">:widget_attributes</span><span class="p">)</span> <span class="p">{</span> <span class="p">{</span> <span class="ss">name: </span><span class="s1">'foo'</span> <span class="p">}</span> <span class="p">}</span>
-    <span class="n">let</span><span class="p">(</span><span class="ss">:widget_relations</span><span class="p">)</span> <span class="p">{</span> <span class="p">{</span> <span class="s1">'organization'</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="ss">data: </span><span class="p">{</span> <span class="ss">id: </span><span class="n">organization</span><span class="p">.</span><span class="nf">id</span> <span class="p">}</span> <span class="p">}</span> <span class="p">}</span> <span class="p">}</span>
+    <span class="n">let</span><span class="p">(</span><span class="ss">:widget_relations</span><span class="p">)</span> <span class="p">{</span> <span class="p">{</span> <span class="s1">'organization'</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="ss">data: </span><span class="p">{</span> <span class="ss">id:  </span><span class="n">organization</span><span class="p">.</span><span class="nf">id</span> <span class="p">}</span> <span class="p">}</span> <span class="p">}</span> <span class="p">}</span>
 
     <span class="n">before</span> <span class="ss">:example</span> <span class="k">do</span>
         <span class="n">authenticate</span> <span class="n">user</span>
@@ -142,6 +142,30 @@ I do things with computers sometimes
 <a class='icon-google-plus' href='https://plus.google.com/share?url=http://www.ross-hunter.com/2017/01/16/json-api-airborne-expectation-helpers/' onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
 <span class='hidden'>Google+</span>
 </a>
+</section>
+<section class='comments'>
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+
+var disqus_config = function () {
+this.page.url = 'http://ross-hunter.com/2017/01/16/json-api-airborne-expectation-helpers/';  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = 19; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = '//ross-hunter.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
 </section>
 </footer>
 </article>
