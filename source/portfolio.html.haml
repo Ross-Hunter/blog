@@ -1,6 +1,4 @@
 ---
-pageable: true
-per_page: 10
 cover: 'bg.png'
 ---
 
@@ -12,12 +10,15 @@ cover: 'bg.png'
   .vertical
     .main-header-content.inner
       %h1.page-title
-        Ross' Blog
+        Portfolio
       %h2.page-description
-        I have a tendency to ramble...
+        Here are some things I did
   %a.scroll-down.icon-arrow-left{href: '#content', data: {offset: '-45'}}
     %span.hidden Scroll Down
 
 %main#content.content{role: :main}
-  = partial(:page_articles,
-            locals: { page_articles: page_articles, paginate: paginate })
+  %article.post
+    %header.post-header
+      %h1.post-title= current_page.data.title
+    %section.post-content
+      =image_tag 'under-construction.gif'

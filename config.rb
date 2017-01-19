@@ -48,6 +48,7 @@ set :casper, {
   navigation: {
     "Home" => "/",
     "Blog" => "/blog/",
+    "Portfolio" => "/portfolio/",
     "GitHub" => "https://github.com/ross-hunter",
     "Twitter" => "https://twitter.com/ross_hunter",
     "LinkedIn" => "https://www.linkedin.com/in/rossh",
