@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Ross-Hunter: db</title>
+<title>Ross-Hunter</title>
 <meta content='Doing the whole "software" thing.' name='description'>
 <meta charset='utf-8'>
 <meta content='width=device-width, initial-scale=1.0' name='viewport'>
 <meta content='IE=edge' http-equiv='X-UA-Compatible'>
 <meta content='True' name='HandheldFriendly'>
 <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
-<link href="../../images/images/favicon.ico" rel="icon" type="image/ico" />
-<link href="../../stylesheets/application-ec71be74.css" rel="stylesheet" />
+<link href="../images/images/favicon.ico" rel="icon" type="image/ico" />
+<link href="../stylesheets/application-ec71be74.css" rel="stylesheet" />
 <link href='//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400' rel='stylesheet' type='text/css'>
 </head>
 <body class='home-template nav-closed'>
@@ -25,7 +25,7 @@
 <li class='nav-blog' role='presentation'>
 <a href='/blog/'>Blog</a>
 </li>
-<li class='nav-portfolio' role='presentation'>
+<li class='nav-portfolio nav-current' role='presentation'>
 <a href='/portfolio/'>Portfolio</a>
 </li>
 <li class='nav-github' role='presentation'>
@@ -41,12 +41,12 @@
 <a href='http://www.facebook.com/ross.hunter'>Facebook</a>
 </li>
 </ul>
-<a class='subscribe-button icon-feed' href='/tag/db/feed.xml'>Subscribe</a>
+<a class='subscribe-button icon-feed' href='/feed.xml'>Subscribe</a>
 </div>
 <span class='nav-cover'></span>
 
 <div class='site-wrapper'>
-<header class='main-header no-cover tag-head'>
+<header class='main-header' style='background-image: url(../images/bg-a6471372.png)'>
 <nav class='main-nav overlay clearfix'>
 <a class='menu-button icon-menu' href='#'>
 <span class='word'>Menu</span>
@@ -54,59 +54,27 @@
 </nav>
 <div class='vertical'>
 <div class='main-header-content inner'>
-<h1 class='page-title'>db</h1>
-<h2 class='page-description'>A 2-post collection</h2>
+<h1 class='page-title'>
+Portfolio
+</h1>
+<h2 class='page-description'>
+Here are some things I did
+</h2>
 </div>
 </div>
+<a class='scroll-down icon-arrow-left' data-offset='-45' href='#content'>
+<span class='hidden'>Scroll Down</span>
+</a>
 </header>
 <main class='content' id='content' role='main'>
-<div class='extra-pagination inner'>
-<nav class='pagination' role='pagination'>
-<span class='page-number'>Page 1 of 1</span>
-</nav>
-
-</div>
 <article class='post'>
 <header class='post-header'>
-<h2 class='post-title'><a href="/2014/06/13/index-foreign-keys/">Index Your Foreign Keys</a></h2>
+<h1 class='post-title'></h1>
 </header>
-<section class='post-excerpt'>
-<p>
-We add indexes to our database in order to speed up read operations. Basically, an index is a sorted copy of a particular set of columns the database uses to quickly look up the attributes of another table, most commonly, foreign keys of relations. There are several ways this can actually be implemented on the database; essentially, we tell the database which values we’ll be looking up most often and
-<a class="read-more" href="/2014/06/13/index-foreign-keys/">&raquo;</a>
-</p>
+<section class='post-content'>
+<img src="../images/under-construction-e8c4927d.gif" />
 </section>
-<footer class='post-meta'>
-<a href='/tag/rails/'>rails</a>, <a href='/tag/db/'>db</a>
-<time class='post-date' datetime='2014-06-13'>
-13 June 2014
-</time>
-</footer>
 </article>
-<article class='post'>
-<header class='post-header'>
-<h2 class='post-title'><a href="/2014/06/12/activerecord-associations/">ActiveRecord Associations & You</a></h2>
-</header>
-<section class='post-excerpt'>
-<p>
-I love abstraction. It’s great to compartmentalize complexity and keep your application modular. SQL is not that. Relying on SQL strings in your code ties your implementation directly to the type, structure, and even the version of your database. ActiveRecord (the ORM behind Rails) is great for letting us focus on our application and not worry so much about the database particulars.
-
-However, understanding
-<a class="read-more" href="/2014/06/12/activerecord-associations/">&raquo;</a>
-</p>
-</section>
-<footer class='post-meta'>
-<a href='/tag/rails/'>rails</a>, <a href='/tag/db/'>db</a>
-<time class='post-date' datetime='2014-06-12'>
-12 June 2014
-</time>
-</footer>
-</article>
-<nav class='pagination' role='pagination'>
-<span class='page-number'>Page 1 of 1</span>
-</nav>
-
-
 </main>
 
 <footer class='site-footer clearfix'>
@@ -121,7 +89,7 @@ Based on the Casper theme powered by
 </section>
 </footer>
 </div>
-<script src="../../javascripts/application-2ee90952.js"></script>
+<script src="../javascripts/application-2ee90952.js"></script>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
