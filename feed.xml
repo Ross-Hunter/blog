@@ -14,11 +14,14 @@
     <link rel="alternate" href="http://www.ross-hunter.com/2017/01/16/json-api-airborne-expectation-helpers/"/>
     <id>http://www.ross-hunter.com/2017/01/16/json-api-airborne-expectation-helpers/</id>
     <published>2017-01-15T19:00:00-05:00</published>
-    <updated>2017-05-08T23:53:15-04:00</updated>
+    <updated>2017-05-08T23:54:30-04:00</updated>
     <author>
       <name>Ross Hunter</name>
     </author>
-    <summary type="html">I am a huge fan of the Airborne gem for testing APIs. Airborne uses rest_client to make HTTP requests and provides the following properties for use in your tests.
+    <summary type="html">Update 05/08/2017
+I made a gem! https://github.com/Ross-Hunter/jsonapi_expectations
+
+I am a huge fan of the Airborne gem for testing APIs. Airborne uses rest_client to make HTTP requests and provides the following properties for use in your tests.
 
 
 
@@ -26,9 +29,7 @@ response - The HTTP response returned from the request
 
 headers - A symbolized hash of the response headers returned by the request
 
-body - The raw HTTP body returned from the request
-
-json_body - A symbolized hash representation of the JSON
+body - The raw HTTP
 </summary>
   </entry>
   <entry>
@@ -36,7 +37,7 @@ json_body - A symbolized hash representation of the JSON
     <link rel="alternate" href="http://www.ross-hunter.com/2016/05/09/topic-based-retro/"/>
     <id>http://www.ross-hunter.com/2016/05/09/topic-based-retro/</id>
     <published>2016-05-08T20:00:00-04:00</published>
-    <updated>2017-05-08T23:53:15-04:00</updated>
+    <updated>2017-05-08T23:54:30-04:00</updated>
     <author>
       <name>Ross Hunter</name>
     </author>
@@ -49,7 +50,7 @@ The concept is simple, throughout the course of the week, if you run into someth
     <link rel="alternate" href="http://www.ross-hunter.com/2014/06/13/index-foreign-keys/"/>
     <id>http://www.ross-hunter.com/2014/06/13/index-foreign-keys/</id>
     <published>2014-06-12T20:00:00-04:00</published>
-    <updated>2017-05-08T23:53:15-04:00</updated>
+    <updated>2017-05-08T23:54:30-04:00</updated>
     <author>
       <name>Ross Hunter</name>
     </author>
@@ -60,7 +61,7 @@ The concept is simple, throughout the course of the week, if you run into someth
     <link rel="alternate" href="http://www.ross-hunter.com/2014/06/12/activerecord-associations/"/>
     <id>http://www.ross-hunter.com/2014/06/12/activerecord-associations/</id>
     <published>2014-06-11T20:00:00-04:00</published>
-    <updated>2017-05-08T23:53:15-04:00</updated>
+    <updated>2017-05-08T23:54:30-04:00</updated>
     <author>
       <name>Ross Hunter</name>
     </author>
@@ -73,7 +74,7 @@ However, understanding</summary>
     <link rel="alternate" href="http://www.ross-hunter.com/2014/04/25/oversimplify-your-code/"/>
     <id>http://www.ross-hunter.com/2014/04/25/oversimplify-your-code/</id>
     <published>2014-04-24T20:00:00-04:00</published>
-    <updated>2017-05-08T23:53:15-04:00</updated>
+    <updated>2017-05-08T23:54:30-04:00</updated>
     <author>
       <name>Ross Hunter</name>
     </author>
@@ -86,7 +87,7 @@ The first benefit is code reuse. This is rather</summary>
     <link rel="alternate" href="http://www.ross-hunter.com/2014/01/14/math/"/>
     <id>http://www.ross-hunter.com/2014/01/14/math/</id>
     <published>2014-01-13T19:00:00-05:00</published>
-    <updated>2017-05-08T23:53:15-04:00</updated>
+    <updated>2017-05-08T23:54:30-04:00</updated>
     <author>
       <name>Ross Hunter</name>
     </author>

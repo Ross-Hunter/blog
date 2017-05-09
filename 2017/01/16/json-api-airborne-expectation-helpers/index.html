@@ -2,7 +2,7 @@
 <html>
 <head>
 <title>Ross-Hunter: JSON API Helpers for API Testing in Rails using Airborne</title>
-<meta content='I am a huge fan of the Airborne gem for testing APIs. Airborne uses rest_client to make HTTP requests and provides the following properties for ...' name='description'>
+<meta content='Update 05/08/2017 I made a gem! https://github.com/Ross-Hunter/jsonapi_expectations I am a huge fan of the Airborne gem for testing APIs. Airbor...' name='description'>
 <meta charset='utf-8'>
 <meta content='width=device-width, initial-scale=1.0' name='viewport'>
 <meta content='IE=edge' http-equiv='X-UA-Compatible'>
@@ -67,7 +67,10 @@
 <a href='/tag/api/'>api</a>, <a href='/tag/rails/'>rails</a>
 </section>
 </header>
-<section class='post-content'><p>I am a huge fan of the <a href="https://github.com/brooklynDev/airborne">Airborne</a> gem for testing APIs. Airborne uses <code>rest_client</code> to make HTTP requests and provides the following properties for use in your tests.</p>
+<section class='post-content'><p><strong>Update 05/08/2017</strong><br>
+I made a gem! <a href="https://github.com/Ross-Hunter/jsonapi_expectations">https://github.com/Ross-Hunter/jsonapi_expectations</a></p>
+
+<p>I am a huge fan of the <a href="https://github.com/brooklynDev/airborne">Airborne</a> gem for testing APIs. Airborne uses <code>rest_client</code> to make HTTP requests and provides the following properties for use in your tests.</p>
 
 <ul>
 <li><code>response</code> - The HTTP response returned from the request</li>
@@ -90,9 +93,9 @@
 <span class="k">end</span>
 </code></pre>
 
-<p>The built-in matchers are nice, but they left me wanting when I was working on an API conforming to the <a href="http://jsonapi.org/">JSON API</a> spec. I came up with he following matchers as a much easier way to test the API and ensure it conformed to the JSON API spec.</p>
+<p>The built-in matchers are nice, but they left me wanting when I was working on an API conforming to the <a href="http://jsonapi.org/">JSON API</a> spec. I came up with the following matchers as a much easier way to test the API and ensure it conformed to the JSON API spec.</p>
 
-<script src="https://gist.github.com/Ross-Hunter/5619d8f4e5bf21a59d51805eba7334f9.js"></script>
+<p><strong>Gem available at <a href="https://github.com/Ross-Hunter/jsonapi_expectations">https://github.com/Ross-Hunter/jsonapi_expectations</a></strong></p>
 
 <p>Using these helpers a request spec might look something like this.</p>
 <pre class="highlight ruby"><code><span class="n">describe</span> <span class="s1">'widgets'</span> <span class="k">do</span>
@@ -119,7 +122,9 @@
 
 <script src="https://gist.github.com/Ross-Hunter/85efd826f038fd81910e800834c3d323.js"></script>
 
-<p>I&rsquo;m thinking about packaging up these helpers as a gem, but they might be best served as just public gists for you to fork and modify for your own needs.</p>
+<p><del>I&rsquo;m thinking about packaging up these helpers as a gem, but they might be best served as just public gists for you to fork and modify for your own needs.</del></p>
+
+<p><strong>Gem available at <a href="https://github.com/Ross-Hunter/jsonapi_expectations">https://github.com/Ross-Hunter/jsonapi_expectations</a></strong></p>
 </section>
 <footer class='post-footer'>
 <figure class='author-image'>
