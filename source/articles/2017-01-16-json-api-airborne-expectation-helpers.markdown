@@ -5,6 +5,9 @@ layout: post
 tags: api, rails
 id: 19
 ---
+**Update 05/08/2017**  
+I made a gem! [https://github.com/Ross-Hunter/jsonapi_expectations](https://github.com/Ross-Hunter/jsonapi_expectations)
+
 I am a huge fan of the [Airborne](https://github.com/brooklynDev/airborne) gem for testing APIs. Airborne uses `rest_client` to make HTTP requests and provides the following properties for use in your tests.
 
 - `response` - The HTTP response returned from the request
@@ -28,9 +31,9 @@ describe 'sample spec' do
 end
 ```
 
-The built-in matchers are nice, but they left me wanting when I was working on an API conforming to the [JSON API](http://jsonapi.org/) spec. I came up with he following matchers as a much easier way to test the API and ensure it conformed to the JSON API spec.
+The built-in matchers are nice, but they left me wanting when I was working on an API conforming to the [JSON API](http://jsonapi.org/) spec. I came up with the following matchers as a much easier way to test the API and ensure it conformed to the JSON API spec.
 
-<script src="https://gist.github.com/Ross-Hunter/5619d8f4e5bf21a59d51805eba7334f9.js"></script>
+**Gem available at [https://github.com/Ross-Hunter/jsonapi_expectations](https://github.com/Ross-Hunter/jsonapi_expectations)**
 
 Using these helpers a request spec might look something like this.
 
@@ -59,4 +62,6 @@ You might notice that also uses an `authed_post` helper, which is from another s
 
 <script src="https://gist.github.com/Ross-Hunter/85efd826f038fd81910e800834c3d323.js"></script>
 
-I'm thinking about packaging up these helpers as a gem, but they might be best served as just public gists for you to fork and modify for your own needs.
+~~I'm thinking about packaging up these helpers as a gem, but they might be best served as just public gists for you to fork and modify for your own needs.~~
+
+**Gem available at [https://github.com/Ross-Hunter/jsonapi_expectations](https://github.com/Ross-Hunter/jsonapi_expectations)**
