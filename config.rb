@@ -52,7 +52,8 @@ set :casper, {
     "GitHub" => "https://github.com/ross-hunter",
     "Twitter" => "https://twitter.com/ross_hunter",
     "LinkedIn" => "https://www.linkedin.com/in/rossh",
-    "Facebook" => "http://www.facebook.com/ross.hunter"
+    "Facebook" => "http://www.facebook.com/ross.hunter",
+    "Email" => "mailto:ross-hunter@ross-hunter.com"
   }
 }
 
@@ -108,6 +109,8 @@ end
 
 # Automatic image dimensions on image_tag helper
 # activate :automatic_image_sizes
+
+activate :protect_emails
 
 # Reload the browser automatically whenever files change
 activate :livereload
