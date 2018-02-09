@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Ross-Hunter: process</title>
+  <subtitle>Posts tagged with process</subtitle>
+  <id>http://www.ross-hunter.com</id>
+  <link href="http://www.ross-hunter.com"/>
+  <link href="http://www.ross-hunter.com/tag/process/feed.xml" rel="self"/>
+  <updated>2018-02-08T19:00:00-05:00</updated>
+  <author>
+    <name>Ross Hunter</name>
+  </author>
+  <entry>
+    <title>The New Best Practices Podcast</title>
+    <link rel="alternate" href="http://www.ross-hunter.com/2018/02/09/the-new-best-practices-podcast/"/>
+    <id>http://www.ross-hunter.com/2018/02/09/the-new-best-practices-podcast/</id>
+    <published>2018-02-08T19:00:00-05:00</published>
+    <updated>2018-02-09T17:39:46-05:00</updated>
+    <author>
+      <name>Ross Hunter</name>
+    </author>
+    <summary type="html">Hey everyone! We recently published the first couple episodes of my podcast The New Best Practices. Long-time friends and collaborators Jason Sich, Jace Browning, and myself discuss the process of creating software.
+
+Our first four episode topics cover:
+
+
+Code Review
+Code Comments
+YAGNI
+Story Points
+
+
+We are unlikely to ever have episodes like “What’s new in technology XYZ”, and instead we have upcoming</summary>
+  </entry>
+</feed>
