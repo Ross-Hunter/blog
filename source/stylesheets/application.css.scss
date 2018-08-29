@@ -85,3 +85,11 @@ pre.highlight {
 .home-template .page-description {
   animation-delay: 0.1s;
 }
+
+.all-the-blogs {
+  @extend .older-posts;
+  position: relative;
+  font-size: 2em;
+  padding: 0.5em 2em;
+  margin-top: 1em;
+}

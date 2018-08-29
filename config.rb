@@ -40,7 +40,7 @@ set :casper, {
   },
   author: {
     name: 'Ross Hunter',
-    bio: 'I do things with computers sometimes',
+    bio: 'Computer Philosopher',
     location: 'Grand Rapids, MI',
     website: 'http://ross-hunter.com',
     gravatar_email: "ross-hunter@ross-hunter.com"
@@ -48,6 +48,7 @@ set :casper, {
   navigation: {
     "Home" => "/",
     "Blog" => "/blog/",
+    "Podcast" => "https://thenewbestpractices.com",
     "GitHub" => "https://github.com/ross-hunter",
     "Twitter" => "https://twitter.com/ross_hunter",
     "LinkedIn" => "https://www.linkedin.com/in/rossh",
