@@ -3,7 +3,7 @@ title: Index Your Foreign Keys
 date: 2014-06-13
 layout: post
 cover: index_cards.jpg
-tags: rails, db
+tags: rails, db, code
 id: 17
 ---
 We add indexes to our database in order to speed up read operations. Basically, an index is a sorted copy of a particular set of columns the database uses to quickly look up the attributes of another table, most commonly, foreign keys of relations. There are several ways this can actually be implemented on the database; essentially, we tell the database which values we'll be looking up most often and it sorts the logical and physical storage of the information to make those operations faster.
