@@ -5,7 +5,7 @@
   <id>http://www.ross-hunter.com</id>
   <link href="http://www.ross-hunter.com"/>
   <link href="http://www.ross-hunter.com/tag/api/feed.xml" rel="self"/>
-  <updated>2018-02-08T19:00:00-05:00</updated>
+  <updated>2018-02-09T00:00:00Z</updated>
   <author>
     <name>Ross Hunter</name>
   </author>
@@ -13,8 +13,8 @@
     <title>JSON API Helpers for API Testing in Rails using Airborne</title>
     <link rel="alternate" href="http://www.ross-hunter.com/2017/01/16/json-api-airborne-expectation-helpers/"/>
     <id>http://www.ross-hunter.com/2017/01/16/json-api-airborne-expectation-helpers/</id>
-    <published>2017-01-15T19:00:00-05:00</published>
-    <updated>2018-08-28T23:05:50-04:00</updated>
+    <published>2017-01-16T00:00:00Z</published>
+    <updated>2018-12-24T19:28:49-07:00</updated>
     <author>
       <name>Ross Hunter</name>
     </author>

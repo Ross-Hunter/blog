@@ -5,7 +5,7 @@
   <id>http://www.ross-hunter.com</id>
   <link href="http://www.ross-hunter.com"/>
   <link href="http://www.ross-hunter.com/tag/code/feed.xml" rel="self"/>
-  <updated>2018-02-08T19:00:00-05:00</updated>
+  <updated>2018-02-09T00:00:00Z</updated>
   <author>
     <name>Ross Hunter</name>
   </author>
@@ -13,8 +13,8 @@
     <title>Index Your Foreign Keys</title>
     <link rel="alternate" href="http://www.ross-hunter.com/2014/06/13/index-foreign-keys/"/>
     <id>http://www.ross-hunter.com/2014/06/13/index-foreign-keys/</id>
-    <published>2014-06-12T20:00:00-04:00</published>
-    <updated>2018-08-28T23:05:50-04:00</updated>
+    <published>2014-06-13T00:00:00Z</published>
+    <updated>2018-12-24T19:28:49-07:00</updated>
     <author>
       <name>Ross Hunter</name>
     </author>
@@ -24,8 +24,8 @@
     <title>ActiveRecord Associations &amp; You</title>
     <link rel="alternate" href="http://www.ross-hunter.com/2014/06/12/activerecord-associations/"/>
     <id>http://www.ross-hunter.com/2014/06/12/activerecord-associations/</id>
-    <published>2014-06-11T20:00:00-04:00</published>
-    <updated>2018-08-28T23:05:50-04:00</updated>
+    <published>2014-06-12T00:00:00Z</published>
+    <updated>2018-12-24T19:28:49-07:00</updated>
     <author>
       <name>Ross Hunter</name>
     </author>
@@ -37,8 +37,8 @@ However, understanding</summary>
     <title>(Over)simplify Your Code</title>
     <link rel="alternate" href="http://www.ross-hunter.com/2014/04/25/oversimplify-your-code/"/>
     <id>http://www.ross-hunter.com/2014/04/25/oversimplify-your-code/</id>
-    <published>2014-04-24T20:00:00-04:00</published>
-    <updated>2018-08-28T23:05:50-04:00</updated>
+    <published>2014-04-25T00:00:00Z</published>
+    <updated>2018-12-24T19:28:49-07:00</updated>
     <author>
       <name>Ross Hunter</name>
     </author>
@@ -50,8 +50,8 @@ The first benefit is code reuse. This is rather</summary>
     <title>Math Is Not Necessary for Software Development</title>
     <link rel="alternate" href="http://www.ross-hunter.com/2014/01/14/math/"/>
     <id>http://www.ross-hunter.com/2014/01/14/math/</id>
-    <published>2014-01-13T19:00:00-05:00</published>
-    <updated>2018-08-28T23:05:50-04:00</updated>
+    <published>2014-01-14T00:00:00Z</published>
+    <updated>2018-12-24T19:28:49-07:00</updated>
     <author>
       <name>Ross Hunter</name>
     </author>
@@ -70,8 +70,8 @@ This was part</summary>
     <title>Open + Download Native Apps with a PhoneGap/Cordova Plugin</title>
     <link rel="alternate" href="http://www.ross-hunter.com/2013/11/12/open-native-apps-phonegap/"/>
     <id>http://www.ross-hunter.com/2013/11/12/open-native-apps-phonegap/</id>
-    <published>2013-11-11T19:00:00-05:00</published>
-    <updated>2018-08-28T23:05:50-04:00</updated>
+    <published>2013-11-12T00:00:00Z</published>
+    <updated>2018-12-24T19:28:49-07:00</updated>
     <author>
       <name>Ross Hunter</name>
     </author>
@@ -87,8 +87,8 @@ Prologue
     <title>Tips for Novice Developers (and why you should become a rubyist)</title>
     <link rel="alternate" href="http://www.ross-hunter.com/2013/08/06/tips-for-beginner-developers/"/>
     <id>http://www.ross-hunter.com/2013/08/06/tips-for-beginner-developers/</id>
-    <published>2013-08-05T20:00:00-04:00</published>
-    <updated>2018-08-28T23:05:50-04:00</updated>
+    <published>2013-08-06T00:00:00Z</published>
+    <updated>2018-12-24T19:28:49-07:00</updated>
     <author>
       <name>Ross Hunter</name>
     </author>

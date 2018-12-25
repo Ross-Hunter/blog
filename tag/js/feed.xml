@@ -5,7 +5,7 @@
   <id>http://www.ross-hunter.com</id>
   <link href="http://www.ross-hunter.com"/>
   <link href="http://www.ross-hunter.com/tag/js/feed.xml" rel="self"/>
-  <updated>2018-02-08T19:00:00-05:00</updated>
+  <updated>2018-02-09T00:00:00Z</updated>
   <author>
     <name>Ross Hunter</name>
   </author>
@@ -13,8 +13,8 @@
     <title>CoffeeScript jQuery Animated Scrolling Sidebar</title>
     <link rel="alternate" href="http://www.ross-hunter.com/2012/06/03/floating-coffee-bar/"/>
     <id>http://www.ross-hunter.com/2012/06/03/floating-coffee-bar/</id>
-    <published>2012-06-02T20:00:00-04:00</published>
-    <updated>2018-08-28T23:05:50-04:00</updated>
+    <published>2012-06-03T00:00:00Z</published>
+    <updated>2018-12-24T19:28:49-07:00</updated>
     <author>
       <name>Ross Hunter</name>
     </author>
@@ -25,8 +25,8 @@ The basic concept is to create</summary>
     <title>Creating an Animated Floating Sidebar With jQuery</title>
     <link rel="alternate" href="http://www.ross-hunter.com/2011/05/08/floating-jquery-bar/"/>
     <id>http://www.ross-hunter.com/2011/05/08/floating-jquery-bar/</id>
-    <published>2011-05-07T20:00:00-04:00</published>
-    <updated>2018-08-28T23:05:50-04:00</updated>
+    <published>2011-05-08T00:00:00Z</published>
+    <updated>2018-12-24T19:28:49-07:00</updated>
     <author>
       <name>Ross Hunter</name>
     </author>
@@ -37,8 +37,8 @@ when the user scrolls down past the header, instead of being fixed over on the s
     <title>jQuery Masonry is Bad Ass</title>
     <link rel="alternate" href="http://www.ross-hunter.com/2011/04/04/masonry/"/>
     <id>http://www.ross-hunter.com/2011/04/04/masonry/</id>
-    <published>2011-04-03T20:00:00-04:00</published>
-    <updated>2018-08-28T23:05:50-04:00</updated>
+    <published>2011-04-04T00:00:00Z</published>
+    <updated>2018-12-24T19:28:49-07:00</updated>
     <author>
       <name>Ross Hunter</name>
     </author>
