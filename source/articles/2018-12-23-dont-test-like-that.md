@@ -1,10 +1,9 @@
 ---
 title: Don't Test Like That!
-date: 2018-12-24
+date: 2018-12-23
 layout: post
 tags: testing, code, rails, javascript
 cover: test.jpg
-published: false
 id: 21
 ---
 As a consultant, I come across a lot of bad test suites in Rails and JavaScript apps. The following are all RSpec, Jest, or Jasmine tests that I have found in the wild -- with minor changes for clarity or to protect the guilty :) (myself included!)
@@ -118,6 +117,7 @@ I also see test like this, where test that variable assignment actually works. T
 __*Don't do this*__
 
 ```ruby
+#RSpec
 RSpec.describe Chemical do
   RSpec.describe 'water' do
     before do
@@ -135,9 +135,10 @@ end
 __*Do something like this*__
 
 ```ruby
+#RSpec
 RSpec.describe Chemical do
   RSpec.describe 'water' do
-    it 'should return water as a chemical' do
+    it 'is a chemical' do
       expect(Chemical.water).to be_a(Chemical)
     end
   end
@@ -192,6 +193,7 @@ Do not allow the absence of an error, or the presence of a success message to be
 __*Don't do this*__
 
 ```ruby
+#RSpec
 Rspec.describe 'Admin Settings Page' do
   it 'can update settings' do
     visit general_settings_path
@@ -211,6 +213,7 @@ end
 __*Do something like this*__
 
 ```ruby
+#RSpec
 Rspec.describe 'Admin Settings Page' do
   it 'can update settings' do
     conversion_rate = '0.75'
