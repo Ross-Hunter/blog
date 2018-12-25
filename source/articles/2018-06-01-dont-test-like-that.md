@@ -1,21 +1,24 @@
 ---
 title: Don't Test Like That!
-date: 2018-06-01
+date: 2018-12-24
 layout: post
 tags: testing, code, rails, javascript
 cover: test.jpg
 published: false
 id: 21
 ---
-As a consultant, I come across a lot of bad test suites in Rails and JavaScript apps. The following are all either RSpec, Jest, or Jasmine tests that I have found in the wild (with minor changes for clarity). A few of them are even my fault!
+As a consultant, I come across a lot of bad test suites in Rails and JavaScript apps. The following are all RSpec, Jest, or Jasmine tests that I have found in the wild -- with minor changes for clarity or to protect the guilty :) (myself included!)
 
 These are some simple things *not to do*, along with some advice about what *to do* to accomplish the same goal.
 
 ###Don't test internals in a system test
 
+System tests should be (mostly) <a href="http://softwaretestingfundamentals.com/black-box-testing/" target="_blank">black box</a>.
+
 __*Don't do this*__
 
 ```ruby
+# RSpec
 RSpec.describe 'Product Display Page' do
   it 'displays the inventory messaging' do
     product = FactoryBot.create :product
@@ -28,15 +31,17 @@ RSpec.describe 'Product Display Page' do
 end
 ```
 - What if `product.inventory_message` is not being properly delegated and is nil or empty? Your tests pass!
-- What if you refactor so that product no longer delegates to inventory? Your system test knows too much about the internals! System tests should be (mostly) a <a href="http://softwaretestingfundamentals.com/black-box-testing/" target="_blank">black box</a>.
+- What if you refactor so that product no longer delegates to inventory? Your system test knows too much about the internals!
 
-__*Do this*__
+__*Do something like this*__
 
 ```ruby
+# RSpec
 RSpec.describe 'Product Display Page' do
+  let(:product) { FactoryBot.create :product }
+  let(:inventory_message){ 'Going Quick!' }
+
   it 'displays the inventory messaging' do
-    inventory_message = 'Going Quick!'
-    product = FactoryBot.create :product
     FactoryBot.create :inventory, product: product, 
                                   inventory_message: inventory_message
     visit product_path(product)
@@ -49,11 +54,12 @@ end
 
 ###Don't write blank tests
 
-I both love and hate when framework scaffolding creates unit tests for you. More than once I have opened up a Rails app and gone straight to the tests, scanned them and thought "OK, pretty good test coverage", only to discover later that I had randomly checked the handful of tests with actual content, meanwhile dozens of files are basically empty.
+I both love and hate when framework scaffolding creates unit tests for you. More than once I have opened up an app and gone straight to the tests, scanned them and thought "OK, pretty good test coverage", only to discover later that I had randomly checked the handful of tests with actual content, meanwhile dozens of files are basically empty.
 
 __*Don't do this*__
 
 ```javascript
+// Jest
 describe("AppCodes", function() {
   it("contains spec with an expectation", function() {
     expect(true).toBe(true);
@@ -62,35 +68,39 @@ describe("AppCodes", function() {
 ```
 - You trick people into thinking your app has tests!
 
-__*Do this*__
+__*Do something like this*__
 
 ```javascript
+// Jest
 describe("AppCodes", function() {
-  it("can instantiate a new instance", function() {
+  it("can instantiate a new instance without exploding", function() {
     new AppCode;
   });
 });
 ```
 - I will usually write tests like these as a bare minimum test to get started and ensure all of my test and app files are being loaded correctly. I try to never commit a blank (or commented out) test.
+- I use this as a starting point, and add tests that actually test behavior, and I'll go back and remove these redundant tests that just add weight to the application.
 
 ###Don't unit test constants
 
-Unit testing that language features work is a waste of time. They get in the way of actual tests.
+Unit testing that language features like constants work is a waste of time. They take time and get in the way of actual tests.
 
 __*Don't do this*__
 
 ```ruby
+# RSpec
 RSpec.describe "REBOOT_UNIT" do
   it "is the value the unit understands as reboot" do
     expect(RemoteUnit::REBOOT_UNIT).to eql('reboot')
   end
 end
 ```
-- One of the reasons to use a constant like this is to not worry about what the actual value of the constant is.
+- One of the reasons to use a named constant is to not worry about what the actual value of it is.
 
-__*Do this*__
+__*Do something like this*__
 
 ```ruby
+# RSpec
 RSpec.describe "REBOOT_UNIT" do
   it "publishes a message to reboot the unit" do
     remote_unit.reboot_unit
@@ -101,63 +111,28 @@ end
 ```
 - This tests actual behavior, and ensures that the constant is being properly used, without caring about its value.
 
-###Don't repeat yourself
+###Don't unit test variable assignment
 
-__*Don't do this*__
-
-```javascript
-// jest
-describe('Criteria Selector', () => {
-  it('shows the selection criteria', () => {
-    let selectionCriteria = { 
-      startDate: '2018-05-05',
-      endDate: '2018-05-10'
-    }
-    //const wrapper = mount(<CriteriaPicker criteria={selectionCriteria} />);
-    expect(wrapper.find('#startDate').props().value).toEqual('2018-05-05');
-    expect(wrapper.find('#endDate').props().value).toEqual('2018-05-10');
-  });
-});
-```
-- This code is not very re-usable. You will need to update the date in multiple places if you want to change it.
-
-__*Do this*__
-
-```javascript
-// jest
-describe('Criteria Selector', () => {
-  it('shows the selection criteria', () => {
-    let selectionCriteria = { 
-      startDate: '2018-05-05',
-      endDate: '2018-05-10'
-    }
-    //const wrapper = mount(<CriteriaPicker criteria={selectionCriteria} />);
-    expect(wrapper.find('#startDate').props().value).toEqual(selectionCriteria.startDate);
-    expect(wrapper.find('#endDate').props().value).toEqual(selectionCriteria.endDate);
-  });
-});
-```
-
-###Don't unit test the framework
+I also see test like this, where test that variable assignment actually works. Test this behavior through some sort of behavior test, this is not a good unit test.
 
 __*Don't do this*__
 
 ```ruby
 RSpec.describe Chemical do
-  before do
-    @water = Chemical.water
-  end
-
   RSpec.describe 'water' do
+    before do
+      @water = Chemical.water
+    end
+
     it 'should return water' do
       Chemical.water.should == @water
     end
   end
 end
 ```
-- `Cemical.water` should equal `Chemical.water`? Really?
+- `Cemical.water` should equal `Chemical.water`? Really? You actually wrote a test like that?
 
-__*Do this*__
+__*Do something like this*__
 
 ```ruby
 RSpec.describe Chemical do
@@ -170,72 +145,97 @@ end
 ```
 - You are actually describing the behavior now! Keep going, tell us more about what `Chemical.water` does!
 
-# Maybe cut it off right here
+###Don't repeat yourself
 
-###Don't write clever tests
+We must walk a fine line in our tests, where we keep them very plain and readable, so that we don't get lost in the complexity of the test themselves. However, we can still follow best practices and use variables to clean up tests and make them easier to read and write.
 
-"Don't repeat yourself" can be taken too far and we can end up creating too much complexity in our tests. 
+__*Don't do this*__
+
+```javascript
+// jest + enzyme
+describe('Criteria Selector', () => {
+  it('shows the selection criteria', () => {
+    const wrapper = mount(<CriteriaPicker criteria={ 
+      startDate: '2018-05-05',
+      endDate: '2018-05-10'
+    } />);
+    expect(wrapper.find('#startDate').props().value).toEqual('2018-05-05');
+    expect(wrapper.find('#endDate').props().value).toEqual('2018-05-10');
+  });
+});
+```
+- This code is not very re-usable. You will need to update the date in multiple places if you ever want to change it.
+
+__*Do something like this*__
+
+```javascript
+// jest + enzyme
+describe('Criteria Selector', () => {
+  it('shows the selection criteria', () => {
+    let selectionCriteria = { 
+      startDate: '2018-05-05',
+      endDate: '2018-05-10'
+    }
+    const wrapper = mount(<CriteriaPicker criteria={selectionCriteria} />);
+    expect(wrapper.find('#startDate').props().value).toEqual(selectionCriteria.startDate);
+    expect(wrapper.find('#endDate').props().value).toEqual(selectionCriteria.endDate);
+  });
+});
+```
+
+- We use a variable to represent our input, and then we test that the new output is equal to our input.
+
+###Don't test the absensce of an error
+
+Do not allow the absence of an error, or the presence of a success message to be your indicator of success. Test the actual result!
 
 __*Don't do this*__
 
 ```ruby
-class String
-  def first_part
-    regex = /[@ ]/
-    self[regex] ? self.split(regex).first :
-      self[0, ((self.size / 2.to_f).ceil + 1)]
-  end
-end
+Rspec.describe 'Admin Settings Page' do
+  it 'can update settings' do
+    visit general_settings_path
 
-def search(user, profile, query)
-  query = query.(profile) unless query.is_a?(String)
-  ContactProfile.search_records(query, user)
-end
+    fill_in 'settings[conversion_rate]', with: 0.75
+    click_button 'update'
 
-RSpec.describe 'ContactProfile.search' do
-  before do
-    @user_a = create(:user)
-    @user_b = create(:user)
-    @profile_a = create(:contact_profile, user: @user_a)
-    @profile_b = create(:contact_profile, user: @user_b)
-  end
+    expect(page).to have_content('Settings have been saved.')
 
-  [['by the first part of their email',
-    ->(m) { m.email.split('@').first }],
-   ['by their exact first name',
-     ->(m) { m.first_name }],
-   ['by first part of their full name',
-    ->(m) { m.full_name.first_part }]].each do |(desc, query_fn)|
-    describe desc do
-      it 'matches user a to profile a' do
-        results = search(@user_a, @profile_a, query_fn)
-        expect(results.count).to eq(1)
-      end
-
-      it 'matches user b to profile b' do
-        results = search(@user_b, @profile_b, query_fn)
-        expect(results.count).to eq(1)
-      end
-
-      it 'does not match user a to profile b' do
-        results = search(@user_a, @profile_b, query_fn)
-        expect(results.count).to eq(0)
-      end
-
-      it 'does not match user b to profile a' do
-        results = search(@user_b, @profile_a, query_fn)
-        expect(results.count).to eq(0)
-      end
-    end
+    # I'm not even sure why these last 2 lines are even here
+    visit root_path
+    expect(current_path).to eq(root_path)
   end
 end
 ```
-- This tests the code we have written right here, not the code our app will run
 
-__*Do this*__
+__*Do something like this*__
 
 ```ruby
+Rspec.describe 'Admin Settings Page' do
+  it 'can update settings' do
+    conversion_rate = '0.75'
+    visit general_settings_path
+
+    fill_in 'settings[conversion]', with: conversion_rate
+    click_button 'update'
+
+    # It's fine to test this message, but it's not a real indication that it worked how you expected
+    expect(page).to have_content('Settings have been saved.')
+
+    visit general_settings_path
+    expect(page).to have_content(conversion_rate)
+  end
+end
 ```
 
+- Success messages are great for your user, but they do not actually prove that your operation succeeded. Perhaps it was a 200 OK, but didn't actually do the thing you intended!
 
-What are some common mistakes you see made in tests?
+###Conclusion
+
+The theme here is to actually think about what you are testing and not just write tests because you were told that is what the cool kids are doing. Bad tests can actually get in the way and create rigidity around your code in a way you don't intend. 
+
+Even worse, when you write tests like this you might come to the conclusion that "testing sucks and is just a waste of time". Testing is awesome and possibly the single biggest "upgrade" you can apply to your software development skills.
+
+###To the listener
+
+What are some common mistakes you see made in tests? There were a lot of "smelly" tests that almost made the cut for this post and perhaps I'll do a part 2 at some point. 
