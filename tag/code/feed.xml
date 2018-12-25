@@ -5,16 +5,33 @@
   <id>http://www.ross-hunter.com</id>
   <link href="http://www.ross-hunter.com"/>
   <link href="http://www.ross-hunter.com/tag/code/feed.xml" rel="self"/>
-  <updated>2018-02-09T00:00:00Z</updated>
+  <updated>2018-12-23T00:00:00Z</updated>
   <author>
     <name>Ross Hunter</name>
   </author>
+  <entry>
+    <title>Don't Test Like That!</title>
+    <link rel="alternate" href="http://www.ross-hunter.com/2018/12/23/dont-test-like-that/"/>
+    <id>http://www.ross-hunter.com/2018/12/23/dont-test-like-that/</id>
+    <published>2018-12-23T00:00:00Z</published>
+    <updated>2018-12-24T19:34:58-07:00</updated>
+    <author>
+      <name>Ross Hunter</name>
+    </author>
+    <summary type="html">As a consultant, I come across a lot of bad test suites in Rails and JavaScript apps. The following are all RSpec, Jest, or Jasmine tests that I have found in the wild – with minor changes for clarity or to protect the guilty :) (myself included!)
+
+These are some simple things not to do, along with some advice about what to do to accomplish the same goal.
+
+Don’t test internals in a system test
+
+System</summary>
+  </entry>
   <entry>
     <title>Index Your Foreign Keys</title>
     <link rel="alternate" href="http://www.ross-hunter.com/2014/06/13/index-foreign-keys/"/>
     <id>http://www.ross-hunter.com/2014/06/13/index-foreign-keys/</id>
     <published>2014-06-13T00:00:00Z</published>
-    <updated>2018-12-24T19:33:13-07:00</updated>
+    <updated>2018-12-24T19:34:58-07:00</updated>
     <author>
       <name>Ross Hunter</name>
     </author>
@@ -25,7 +42,7 @@
     <link rel="alternate" href="http://www.ross-hunter.com/2014/06/12/activerecord-associations/"/>
     <id>http://www.ross-hunter.com/2014/06/12/activerecord-associations/</id>
     <published>2014-06-12T00:00:00Z</published>
-    <updated>2018-12-24T19:33:13-07:00</updated>
+    <updated>2018-12-24T19:34:58-07:00</updated>
     <author>
       <name>Ross Hunter</name>
     </author>
@@ -38,7 +55,7 @@ However, understanding</summary>
     <link rel="alternate" href="http://www.ross-hunter.com/2014/04/25/oversimplify-your-code/"/>
     <id>http://www.ross-hunter.com/2014/04/25/oversimplify-your-code/</id>
     <published>2014-04-25T00:00:00Z</published>
-    <updated>2018-12-24T19:33:13-07:00</updated>
+    <updated>2018-12-24T19:34:58-07:00</updated>
     <author>
       <name>Ross Hunter</name>
     </author>
@@ -51,7 +68,7 @@ The first benefit is code reuse. This is rather</summary>
     <link rel="alternate" href="http://www.ross-hunter.com/2014/01/14/math/"/>
     <id>http://www.ross-hunter.com/2014/01/14/math/</id>
     <published>2014-01-14T00:00:00Z</published>
-    <updated>2018-12-24T19:33:13-07:00</updated>
+    <updated>2018-12-24T19:34:58-07:00</updated>
     <author>
       <name>Ross Hunter</name>
     </author>
@@ -71,7 +88,7 @@ This was part</summary>
     <link rel="alternate" href="http://www.ross-hunter.com/2013/11/12/open-native-apps-phonegap/"/>
     <id>http://www.ross-hunter.com/2013/11/12/open-native-apps-phonegap/</id>
     <published>2013-11-12T00:00:00Z</published>
-    <updated>2018-12-24T19:33:13-07:00</updated>
+    <updated>2018-12-24T19:34:58-07:00</updated>
     <author>
       <name>Ross Hunter</name>
     </author>
@@ -82,20 +99,5 @@ Note: This work was completed in a pre-PhoneGap 3.0.0 world. There is now a Plug
 Prologue
 
 </summary>
-  </entry>
-  <entry>
-    <title>Tips for Novice Developers (and why you should become a rubyist)</title>
-    <link rel="alternate" href="http://www.ross-hunter.com/2013/08/06/tips-for-beginner-developers/"/>
-    <id>http://www.ross-hunter.com/2013/08/06/tips-for-beginner-developers/</id>
-    <published>2013-08-06T00:00:00Z</published>
-    <updated>2018-12-24T19:33:13-07:00</updated>
-    <author>
-      <name>Ross Hunter</name>
-    </author>
-    <summary type="html">Work Locally
-
-Working locally means that you have an instance of your web app running on your machine. You edit files directly on your machine, rather than uploading every change to the server.
-
-It is tempting to edit files directly on your shared server, but don’t do it! It is a very bad practice and will bite you over and over again if you let it become habit. You may start out thinking of a website</summary>
   </entry>
 </feed>

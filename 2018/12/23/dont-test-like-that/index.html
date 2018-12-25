@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ross-Hunter: Don't Test Like That!</title>
+<meta content='As a consultant, I come across a lot of bad test suites in Rails and JavaScript apps. The following are all RSpec, Jest, or Jasmine tests that I...' name='description'>
+<meta charset='utf-8'>
+<meta content='width=device-width, initial-scale=1.0' name='viewport'>
+<meta content='IE=edge' http-equiv='X-UA-Compatible'>
+<meta content='True' name='HandheldFriendly'>
+<link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+<link href="../../../../images/images/favicon.ico" rel="icon" type="image/ico" />
+<link href="../../../../stylesheets/application-e8b8b3fd.css" rel="stylesheet" />
+<link href='//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400' rel='stylesheet' type='text/css'>
+</head>
+<body class='post-template nav-closed'>
+<div class='nav'>
+<h3 class='nav-title'>Menu</h3>
+<a class='nav-close' href='#'>
+<span class='hidden'>Close</span>
+</a>
+<ul>
+<li class='nav-home' role='presentation'>
+<a href='/'>Home</a>
+</li>
+<li class='nav-blog' role='presentation'>
+<a href='/blog/'>Blog</a>
+</li>
+<li class='nav-podcast' role='presentation'>
+<a href='https://thenewbestpractices.com'>Podcast</a>
+</li>
+<li class='nav-github' role='presentation'>
+<a href='https://github.com/ross-hunter'>GitHub</a>
+</li>
+<li class='nav-twitter' role='presentation'>
+<a href='https://twitter.com/ross_hunter'>Twitter</a>
+</li>
+<li class='nav-linkedin' role='presentation'>
+<a href='https://www.linkedin.com/in/rossh'>LinkedIn</a>
+</li>
+<li class='nav-facebook' role='presentation'>
+<a href='http://www.facebook.com/ross.hunter'>Facebook</a>
+</li>
+<li class='nav-email' role='presentation'>
+<a href='#email-protection-ebff-uhagre@ebff-uhagre.pbz'>Email</a>
+</li>
+</ul>
+<a class='subscribe-button icon-feed' href='/feed.xml'>Subscribe</a>
+</div>
+<span class='nav-cover'></span>
+
+<div class='site-wrapper'>
+<header class='main-header post-head' style='background-image: url(../../../../images/test-c795f1e5.jpg)'>
+<nav class='clearfix main-nav overlay'>
+<a class='menu-button icon-menu' href='#'>
+<span class='word'>Menu</span>
+</a>
+</nav>
+</header>
+<main class='content' role='main'>
+<article class='post'>
+<header class='post-header'>
+<h1 class='post-title'>Don't Test Like That!</h1>
+<section class='post-meta'>
+<time class='post-date' datetime='2018-12-23'>
+23 December 2018
+</time>
+<a href='/tag/testing/'>testing</a>, <a href='/tag/code/'>code</a>, <a href='/tag/rails/'>rails</a>, <a href='/tag/javascript/'>javascript</a>
+</section>
+</header>
+<section class='post-content'><p>As a consultant, I come across a lot of bad test suites in Rails and JavaScript apps. The following are all RSpec, Jest, or Jasmine tests that I have found in the wild &ndash; with minor changes for clarity or to protect the guilty :) (myself included!)</p>
+
+<p>These are some simple things <em>not to do</em>, along with some advice about what <em>to do</em> to accomplish the same goal.</p>
+
+<h3>Don&rsquo;t test internals in a system test</h3>
+
+<p>System tests should be (mostly) <a href="http://softwaretestingfundamentals.com/black-box-testing/" target="_blank">black box</a>.</p>
+
+<p><strong><em>Don&rsquo;t do this</em></strong></p>
+<pre class="highlight ruby"><code><span class="c1"># RSpec</span>
+<span class="no">RSpec</span><span class="p">.</span><span class="nf">describe</span> <span class="s1">'Product Display Page'</span> <span class="k">do</span>
+  <span class="n">it</span> <span class="s1">'displays the inventory messaging'</span> <span class="k">do</span>
+    <span class="n">product</span> <span class="o">=</span> <span class="no">FactoryBot</span><span class="p">.</span><span class="nf">create</span> <span class="ss">:product</span>
+    <span class="no">FactoryBot</span><span class="p">.</span><span class="nf">create</span> <span class="ss">:inventory</span><span class="p">,</span> <span class="ss">product: </span><span class="n">product</span><span class="p">,</span> 
+                                  <span class="ss">inventory_message: </span><span class="s1">'Going Quick!'</span>
+    <span class="n">visit</span> <span class="n">product_path</span><span class="p">(</span><span class="n">product</span><span class="p">)</span>
+    <span class="c1"># product delegates :inventory_message to :inventory</span>
+    <span class="n">expect</span><span class="p">(</span><span class="n">page</span><span class="p">).</span><span class="nf">to</span> <span class="n">have_content</span><span class="p">(</span><span class="n">product</span><span class="p">.</span><span class="nf">inventory_message</span><span class="p">)</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre>
+
+<ul>
+<li>What if <code>product.inventory_message</code> is not being properly delegated and is nil or empty? Your tests pass!</li>
+<li>What if you refactor so that product no longer delegates to inventory? Your system test knows too much about the internals!</li>
+</ul>
+
+<p><strong><em>Do something like this</em></strong></p>
+<pre class="highlight ruby"><code><span class="c1"># RSpec</span>
+<span class="no">RSpec</span><span class="p">.</span><span class="nf">describe</span> <span class="s1">'Product Display Page'</span> <span class="k">do</span>
+  <span class="n">let</span><span class="p">(</span><span class="ss">:product</span><span class="p">)</span> <span class="p">{</span> <span class="no">FactoryBot</span><span class="p">.</span><span class="nf">create</span> <span class="ss">:product</span> <span class="p">}</span>
+  <span class="n">let</span><span class="p">(</span><span class="ss">:inventory_message</span><span class="p">){</span> <span class="s1">'Going Quick!'</span> <span class="p">}</span>
+
+  <span class="n">it</span> <span class="s1">'displays the inventory messaging'</span> <span class="k">do</span>
+    <span class="no">FactoryBot</span><span class="p">.</span><span class="nf">create</span> <span class="ss">:inventory</span><span class="p">,</span> <span class="ss">product: </span><span class="n">product</span><span class="p">,</span> 
+                                  <span class="ss">inventory_message: </span><span class="n">inventory_message</span>
+    <span class="n">visit</span> <span class="n">product_path</span><span class="p">(</span><span class="n">product</span><span class="p">)</span>
+    <span class="n">expect</span><span class="p">(</span><span class="n">page</span><span class="p">).</span><span class="nf">to</span> <span class="n">have_content</span><span class="p">(</span><span class="n">inventory_message</span><span class="p">)</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre>
+
+<ul>
+<li>You don&rsquo;t have information buried in the parameters to a method</li>
+<li>The test will pass if the content appears on the page, and fail if the content does not appear on the page, regardless of what internals might change.</li>
+</ul>
+
+<h3>Don&rsquo;t write blank tests</h3>
+
+<p>I both love and hate when framework scaffolding creates unit tests for you. More than once I have opened up an app and gone straight to the tests, scanned them and thought &ldquo;OK, pretty good test coverage&rdquo;, only to discover later that I had randomly checked the handful of tests with actual content, meanwhile dozens of files are basically empty.</p>
+
+<p><strong><em>Don&rsquo;t do this</em></strong></p>
+<pre class="highlight javascript"><code><span class="c1">// Jest</span>
+<span class="nx">describe</span><span class="p">(</span><span class="s2">"AppCodes"</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">it</span><span class="p">(</span><span class="s2">"contains spec with an expectation"</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">expect</span><span class="p">(</span><span class="kc">true</span><span class="p">).</span><span class="nx">toBe</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+  <span class="p">});</span>
+<span class="p">});</span>
+</code></pre>
+
+<ul>
+<li>You trick people into thinking your app has tests!</li>
+</ul>
+
+<p><strong><em>Do something like this</em></strong></p>
+<pre class="highlight javascript"><code><span class="c1">// Jest</span>
+<span class="nx">describe</span><span class="p">(</span><span class="s2">"AppCodes"</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">it</span><span class="p">(</span><span class="s2">"can instantiate a new instance without exploding"</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">new</span> <span class="nx">AppCode</span><span class="p">;</span>
+  <span class="p">});</span>
+<span class="p">});</span>
+</code></pre>
+
+<ul>
+<li>I will usually write tests like these as a bare minimum test to get started and ensure all of my test and app files are being loaded correctly. I try to never commit a blank (or commented out) test.</li>
+<li>I use this as a starting point, and add tests that actually test behavior, and I&rsquo;ll go back and remove these redundant tests that just add weight to the application.</li>
+</ul>
+
+<h3>Don&rsquo;t unit test constants</h3>
+
+<p>Unit testing that language features like constants work is a waste of time. They take time and get in the way of actual tests.</p>
+
+<p><strong><em>Don&rsquo;t do this</em></strong></p>
+<pre class="highlight ruby"><code><span class="c1"># RSpec</span>
+<span class="no">RSpec</span><span class="p">.</span><span class="nf">describe</span> <span class="s2">"REBOOT_UNIT"</span> <span class="k">do</span>
+  <span class="n">it</span> <span class="s2">"is the value the unit understands as reboot"</span> <span class="k">do</span>
+    <span class="n">expect</span><span class="p">(</span><span class="no">RemoteUnit</span><span class="o">::</span><span class="no">REBOOT_UNIT</span><span class="p">).</span><span class="nf">to</span> <span class="n">eql</span><span class="p">(</span><span class="s1">'reboot'</span><span class="p">)</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre>
+
+<ul>
+<li>One of the reasons to use a named constant is to not worry about what the actual value of it is.</li>
+</ul>
+
+<p><strong><em>Do something like this</em></strong></p>
+<pre class="highlight ruby"><code><span class="c1"># RSpec</span>
+<span class="no">RSpec</span><span class="p">.</span><span class="nf">describe</span> <span class="s2">"REBOOT_UNIT"</span> <span class="k">do</span>
+  <span class="n">it</span> <span class="s2">"publishes a message to reboot the unit"</span> <span class="k">do</span>
+    <span class="n">remote_unit</span><span class="p">.</span><span class="nf">reboot_unit</span>
+    <span class="n">expect</span><span class="p">(</span><span class="n">messenger</span><span class="p">).</span><span class="nf">to</span> <span class="n">have_received</span><span class="p">(</span><span class="ss">:publish</span><span class="p">)</span>
+      <span class="p">.</span><span class="nf">with</span><span class="p">({</span><span class="ss">type: </span><span class="no">RemoteUnit</span><span class="o">::</span><span class="no">REBOOT_UNIT</span><span class="p">})</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre>
+
+<ul>
+<li>This tests actual behavior, and ensures that the constant is being properly used, without caring about its value.</li>
+</ul>
+
+<h3>Don&rsquo;t unit test variable assignment</h3>
+
+<p>I also see test like this, where test that variable assignment actually works. Test this behavior through some sort of behavior test, this is not a good unit test.</p>
+
+<p><strong><em>Don&rsquo;t do this</em></strong></p>
+<pre class="highlight ruby"><code><span class="c1">#RSpec</span>
+<span class="no">RSpec</span><span class="p">.</span><span class="nf">describe</span> <span class="no">Chemical</span> <span class="k">do</span>
+  <span class="no">RSpec</span><span class="p">.</span><span class="nf">describe</span> <span class="s1">'water'</span> <span class="k">do</span>
+    <span class="n">before</span> <span class="k">do</span>
+      <span class="vi">@water</span> <span class="o">=</span> <span class="no">Chemical</span><span class="p">.</span><span class="nf">water</span>
+    <span class="k">end</span>
+
+    <span class="n">it</span> <span class="s1">'should return water'</span> <span class="k">do</span>
+      <span class="no">Chemical</span><span class="p">.</span><span class="nf">water</span><span class="p">.</span><span class="nf">should</span> <span class="o">==</span> <span class="vi">@water</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre>
+
+<ul>
+<li><code>Cemical.water</code> should equal <code>Chemical.water</code>? Really? You actually wrote a test like that?</li>
+</ul>
+
+<p><strong><em>Do something like this</em></strong></p>
+<pre class="highlight ruby"><code><span class="c1">#RSpec</span>
+<span class="no">RSpec</span><span class="p">.</span><span class="nf">describe</span> <span class="no">Chemical</span> <span class="k">do</span>
+  <span class="no">RSpec</span><span class="p">.</span><span class="nf">describe</span> <span class="s1">'water'</span> <span class="k">do</span>
+    <span class="n">it</span> <span class="s1">'is a chemical'</span> <span class="k">do</span>
+      <span class="n">expect</span><span class="p">(</span><span class="no">Chemical</span><span class="p">.</span><span class="nf">water</span><span class="p">).</span><span class="nf">to</span> <span class="n">be_a</span><span class="p">(</span><span class="no">Chemical</span><span class="p">)</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre>
+
+<ul>
+<li>You are actually describing the behavior now! Keep going, tell us more about what <code>Chemical.water</code> does!</li>
+</ul>
+
+<h3>Don&rsquo;t repeat yourself</h3>
+
+<p>We must walk a fine line in our tests, where we keep them very plain and readable, so that we don&rsquo;t get lost in the complexity of the test themselves. However, we can still follow best practices and use variables to clean up tests and make them easier to read and write.</p>
+
+<p><strong><em>Don&rsquo;t do this</em></strong></p>
+<pre class="highlight javascript"><code><span class="c1">// jest + enzyme</span>
+<span class="nx">describe</span><span class="p">(</span><span class="s1">'Criteria Selector'</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">it</span><span class="p">(</span><span class="s1">'shows the selection criteria'</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="kr">const</span> <span class="nx">wrapper</span> <span class="o">=</span> <span class="nx">mount</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">CriteriaPicker</span> <span class="nx">criteria</span><span class="o">=</span><span class="p">{</span> 
+      <span class="na">startDate</span><span class="p">:</span> <span class="s1">'2018-05-05'</span><span class="p">,</span>
+      <span class="na">endDate</span><span class="p">:</span> <span class="s1">'2018-05-10'</span>
+    <span class="p">}</span> <span class="sr">/&gt;</span><span class="se">)</span><span class="err">;
+</span>    <span class="nx">expect</span><span class="p">(</span><span class="nx">wrapper</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s1">'#startDate'</span><span class="p">).</span><span class="nx">props</span><span class="p">().</span><span class="nx">value</span><span class="p">).</span><span class="nx">toEqual</span><span class="p">(</span><span class="s1">'2018-05-05'</span><span class="p">);</span>
+    <span class="nx">expect</span><span class="p">(</span><span class="nx">wrapper</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s1">'#endDate'</span><span class="p">).</span><span class="nx">props</span><span class="p">().</span><span class="nx">value</span><span class="p">).</span><span class="nx">toEqual</span><span class="p">(</span><span class="s1">'2018-05-10'</span><span class="p">);</span>
+  <span class="p">});</span>
+<span class="p">});</span>
+</code></pre>
+
+<ul>
+<li>This code is not very re-usable. You will need to update the date in multiple places if you ever want to change it.</li>
+</ul>
+
+<p><strong><em>Do something like this</em></strong></p>
+<pre class="highlight javascript"><code><span class="c1">// jest + enzyme</span>
+<span class="nx">describe</span><span class="p">(</span><span class="s1">'Criteria Selector'</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">it</span><span class="p">(</span><span class="s1">'shows the selection criteria'</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nx">selectionCriteria</span> <span class="o">=</span> <span class="p">{</span> 
+      <span class="na">startDate</span><span class="p">:</span> <span class="s1">'2018-05-05'</span><span class="p">,</span>
+      <span class="na">endDate</span><span class="p">:</span> <span class="s1">'2018-05-10'</span>
+    <span class="p">}</span>
+    <span class="kr">const</span> <span class="nx">wrapper</span> <span class="o">=</span> <span class="nx">mount</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">CriteriaPicker</span> <span class="nx">criteria</span><span class="o">=</span><span class="p">{</span><span class="nx">selectionCriteria</span><span class="p">}</span> <span class="sr">/&gt;</span><span class="se">)</span><span class="err">;
+</span>    <span class="nx">expect</span><span class="p">(</span><span class="nx">wrapper</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s1">'#startDate'</span><span class="p">).</span><span class="nx">props</span><span class="p">().</span><span class="nx">value</span><span class="p">).</span><span class="nx">toEqual</span><span class="p">(</span><span class="nx">selectionCriteria</span><span class="p">.</span><span class="nx">startDate</span><span class="p">);</span>
+    <span class="nx">expect</span><span class="p">(</span><span class="nx">wrapper</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="s1">'#endDate'</span><span class="p">).</span><span class="nx">props</span><span class="p">().</span><span class="nx">value</span><span class="p">).</span><span class="nx">toEqual</span><span class="p">(</span><span class="nx">selectionCriteria</span><span class="p">.</span><span class="nx">endDate</span><span class="p">);</span>
+  <span class="p">});</span>
+<span class="p">});</span>
+</code></pre>
+
+<ul>
+<li>We use a variable to represent our input, and then we test that the new output is equal to our input.</li>
+</ul>
+
+<h3>Don&rsquo;t test the absensce of an error</h3>
+
+<p>Do not allow the absence of an error, or the presence of a success message to be your indicator of success. Test the actual result!</p>
+
+<p><strong><em>Don&rsquo;t do this</em></strong></p>
+<pre class="highlight ruby"><code><span class="c1">#RSpec</span>
+<span class="no">Rspec</span><span class="p">.</span><span class="nf">describe</span> <span class="s1">'Admin Settings Page'</span> <span class="k">do</span>
+  <span class="n">it</span> <span class="s1">'can update settings'</span> <span class="k">do</span>
+    <span class="n">visit</span> <span class="n">general_settings_path</span>
+
+    <span class="n">fill_in</span> <span class="s1">'settings[conversion_rate]'</span><span class="p">,</span> <span class="ss">with: </span><span class="mi">0</span><span class="o">.</span><span class="mi">75</span>
+    <span class="n">click_button</span> <span class="s1">'update'</span>
+
+    <span class="n">expect</span><span class="p">(</span><span class="n">page</span><span class="p">).</span><span class="nf">to</span> <span class="n">have_content</span><span class="p">(</span><span class="s1">'Settings have been saved.'</span><span class="p">)</span>
+
+    <span class="c1"># I'm not even sure why these last 2 lines are even here</span>
+    <span class="n">visit</span> <span class="n">root_path</span>
+    <span class="n">expect</span><span class="p">(</span><span class="n">current_path</span><span class="p">).</span><span class="nf">to</span> <span class="n">eq</span><span class="p">(</span><span class="n">root_path</span><span class="p">)</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre>
+
+<p><strong><em>Do something like this</em></strong></p>
+<pre class="highlight ruby"><code><span class="c1">#RSpec</span>
+<span class="no">Rspec</span><span class="p">.</span><span class="nf">describe</span> <span class="s1">'Admin Settings Page'</span> <span class="k">do</span>
+  <span class="n">it</span> <span class="s1">'can update settings'</span> <span class="k">do</span>
+    <span class="n">conversion_rate</span> <span class="o">=</span> <span class="s1">'0.75'</span>
+    <span class="n">visit</span> <span class="n">general_settings_path</span>
+
+    <span class="n">fill_in</span> <span class="s1">'settings[conversion]'</span><span class="p">,</span> <span class="ss">with: </span><span class="n">conversion_rate</span>
+    <span class="n">click_button</span> <span class="s1">'update'</span>
+
+    <span class="c1"># It's fine to test this message, but it's not a real indication that it worked how you expected</span>
+    <span class="n">expect</span><span class="p">(</span><span class="n">page</span><span class="p">).</span><span class="nf">to</span> <span class="n">have_content</span><span class="p">(</span><span class="s1">'Settings have been saved.'</span><span class="p">)</span>
+
+    <span class="n">visit</span> <span class="n">general_settings_path</span>
+    <span class="n">expect</span><span class="p">(</span><span class="n">page</span><span class="p">).</span><span class="nf">to</span> <span class="n">have_content</span><span class="p">(</span><span class="n">conversion_rate</span><span class="p">)</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre>
+
+<ul>
+<li>Success messages are great for your user, but they do not actually prove that your operation succeeded. Perhaps it was a 200 OK, but didn&rsquo;t actually do the thing you intended!</li>
+</ul>
+
+<h3>Conclusion</h3>
+
+<p>The theme here is to actually think about what you are testing and not just write tests because you were told that is what the cool kids are doing. Bad tests can actually get in the way and create rigidity around your code in a way you don&rsquo;t intend. </p>
+
+<p>Even worse, when you write tests like this you might come to the conclusion that &ldquo;testing sucks and is just a waste of time&rdquo;. Testing is awesome and possibly the single biggest &ldquo;upgrade&rdquo; you can apply to your software development skills.</p>
+
+<h3>To the listener</h3>
+
+<p>What are some common mistakes you see made in tests? There were a lot of &ldquo;smelly&rdquo; tests that almost made the cut for this post and perhaps I&rsquo;ll do a part 2 at some point. </p>
+</section>
+<footer class='post-footer'>
+<figure class='author-image'>
+<a class='img' href='/' style='background-image: url(https://www.gravatar.com/avatar/99057d911bd664e8cde1a2995ee25401?size=68)'>
+<span class='hidden'>Ross Hunter's Picture</span>
+</a>
+</figure>
+<section class='author'>
+<h4>
+<a href='/'>Ross Hunter</a>
+</h4>
+<p></p>
+Computer Philosopher
+<div class='author-meta'>
+<span class='author-location icon-location'>Grand Rapids, MI</span>
+</div>
+</section>
+<section class='share'>
+<h4>Share this post</h4>
+<a class='icon-twitter' href="https://twitter.com/share?text=Don't Test Like That!&amp;amp;url=http://www.ross-hunter.com/2018/12/23/dont-test-like-that/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+<span class='hidden'>Twitter</span>
+</a>
+<a class='icon-facebook' href='https://www.facebook.com/sharer/sharer.php?u=http://www.ross-hunter.com/2018/12/23/dont-test-like-that/' onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+<span class='hidden'>Facebook</span>
+</a>
+<a class='icon-google-plus' href='https://plus.google.com/share?url=http://www.ross-hunter.com/2018/12/23/dont-test-like-that/' onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+<span class='hidden'>Google+</span>
+</a>
+</section>
+<section class='comments'>
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+
+var disqus_config = function () {
+this.page.url = 'http://ross-hunter.com/2018/12/23/dont-test-like-that/';  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = 21; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = '//ross-hunter.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+</section>
+</footer>
+</article>
+</main>
+<aside class='read-next'>
+<a class='read-next-story' href='/2018/02/09/the-new-best-practices-podcast/' style='background-image: url(../../../../images/new-69262a48.png)'>
+<section class='post'>
+<h2>The New Best Practices Podcast</h2>
+<p>Hey everyone! We recently published the first couple episodes of my podcast The New Best Practices. Long-time friends and&hellip;</p>
+</section>
+</a>
+</aside>
+
+<footer class='site-footer clearfix'>
+<section class='copyright'>
+<a href='/'>Ross-Hunter</a>
+&copy;
+2018
+</section>
+<section class='poweredby'>
+Based on the Casper theme powered by
+<a href='https://ghost.org' target='_blank'>Ghost</a>
+</section>
+</footer>
+</div>
+<script src="../../../../javascripts/application-2ee90952.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  
+  ga('create', 'UA-4184025-5', 'auto');
+  ga('send', 'pageview');
+</script>
+<script type="text/javascript">!function(){try{var a,b,c,d,g=document.getElementsByTagName("a");for(c=0;g.length-c;c++)try{b=g[c].getAttribute("href"),b&&b.indexOf("#email-protection-")>-1&&b.length>19&&(a="",d=19+b.indexOf("#email-protection-"),b.length>d&&(a=b.substr(18).replace(/[a-zA-Z]/g,function(a){return String.fromCharCode(("Z">=a?90:122)>=(a=a.charCodeAt(0)+13)?a:a-26)})),g[c].setAttribute("href","mailto:"+a))}catch(h){}}catch(h){}}();</script>
+</body>
+</html>
