@@ -179,7 +179,7 @@
 
 <h3>Don&rsquo;t unit test variable assignment</h3>
 
-<p>I also see test like this, where test that variable assignment actually works. Test this behavior through some sort of behavior test, this is not a good unit test.</p>
+<p>I&rsquo;ve also seen variable assignment tests like this too many times. Test this through some sort of behavior test, this is not a good unit test.</p>
 
 <p><strong><em>Don&rsquo;t do this</em></strong></p>
 <pre class="highlight ruby"><code><span class="c1">#RSpec</span>
@@ -212,7 +212,7 @@
 </code></pre>
 
 <ul>
-<li>You are actually describing the behavior now! Keep going, tell us more about what <code>Chemical.water</code> does!</li>
+<li>You are on your way to actually describing the behavior now! Keep going, tell us more about what it means that <code>Chemical.water</code> is a Chemical!</li>
 </ul>
 
 <h3>Don&rsquo;t repeat yourself</h3>
@@ -270,10 +270,6 @@
     <span class="n">click_button</span> <span class="s1">'update'</span>
 
     <span class="n">expect</span><span class="p">(</span><span class="n">page</span><span class="p">).</span><span class="nf">to</span> <span class="n">have_content</span><span class="p">(</span><span class="s1">'Settings have been saved.'</span><span class="p">)</span>
-
-    <span class="c1"># I'm not even sure why these last 2 lines are even here</span>
-    <span class="n">visit</span> <span class="n">root_path</span>
-    <span class="n">expect</span><span class="p">(</span><span class="n">current_path</span><span class="p">).</span><span class="nf">to</span> <span class="n">eq</span><span class="p">(</span><span class="n">root_path</span><span class="p">)</span>
   <span class="k">end</span>
 <span class="k">end</span>
 </code></pre>
