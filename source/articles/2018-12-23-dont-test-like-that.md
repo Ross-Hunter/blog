@@ -112,7 +112,7 @@ end
 
 ###Don't unit test variable assignment
 
-I also see test like this, where test that variable assignment actually works. Test this behavior through some sort of behavior test, this is not a good unit test.
+I've also seen variable assignment tests like this too many times. Test this through some sort of behavior test, this is not a good unit test.
 
 __*Don't do this*__
 
@@ -144,7 +144,7 @@ RSpec.describe Chemical do
   end
 end
 ```
-- You are actually describing the behavior now! Keep going, tell us more about what `Chemical.water` does!
+- You are on your way to actually describing the behavior now! Keep going, tell us more about what it means that `Chemical.water` is a Chemical!
 
 ###Don't repeat yourself
 
@@ -202,10 +202,6 @@ Rspec.describe 'Admin Settings Page' do
     click_button 'update'
 
     expect(page).to have_content('Settings have been saved.')
-
-    # I'm not even sure why these last 2 lines are even here
-    visit root_path
-    expect(current_path).to eq(root_path)
   end
 end
 ```
