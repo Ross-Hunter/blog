@@ -6,6 +6,6 @@ I kicked-off my career in software by starting my own e-commerce business sellin
 
 I live in Grand Rapids, MI where I am pretty involved in the local tech community. I am (or have been) an organizer for <a target="_blank" href="http://beercitycode.com">Beer City Code</a>, <a target="_blank" href="http://grwebdev.org">GRWebDev</a>, <a target="_blank" href="https://codeforgoodwm.org/">Code For Good</a>, <a target="_blank" href="http://barcampgr.org">BarCampGR</a> & <a target="_blank" href="http://meetup.com/mi-ruby">West Michigan Ruby</a>.
 
-I'm happily married to my high school sweetheart & I love teaching my wonderful daughter about the nerdy games that daddy plays with his friends. I'm a staunch progressive & I love making loud, rock & roll shaped sounds.
+I'm happily married to my high school sweetheart & I love teaching my wonderful daughter about the nerdy games that daddy plays with his nerd friends. I'm a staunch progressive, avid frisbee thrower & I love making loud, rock n' roll shaped sounds.
 
 _<a href="/blog">Every now & again I write about software</a>_.

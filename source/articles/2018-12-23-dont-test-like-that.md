@@ -130,7 +130,7 @@ RSpec.describe Chemical do
   end
 end
 ```
-- `Cemical.water` should equal `Chemical.water`? Really? You actually wrote a test like that?
+- `Chemical.water` should equal `Chemical.water`? Really? You actually wrote a test like that?
 
 __*Do something like this*__
 
