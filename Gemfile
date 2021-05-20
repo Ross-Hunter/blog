@@ -14,7 +14,7 @@ gem 'middleman-syntax', '~> 2.0.0'
 gem 'redcarpet', '~> 3.3.2'
 
 # For "summary"-Helper
-gem 'nokogiri', '~> 1.6.8'
+gem 'nokogiri', '~> 1.11.4'
 
 gem "middleman-favicon-maker", "~> 3.7"
 
