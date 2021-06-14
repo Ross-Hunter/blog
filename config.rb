@@ -52,7 +52,7 @@ set :casper, {
     "GitHub" => "https://github.com/ross-hunter",
     "Twitter" => "https://twitter.com/ross_hunter",
     "LinkedIn" => "https://www.linkedin.com/in/rossh",
-    "Facebook" => "http://www.facebook.com/ross.hunter",
+    "Soundcloud" => "https://soundcloud.com/ross-hunter-1",
     "Email" => "mailto:ross-hunter@ross-hunter.com"
   }
 }
