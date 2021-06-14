@@ -40,7 +40,7 @@ set :casper, {
   },
   author: {
     name: 'Ross Hunter',
-    bio: 'Computer Philosopher',
+    bio: 'Software Shepherd',
     location: 'Grand Rapids, MI',
     website: 'http://ross-hunter.com',
     gravatar_email: "ross-hunter@ross-hunter.com"
