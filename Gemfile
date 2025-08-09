@@ -1,24 +1,28 @@
 source 'https://rubygems.org'
 
-gem 'middleman', '~> 3.4.0'
-gem 'middleman-blog', '~> 3.5.3'
-gem 'middleman-livereload', '~> 3.4.3'
+gem 'middleman', '~> 4.5'
+gem 'middleman-blog', '~> 4.0'
+gem 'middleman-livereload', '~> 3.4'
 
 gem 'rake'
 
 # For feed.xml.builder
-gem 'builder', '~> 3.2.2'
+gem 'builder', '~> 3.2'
 
 # Code syntax highlighting
-gem 'middleman-syntax', '~> 2.0.0'
-gem 'redcarpet', '~> 3.3.2'
+gem 'middleman-syntax', '~> 3.3'
+gem 'redcarpet', '~> 3.6'
 
 # For "summary"-Helper
-gem 'nokogiri', '~> 1.6.8'
+gem 'nokogiri', '~> 1.16'
 
-gem "middleman-favicon-maker", "~> 3.7"
+gem "middleman-favicon-maker", "~> 4.1"
 
 gem 'middleman-protect-emails'
 
-# gem 'middleman-deploy', '~> 1.0'
-gem 'mgd'
+# GitHub Pages deployment
+gem 'middleman-gh-pages'
+
+# Additional dependencies for modern Ruby
+gem 'webrick', '~> 1.8'
+gem 'ostruct'
