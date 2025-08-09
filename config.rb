@@ -62,16 +62,16 @@ page '/sitemap.xml', layout: false
 
 ignore '/partials/*'
 
-ready do
-  blog.tags.each do |tag, articles|
-    proxy "/tag/#{tag.downcase.parameterize}/feed.xml", '/feed.xml', layout: false do
-      @tagname = tag
-      @articles = articles[0..5]
-    end
-  end
+# ready do
+#   blog.tags.each do |tag, articles|
+#     proxy "/tag/#{tag.downcase.parameterize}/feed.xml", '/feed.xml', layout: false do
+#       @tagname = tag
+#       @articles = articles[0..5]
+#     end
+#   end
 
-  # proxy "/author/#{blog_author.name.parameterize}.html", '/author.html', ignore: true
-end
+#   # proxy "/author/#{blog_author.name.parameterize}.html", '/author.html', ignore: true
+# end
 
 ###
 # Compass
@@ -119,7 +119,7 @@ activate :livereload
 activate :directory_indexes
 
 # Middleman-Syntax - https://github.com/middleman/middleman-syntax
-set :haml, { ugly: true }
+set :haml, { format: :html5 }
 set :markdown_engine, :redcarpet
 set :markdown, fenced_code_blocks: true, smartypants: true, strikethrough: true
 activate :syntax, line_numbers: false
