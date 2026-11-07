@@ -23,6 +23,9 @@ task :build do
 end
 task b: :build
 
+# Deploys happen in GitHub Actions (.github/workflows/deploy.yml) on every
+# push to master. This re-runs that workflow manually.
+desc "Build and deploy master to GitHub Pages via GitHub Actions"
 task :deploy do
-  sh "bundle exec mgd"
+  sh "gh workflow run deploy.yml --ref master"
 end

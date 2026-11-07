@@ -20,9 +20,6 @@ gem "middleman-favicon-maker", "~> 4.1"
 
 gem 'middleman-protect-emails'
 
-# GitHub Pages deployment
-gem 'middleman-gh-pages'
-
 # Additional dependencies for modern Ruby
 gem 'webrick', '~> 1.8'
 gem 'ostruct'
