@@ -210,7 +210,7 @@
 
 <h3>Don&rsquo;t repeat yourself</h3>
 
-<p>We must walk a fine line in our tests, where we keep them very plain and readable, so that we don&rsquo;t get lost in the complexity of the test themselves. However, we can still follow best practices and use variables to clean up tests and make them easier to read and write.</p>
+<p>We must walk a fine line in our tests, where we keep them very plain and readable, so that we don&rsquo;t get lost in the complexity of the tests themselves. However, we can still follow best practices and use variables to clean up tests and make them easier to read and write.</p>
 
 <p><strong><em>Don&rsquo;t do this</em></strong></p>
 <div class="highlight"><pre class="highlight javascript"><code><span class="c1">// jest + enzyme</span>
@@ -247,13 +247,13 @@
 <li>We use a variable to represent our input, and then we test that the new output is equal to our input.</li>
 </ul>
 
-<h3>Don&rsquo;t test the absensce of an error</h3>
+<h3>Don&rsquo;t test the absence of an error</h3>
 
 <p>Do not allow the absence of an error, or the presence of a success message to be your indicator of success. Test the actual result!</p>
 
 <p><strong><em>Don&rsquo;t do this</em></strong></p>
 <div class="highlight"><pre class="highlight ruby"><code><span class="c1">#RSpec</span>
-<span class="no">Rspec</span><span class="p">.</span><span class="nf">describe</span> <span class="s1">'Admin Settings Page'</span> <span class="k">do</span>
+<span class="no">RSpec</span><span class="p">.</span><span class="nf">describe</span> <span class="s1">'Admin Settings Page'</span> <span class="k">do</span>
   <span class="n">it</span> <span class="s1">'can update settings'</span> <span class="k">do</span>
     <span class="n">visit</span> <span class="n">general_settings_path</span>
 
@@ -266,12 +266,12 @@
 </code></pre></div>
 <p><strong><em>Do something like this</em></strong></p>
 <div class="highlight"><pre class="highlight ruby"><code><span class="c1">#RSpec</span>
-<span class="no">Rspec</span><span class="p">.</span><span class="nf">describe</span> <span class="s1">'Admin Settings Page'</span> <span class="k">do</span>
+<span class="no">RSpec</span><span class="p">.</span><span class="nf">describe</span> <span class="s1">'Admin Settings Page'</span> <span class="k">do</span>
   <span class="n">it</span> <span class="s1">'can update settings'</span> <span class="k">do</span>
     <span class="n">conversion_rate</span> <span class="o">=</span> <span class="s1">'0.75'</span>
     <span class="n">visit</span> <span class="n">general_settings_path</span>
 
-    <span class="n">fill_in</span> <span class="s1">'settings[conversion]'</span><span class="p">,</span> <span class="ss">with: </span><span class="n">conversion_rate</span>
+    <span class="n">fill_in</span> <span class="s1">'settings[conversion_rate]'</span><span class="p">,</span> <span class="ss">with: </span><span class="n">conversion_rate</span>
     <span class="n">click_button</span> <span class="s1">'update'</span>
 
     <span class="c1"># It's fine to test this message, but it's not a real indication that it worked how you expected</span>
@@ -292,7 +292,7 @@
 
 <p>Even worse, when you write tests like this you might come to the conclusion that &ldquo;testing sucks and is just a waste of time&rdquo;. Testing is awesome and possibly the single biggest &ldquo;upgrade&rdquo; you can apply to your software development skills.</p>
 
-<h3>To the listener</h3>
+<h3>To the reader</h3>
 
 <p>What are some common mistakes you see made in tests? There were a lot of &ldquo;smelly&rdquo; tests that almost made the cut for this post and perhaps I&rsquo;ll do a part 2 at some point. </p>
 </section>

@@ -70,14 +70,59 @@
 </header>
 <section class='post-content'><p><a href="http://desandro.com/resources/jquery-masonry/">jQuery Masonry</a> is a sweet layout plugin for jQuery. They describe it as &ldquo;The flip side of CSS floats&rdquo;. It aligns elements vertically then horizontally, minimizing the vertical gaps between elements of varying heights. I created my own sandbox for playing around with masonry.</p>
 
-<p>Like any layout, it has it&rsquo;s time and place. I would consider this primarily an alternative layout, only to be used when trying to be a little different. In terms of usability, one is generally better off sticking to a grid.</p>
+<p>Like any layout, it has its time and place. I would consider this primarily an alternative layout, only to be used when trying to be a little different. In terms of usability, one is generally better off sticking to a grid.</p>
 
 <p>If the content being displayed is meant to be &ldquo;artsy&rdquo;, such as a list of varying sized portfolio pieces or photos, then it is actually really useful and can give your site an &ldquo;edgy&rdquo; feel.</p>
 
-<p>On my masonry sandbox page I am also playing around with some other ways to effect Drupal views. In the header of the view I have created buttons that correspond to toggling views field names. This can cause some overlap with the masonry layout that is applied that stacks content on top of other content. However, there is a simple fix; we just add masonry to the callback function of the slideToggle functions to re-mason the page only after the slideToggle has finished firing. The full JS for the page is below.</p>
+<p>On my masonry sandbox page I am also playing around with some other ways to affect Drupal views. In the header of the view I have created buttons that correspond to toggling views field names. This can cause some overlap with the masonry layout that is applied that stacks content on top of other content. However, there is a simple fix; we just add masonry to the callback function of the slideToggle functions to re-mason the page only after the slideToggle has finished firing. The full JS for the page is below.</p>
+<div class="highlight"><pre class="highlight javascript"><code><span class="nf">jQuery</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nf">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+<span class="kd">var</span>
+  <span class="nx">speed</span> <span class="o">=</span> <span class="mi">600</span><span class="p">,</span>  <span class="c1">// animation speed</span>
+  <span class="nx">$wall</span> <span class="o">=</span> <span class="nf">jQuery</span><span class="p">(</span><span class="dl">'</span><span class="s1">#content</span><span class="dl">'</span><span class="p">).</span><span class="nf">find</span><span class="p">(</span><span class="dl">'</span><span class="s1">.tobemasoned .view-content</span><span class="dl">'</span><span class="p">)</span>
+<span class="p">;</span>
 
-<script src="http://pastebin.com/embed_js.php?i=DCTAvLFV"></script>
-</section>
+<span class="nx">$wall</span><span class="p">.</span><span class="nf">masonry</span><span class="p">({</span>
+  <span class="na">columnWidth</span><span class="p">:</span> <span class="mi">172</span><span class="p">,</span>
+  <span class="c1">// only apply masonry layout to visible elements</span>
+  <span class="na">itemSelector</span><span class="p">:</span> <span class="dl">'</span><span class="s1">.views-row:not(.invis)</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">animate</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="na">animationOptions</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">duration</span><span class="p">:</span> <span class="nx">speed</span><span class="p">,</span>
+    <span class="na">queue</span><span class="p">:</span> <span class="kc">false</span>
+  <span class="p">}</span>
+<span class="p">});</span>
+
+<span class="nf">jQuery</span><span class="p">(</span><span class="dl">'</span><span class="s1">.view-header a</span><span class="dl">'</span><span class="p">).</span><span class="nf">click</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+  <span class="kd">var</span> <span class="nx">colorClass</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">.</span><span class="dl">'</span> <span class="o">+</span> <span class="nf">jQuery</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nf">attr</span><span class="p">(</span><span class="dl">'</span><span class="s1">class</span><span class="dl">'</span><span class="p">);</span>
+
+  <span class="k">if</span><span class="p">(</span><span class="nx">colorClass</span><span class="o">==</span><span class="dl">'</span><span class="s1">.all</span><span class="dl">'</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// show all hidden boxes</span>
+    <span class="nx">$wall</span><span class="p">.</span><span class="nf">children</span><span class="p">(</span><span class="dl">'</span><span class="s1">.invis</span><span class="dl">'</span><span class="p">)</span>
+      <span class="p">.</span><span class="nf">toggleClass</span><span class="p">(</span><span class="dl">'</span><span class="s1">invis</span><span class="dl">'</span><span class="p">).</span><span class="nf">fadeIn</span><span class="p">(</span><span class="nx">speed</span><span class="p">);</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="c1">// hide visible boxes</span>
+    <span class="nx">$wall</span><span class="p">.</span><span class="nf">children</span><span class="p">().</span><span class="nf">not</span><span class="p">(</span><span class="nx">colorClass</span><span class="p">).</span><span class="nf">not</span><span class="p">(</span><span class="dl">'</span><span class="s1">.invis</span><span class="dl">'</span><span class="p">)</span>
+      <span class="p">.</span><span class="nf">toggleClass</span><span class="p">(</span><span class="dl">'</span><span class="s1">invis</span><span class="dl">'</span><span class="p">).</span><span class="nf">fadeOut</span><span class="p">(</span><span class="nx">speed</span><span class="p">);</span>
+    <span class="c1">// show hidden boxes</span>
+    <span class="nx">$wall</span><span class="p">.</span><span class="nf">children</span><span class="p">(</span><span class="nx">colorClass</span><span class="o">+</span><span class="dl">'</span><span class="s1">.invis</span><span class="dl">'</span><span class="p">)</span>
+      <span class="p">.</span><span class="nf">toggleClass</span><span class="p">(</span><span class="dl">'</span><span class="s1">invis</span><span class="dl">'</span><span class="p">).</span><span class="nf">fadeIn</span><span class="p">(</span><span class="nx">speed</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="nx">$wall</span><span class="p">.</span><span class="nf">masonry</span><span class="p">();</span>
+
+  <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">});</span>
+
+<span class="nf">jQuery</span><span class="p">(</span><span class="dl">'</span><span class="s1">#titleButton</span><span class="dl">'</span><span class="p">).</span><span class="nf">click</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+   <span class="nf">jQuery</span><span class="p">(</span><span class="dl">"</span><span class="s2">.views-field-title</span><span class="dl">"</span><span class="p">).</span><span class="nf">slideToggle</span><span class="p">(</span><span class="nx">speed</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="nx">$wall</span><span class="p">.</span><span class="nf">masonry</span><span class="p">();</span> <span class="p">});</span>
+   <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+   <span class="p">});</span>
+
+<span class="nf">jQuery</span><span class="p">(</span><span class="dl">'</span><span class="s1">#postDate</span><span class="dl">'</span><span class="p">).</span><span class="nf">click</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+   <span class="nf">jQuery</span><span class="p">(</span><span class="dl">"</span><span class="s2">.views-field-created</span><span class="dl">"</span><span class="p">).</span><span class="nf">slideToggle</span><span class="p">(</span><span class="nx">speed</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="nx">$wall</span><span class="p">.</span><span class="nf">masonry</span><span class="p">();</span> <span class="p">});</span>
+   <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+   <span class="p">});</span>
+<span class="p">});</span>
+</code></pre></div></section>
 <footer class='post-footer'>
 <figure class='author-image'>
 <a class='img' href='/' style='background-image: url(https://www.gravatar.com/avatar/99057d911bd664e8cde1a2995ee25401?size=68)'>

@@ -79,12 +79,14 @@
 </ul>
 
 <p>Instead of using Javascript and/or images, it uses a 28K .htc file which is loaded simply by uploading the PIE.htc file into your CSS folder and adding the following to your CSS on elements using any of the advanced CSS features</p>
+<div class="highlight"><pre class="highlight css"><code><span class="nf">#myElement</span> <span class="p">{</span>
+    <span class="c">/*CSS3 such as border-radius*/</span>
+    <span class="py">behavior</span><span class="p">:</span> <span class="nf">url</span><span class="p">(</span><span class="n">PIE</span><span class="p">.</span><span class="n">htc</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>I had been searching for an easy way to do rounded corners in Internet Explorer for a while before I discovered sweet, glorious PIE. There are <a href="http://css3pie.com/documentation/product-comparison/">many methods</a> involving images and Javascript, and even a few other .htc file implementations, that create rounded corners, but in my opinion they are all junk compared to PIE. PIE has the added benefit that the PIE.htc file is only loaded in IE and only when called from the stylesheet; it doesn&rsquo;t increase the overhead on any of the good browsers!</p>
 
-<script src="http://pastebin.com/embed_js.php?i=af8f5GT5"></script>
-
-<p>I had been searching for an easy way to do rounded corners in internet explorer for a while before I discovered sweet, glorious PIE. There are <a href="http://css3pie.com/documentation/product-comparison/">many methods</a> involving images and Javascript, and even a few other .htc file implementations, that create rounded corners, but in my opinion they are all junk compared to PIE. PIE has the added benefit that the PIE.htc file is only loaded in IE and only when called from the stylesheet; it doesn&rsquo;t increase the overhead on any of the good browsers!</p>
-
-<p>PIE is an open source project <a href="https://github.com/lojjic/PIE">available on github.</a> So if you have the skills, please contribute and let&rsquo;s get all CSS3 behavior rolled into this thing.</p>
+<p>PIE is an open source project <a href="https://github.com/lojjic/PIE">available on GitHub.</a> So if you have the skills, please contribute and let&rsquo;s get all CSS3 behavior rolled into this thing.</p>
 </section>
 <footer class='post-footer'>
 <figure class='author-image'>

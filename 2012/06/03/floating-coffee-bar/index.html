@@ -69,12 +69,38 @@
 </section>
 </header>
 <section class='post-content'><p>I have been really getting into writing CoffeeScript lately, so I decided to revisit the jQuery floating sidebar I blogged about a while back. The logic is the same, other than using a named function to increase readability. The code is shrunk from 40 lines to 28 lines (with extra line breaks for readability). More importantly, I believe the code is easier to understand.</p>
-<p>The basic concept is to create function which I have called jitteryScroll that either scrolls the sidebar items, or returns them to the header if the scroll is at the top of the page. Then I define a function that fires on scroll and I use setTimeout in order to prevent the scroll function from overloading the browser (the scroll function fires like a machine gun when a user scrolls a page).</p>
 
-<script src="http://pastebin.com/embed_js.php?i=H7f1x28B"></script>
+<p>The basic concept is to create a function which I have called jitteryScroll that either scrolls the sidebar items, or returns them to the header if the scroll is at the top of the page. Then I define a function that fires on scroll and I use setTimeout in order to prevent the scroll function from overloading the browser (the scroll function fires like a machine gun when a user scrolls a page).</p>
+<div class="highlight"><pre class="highlight coffeescript"><code><span class="nx">jQuery</span> <span class="p">(</span><span class="nx">$</span><span class="p">)</span><span class="o">-&gt;</span>
+  <span class="nx">timer</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="nx">$top</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s">'#block-block-3'</span><span class="p">).</span><span class="na">offset</span><span class="p">().</span><span class="na">top</span> <span class="o">+</span> <span class="mi">20</span>
 
-<p>s
-Let me know if you have any questions or suggestions.</p>
+  <span class="nx">jitteryScroll</span> <span class="o">=</span> <span class="p">()</span><span class="o">-&gt;</span>
+    <span class="nx">timer</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="nx">topOfWindow</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="nb">window</span><span class="p">).</span><span class="na">scrollTop</span><span class="p">()</span>
+    <span class="k">if</span> <span class="nx">topOfWindow</span> <span class="o">&gt;</span> <span class="nx">$top</span>
+      <span class="nx">$</span><span class="p">(</span><span class="s">'#block-block-3'</span><span class="p">).</span><span class="na">css</span><span class="p">({</span>
+          <span class="na">position</span><span class="o">:</span> <span class="s">'absolute'</span><span class="p">})</span>
+      <span class="nx">$</span><span class="p">(</span><span class="s">'#block-block-3'</span><span class="p">).</span><span class="na">stop</span><span class="p">(</span><span class="no">true</span><span class="p">,</span> <span class="no">true</span><span class="p">).</span><span class="na">animate</span><span class="p">({</span>
+          <span class="na">opacity</span><span class="o">:</span> <span class="mf">0.75</span>
+          <span class="na">width</span><span class="o">:</span> <span class="mi">40</span>
+          <span class="na">top</span><span class="o">:</span> <span class="nx">topOfWindow</span>
+          <span class="na">right</span><span class="o">:</span> <span class="o">-</span><span class="mi">25</span>
+          <span class="p">},</span> <span class="mi">600</span><span class="p">,</span> <span class="s">'easeOutElastic'</span> <span class="p">)</span>
+    <span class="k">else</span>
+      <span class="nx">$</span><span class="p">(</span><span class="s">'#block-block-3'</span><span class="p">).</span><span class="na">stop</span><span class="p">(</span><span class="no">true</span><span class="p">,</span> <span class="no">true</span><span class="p">).</span><span class="na">css</span><span class="p">({</span>
+          <span class="na">opacity</span><span class="o">:</span> <span class="mi">1</span>
+          <span class="na">width</span><span class="o">:</span> <span class="mi">270</span>
+          <span class="na">top</span><span class="o">:</span> <span class="mi">0</span>
+          <span class="na">right</span><span class="o">:</span> <span class="mi">0</span>
+          <span class="na">position</span><span class="o">:</span> <span class="s">'relative'</span>
+          <span class="p">})</span>
+
+  <span class="nx">$</span><span class="p">(</span><span class="nb">window</span><span class="p">).</span><span class="na">scroll</span> <span class="p">()</span><span class="o">-&gt;</span>
+    <span class="k">if</span> <span class="o">!</span><span class="nx">timer</span>
+      <span class="nx">timer</span> <span class="o">=</span> <span class="nx">setTimeout</span> <span class="nx">jitteryScroll</span><span class="p">,</span> <span class="mi">250</span>
+</code></pre></div>
+<p>Let me know if you have any questions or suggestions.</p>
 </section>
 <footer class='post-footer'>
 <figure class='author-image'>
@@ -134,7 +160,7 @@ s.setAttribute('data-timestamp', +new Date());
 <aside class='read-next'>
 <a class='read-next-story no-cover' href='/2012/03/04/php-centos/'>
 <section class='post'>
-<h2>Installing PHP 5.4 on Centos 5.7</h2>
+<h2>Installing PHP 5.4 on CentOS 5.7</h2>
 <p>I am not what one would consider a sys admin. I do enjoy running my own VPS and mucking&hellip;</p>
 </section>
 </a>

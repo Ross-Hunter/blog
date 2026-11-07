@@ -73,9 +73,16 @@
 <p>So I opened up my config and my PATH variable looked like a super long unintelligible mess (I wish I had saved a version of it for comparison). I had followed too many tutorials/installation instructions that simply told me to &ldquo;copy and paste this code into terminal&rdquo; and it resulted in a ton of things appending to my PATH. There were a lot of words and slashes and it was not clear to me the order in which things were loaded. So I decided to separate each individual path that was being added to my PATH, and put each one on a separate line. This really makes it clear the order in which things load, so that it is clear that things being installed from brew (/usr/local/bin) run before macports or system.</p>
 
 <p><strong><em>Update</em>:</strong> I bought a new computer and cleaned out my PATH even more, getting rid of macports etc.</p>
+<div class="highlight"><pre class="highlight shell"><code><span class="nv">PATH</span><span class="o">=</span>/usr/local/bin
+<span class="nv">PATH</span><span class="o">=</span><span class="k">${</span><span class="nv">PATH</span><span class="k">}</span>:/Users/vox/.rvm/bin
+<span class="nv">PATH</span><span class="o">=</span><span class="k">${</span><span class="nv">PATH</span><span class="k">}</span>:/usr/local/Cellar/php54/5.4.5/bin
+<span class="nv">PATH</span><span class="o">=</span><span class="k">${</span><span class="nv">PATH</span><span class="k">}</span>:/usr/bin
+<span class="nv">PATH</span><span class="o">=</span><span class="k">${</span><span class="nv">PATH</span><span class="k">}</span>:/bin
+<span class="nv">PATH</span><span class="o">=</span><span class="k">${</span><span class="nv">PATH</span><span class="k">}</span>:/usr/sbin
+<span class="nv">PATH</span><span class="o">=</span><span class="k">${</span><span class="nv">PATH</span><span class="k">}</span>:/sbin
 
-<script src="http://pastebin.com/embed_js.php?i=0zq8Wn2R"></script>
-
+<span class="nb">export </span>PATH
+</code></pre></div>
 <p>Let me know in comments if you have any questions, or suggestions for improvement.</p>
 </section>
 <footer class='post-footer'>

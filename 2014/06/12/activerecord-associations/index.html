@@ -80,7 +80,7 @@
 
 <p>These are pretty straightforward and are 2 sides of the same relationship. The table of the <code>belongs_to</code> model contains a column with the foreign key of the <code>has_one</code> model. ActiveRecord expects only one <code>belongs_to</code> model to match up to the <code>has_one</code>. The <code>has_one</code> model should be the one that semantically makes more sense to own the other. For instance, it makes more sense for a profile to <code>belong_to</code> a user, rather than the other way around.</p>
 
-<p>Before 4.1, there was a peformance benefit from specifiying that the <code>has_one</code> and <code>belongs_to</code> were related, but now rails guesses the inverse based on hueristics. If you are on a version previous to 4.1 or your relationship uses a different class name, or other options, you may want to specify the <code>inverse_of</code> attribute. This will reduce the number of database calls since ActiveRecord will not go to the database if the object has already been loaded from another association.</p>
+<p>Before 4.1, there was a performance benefit from specifying that the <code>has_one</code> and <code>belongs_to</code> were related, but now rails guesses the inverse based on heuristics. If you are on a version previous to 4.1 or your relationship uses a different class name, or other options, you may want to specify the <code>inverse_of</code> attribute. This will reduce the number of database calls since ActiveRecord will not go to the database if the object has already been loaded from another association.</p>
 
 <script src="https://gist.github.com/Ross-Hunter/f2539f3e2fd09ad4eb5c.js"></script>
 
@@ -102,7 +102,7 @@
 
 <script src="https://gist.github.com/Ross-Hunter/d050da14afd00b5d06b7.js"></script>
 
-<p>In some instances it will make sense to create a new connecting model to represent the relationship. For instance a <code>membership</code> might make sense to be its own model that can have methods and be queried more easily using activerecord.</p>
+<p>In some instances it will make sense to create a new connecting model to represent the relationship. For instance a <code>membership</code> might make sense to be its own model that can have methods and be queried more easily using ActiveRecord.</p>
 
 <script src="https://gist.github.com/Ross-Hunter/ea122684a5cbd1795083.js"></script>
 
