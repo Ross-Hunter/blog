@@ -1,5 +1,7 @@
 require 'ostruct'
 require 'digest/md5'
+require 'erb'
+require 'nokogiri'
 
 module MiddlemanCasperHelpers
   def page_title
@@ -16,7 +18,7 @@ module MiddlemanCasperHelpers
 
   def page_description
     if is_blog_article?
-      body = strip_tags(current_article.body).gsub(/\s+/, ' ')
+      body = plain_text(current_article.body).gsub(/\s+/, ' ')
       truncate(body, length: 147)
     else
       blog_settings.description
@@ -35,12 +37,18 @@ module MiddlemanCasperHelpers
 
   def summary(article)
     summary_length = article.blog_options[:summary_length]
-    strip_tags(article.summary(summary_length, ''))
+    plain_text(article.summary(summary_length, ''))
   end
 
   def read_next_summary(article, words)
-    body = strip_tags(article.body)
+    body = plain_text(article.body)
     truncate_words(body, length: words, omission: '')
+  end
+
+  # Text content of an HTML fragment with entities decoded, so templates can
+  # escape it exactly once (Haml 6 escapes by default).
+  def plain_text(html)
+    Nokogiri::HTML::DocumentFragment.parse(html.to_s).text
   end
 
   def blog_author
@@ -62,12 +70,8 @@ module MiddlemanCasperHelpers
     article.tags.present?
   end
   def tags(article = current_article, separator = ', ')
-    capture_haml do
-      article.tags.each do |tag|
-        haml_tag(:a, tag, href: tag_path(tag))
-        haml_concat(separator) unless article.tags.last == tag
-      end
-    end.gsub("\n", '')
+    links = article.tags.map { |tag| link_to(tag, tag_path(tag)) }
+    links.join(separator).html_safe
   end
 
   def current_article_url
@@ -94,8 +98,8 @@ module MiddlemanCasperHelpers
   end
 
   def twitter_url
-    "https://twitter.com/share?text=#{current_article.title}" \
-      "&amp;url=#{current_article_url}"
+    "https://twitter.com/share?text=#{ERB::Util.url_encode(current_article.title)}" \
+      "&url=#{ERB::Util.url_encode(current_article_url.to_s)}"
   end
   def facebook_url
     "https://www.facebook.com/sharer/sharer.php?u=#{current_article_url}"
