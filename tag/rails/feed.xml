@@ -5,7 +5,7 @@
   <id>http://www.ross-hunter.com</id>
   <link href="http://www.ross-hunter.com"/>
   <link href="http://www.ross-hunter.com/tag/rails/feed.xml" rel="self"/>
-  <updated>2018-12-23T00:00:00Z</updated>
+  <updated>2018-12-23T00:00:00+00:00</updated>
   <author>
     <name>Ross Hunter</name>
   </author>
@@ -13,8 +13,8 @@
     <title>Don't Test Like That!</title>
     <link rel="alternate" href="http://www.ross-hunter.com/2018/12/23/dont-test-like-that/"/>
     <id>http://www.ross-hunter.com/2018/12/23/dont-test-like-that/</id>
-    <published>2018-12-23T00:00:00Z</published>
-    <updated>2022-08-01T11:08:27-04:00</updated>
+    <published>2018-12-23T00:00:00+00:00</published>
+    <updated>2026-11-07T19:16:37+00:00</updated>
     <author>
       <name>Ross Hunter</name>
     </author>
@@ -30,8 +30,8 @@ System</summary>
     <title>JSON API Helpers for API Testing in Rails using Airborne</title>
     <link rel="alternate" href="http://www.ross-hunter.com/2017/01/16/json-api-airborne-expectation-helpers/"/>
     <id>http://www.ross-hunter.com/2017/01/16/json-api-airborne-expectation-helpers/</id>
-    <published>2017-01-16T00:00:00Z</published>
-    <updated>2022-08-01T11:08:27-04:00</updated>
+    <published>2017-01-16T00:00:00+00:00</published>
+    <updated>2026-11-07T19:16:37+00:00</updated>
     <author>
       <name>Ross Hunter</name>
     </author>
@@ -53,8 +53,8 @@ body - The raw HTTP
     <title>Index Your Foreign Keys</title>
     <link rel="alternate" href="http://www.ross-hunter.com/2014/06/13/index-foreign-keys/"/>
     <id>http://www.ross-hunter.com/2014/06/13/index-foreign-keys/</id>
-    <published>2014-06-13T00:00:00Z</published>
-    <updated>2022-08-01T11:08:27-04:00</updated>
+    <published>2014-06-13T00:00:00+00:00</published>
+    <updated>2026-11-07T19:16:37+00:00</updated>
     <author>
       <name>Ross Hunter</name>
     </author>
@@ -64,8 +64,8 @@ body - The raw HTTP
     <title>ActiveRecord Associations &amp; You</title>
     <link rel="alternate" href="http://www.ross-hunter.com/2014/06/12/activerecord-associations/"/>
     <id>http://www.ross-hunter.com/2014/06/12/activerecord-associations/</id>
-    <published>2014-06-12T00:00:00Z</published>
-    <updated>2022-08-01T11:08:27-04:00</updated>
+    <published>2014-06-12T00:00:00+00:00</published>
+    <updated>2026-11-07T19:16:37+00:00</updated>
     <author>
       <name>Ross Hunter</name>
     </author>
@@ -77,8 +77,8 @@ However, understanding</summary>
     <title>Better Rails Debugging with better_errors and jazz_hands</title>
     <link rel="alternate" href="http://www.ross-hunter.com/2013/05/17/rails-debugging/"/>
     <id>http://www.ross-hunter.com/2013/05/17/rails-debugging/</id>
-    <published>2013-05-17T00:00:00Z</published>
-    <updated>2022-08-01T11:08:27-04:00</updated>
+    <published>2013-05-17T00:00:00+00:00</published>
+    <updated>2026-11-07T19:16:37+00:00</updated>
     <author>
       <name>Ross Hunter</name>
     </author>

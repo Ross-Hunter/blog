@@ -5,7 +5,7 @@
   <id>http://www.ross-hunter.com</id>
   <link href="http://www.ross-hunter.com"/>
   <link href="http://www.ross-hunter.com/tag/css/feed.xml" rel="self"/>
-  <updated>2018-12-23T00:00:00Z</updated>
+  <updated>2018-12-23T00:00:00+00:00</updated>
   <author>
     <name>Ross Hunter</name>
   </author>
@@ -13,8 +13,8 @@
     <title>Rounded Corners and More! CSS3 PIE Makes Developing for IE Suck Less.</title>
     <link rel="alternate" href="http://www.ross-hunter.com/2010/11/16/css3-pie/"/>
     <id>http://www.ross-hunter.com/2010/11/16/css3-pie/</id>
-    <published>2010-11-16T00:00:00Z</published>
-    <updated>2022-08-01T11:08:27-04:00</updated>
+    <published>2010-11-16T00:00:00+00:00</published>
+    <updated>2026-11-07T19:16:37+00:00</updated>
     <author>
       <name>Ross Hunter</name>
     </author>

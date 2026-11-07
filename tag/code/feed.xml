@@ -5,7 +5,7 @@
   <id>http://www.ross-hunter.com</id>
   <link href="http://www.ross-hunter.com"/>
   <link href="http://www.ross-hunter.com/tag/code/feed.xml" rel="self"/>
-  <updated>2018-12-23T00:00:00Z</updated>
+  <updated>2018-12-23T00:00:00+00:00</updated>
   <author>
     <name>Ross Hunter</name>
   </author>
@@ -13,8 +13,8 @@
     <title>Don't Test Like That!</title>
     <link rel="alternate" href="http://www.ross-hunter.com/2018/12/23/dont-test-like-that/"/>
     <id>http://www.ross-hunter.com/2018/12/23/dont-test-like-that/</id>
-    <published>2018-12-23T00:00:00Z</published>
-    <updated>2022-08-01T11:08:27-04:00</updated>
+    <published>2018-12-23T00:00:00+00:00</published>
+    <updated>2026-11-07T19:16:37+00:00</updated>
     <author>
       <name>Ross Hunter</name>
     </author>
@@ -30,8 +30,8 @@ System</summary>
     <title>Index Your Foreign Keys</title>
     <link rel="alternate" href="http://www.ross-hunter.com/2014/06/13/index-foreign-keys/"/>
     <id>http://www.ross-hunter.com/2014/06/13/index-foreign-keys/</id>
-    <published>2014-06-13T00:00:00Z</published>
-    <updated>2022-08-01T11:08:27-04:00</updated>
+    <published>2014-06-13T00:00:00+00:00</published>
+    <updated>2026-11-07T19:16:37+00:00</updated>
     <author>
       <name>Ross Hunter</name>
     </author>
@@ -41,8 +41,8 @@ System</summary>
     <title>ActiveRecord Associations &amp; You</title>
     <link rel="alternate" href="http://www.ross-hunter.com/2014/06/12/activerecord-associations/"/>
     <id>http://www.ross-hunter.com/2014/06/12/activerecord-associations/</id>
-    <published>2014-06-12T00:00:00Z</published>
-    <updated>2022-08-01T11:08:27-04:00</updated>
+    <published>2014-06-12T00:00:00+00:00</published>
+    <updated>2026-11-07T19:16:37+00:00</updated>
     <author>
       <name>Ross Hunter</name>
     </author>
@@ -54,8 +54,8 @@ However, understanding</summary>
     <title>(Over)simplify Your Code</title>
     <link rel="alternate" href="http://www.ross-hunter.com/2014/04/25/oversimplify-your-code/"/>
     <id>http://www.ross-hunter.com/2014/04/25/oversimplify-your-code/</id>
-    <published>2014-04-25T00:00:00Z</published>
-    <updated>2022-08-01T11:08:27-04:00</updated>
+    <published>2014-04-25T00:00:00+00:00</published>
+    <updated>2026-11-07T19:16:37+00:00</updated>
     <author>
       <name>Ross Hunter</name>
     </author>
@@ -67,8 +67,8 @@ The first benefit is code reuse. This is rather</summary>
     <title>Math Is Not Necessary for Software Development</title>
     <link rel="alternate" href="http://www.ross-hunter.com/2014/01/14/math/"/>
     <id>http://www.ross-hunter.com/2014/01/14/math/</id>
-    <published>2014-01-14T00:00:00Z</published>
-    <updated>2022-08-01T11:08:27-04:00</updated>
+    <published>2014-01-14T00:00:00+00:00</published>
+    <updated>2026-11-07T19:16:37+00:00</updated>
     <author>
       <name>Ross Hunter</name>
     </author>
@@ -87,8 +87,8 @@ This was part</summary>
     <title>Open + Download Native Apps with a PhoneGap/Cordova Plugin</title>
     <link rel="alternate" href="http://www.ross-hunter.com/2013/11/12/open-native-apps-phonegap/"/>
     <id>http://www.ross-hunter.com/2013/11/12/open-native-apps-phonegap/</id>
-    <published>2013-11-12T00:00:00Z</published>
-    <updated>2022-08-01T11:08:27-04:00</updated>
+    <published>2013-11-12T00:00:00+00:00</published>
+    <updated>2026-11-07T19:16:37+00:00</updated>
     <author>
       <name>Ross Hunter</name>
     </author>
