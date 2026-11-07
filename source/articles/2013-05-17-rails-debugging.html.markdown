@@ -19,7 +19,7 @@ By answering these questions you have already proven yourself to be quite a smar
 
 <br>
 <aside>
-<header>Basic `better_errors` stats:</header>
+<header>Basic <code>better_errors</code> stats:</header>
 <ul>
 <li>Full stack trace</li>
 <li>Source code inspection for all stack frames (with highlighting)</li>
@@ -37,18 +37,18 @@ One of my favorite parts of better_errors is that it filters application frames 
 
 If you are debugging a Rails API, AJAX, want to investigate a non-critical error like missing images, or for any other reason don't access the error page directly at the time of the error `better_errors` provides a page accessible via the url "/__better_errors" which contains the error page for the last error on the server.
 
-Another awesome part of `better_errors` is that it can open up files in your editor! It comes out of the box with support for textmate, but also supports for vim and a couple other editors. You can add Sublime Text by downloading <a href="https://github.com/asuth/subl-handler">sublime-handler</a> and configuring an initializer for `better_errors` that simply contains:
+Another awesome part of `better_errors` is that it can open up files in your editor! It comes out of the box with support for textmate, but also support for vim and a couple other editors. You can add Sublime Text by downloading <a href="https://github.com/asuth/subl-handler">sublime-handler</a> and configuring an initializer for `better_errors` that simply contains:
 
 <code>BetterErrors.editor = :sublime if defined? BetterErrors</code>
 
-The error page page is even responsive! This is an extremely polished gem and I simply can't live without it.
+The error page is even responsive! This is an extremely polished gem and I simply can't live without it.
 
 ### Jazz Hands
 
 When I need to really get my mitts in there and dig around for debugging, I like to use <a href="https://github.com/nixme/jazz_hands">`jazz_hands`</a>.
 
 <aside>
-<header>`jazz_hands` is collection of gems built around the popular IRB replacement `pry`. It includes:</header>
+<header><code>jazz_hands</code> is a collection of gems built around the popular IRB replacement <code>pry</code>. It includes:</header>
 <ul>
 <li>Pry for a powerful shell alternative to IRB.</li>
 <li>Awesome Print for stylish pretty print.</li>

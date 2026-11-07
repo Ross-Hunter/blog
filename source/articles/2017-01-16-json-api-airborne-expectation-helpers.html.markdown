@@ -58,7 +58,7 @@ describe 'widgets' do
 end
 ```
 
-You might notice that also uses an `authed_post` helper, which is from another set of helpers I created for making token-auth requests easier and JSON API compliant.
+You might notice that it also uses an `authed_post` helper, which is from another set of helpers I created for making token-auth requests easier and JSON API compliant.
 
 <script src="https://gist.github.com/Ross-Hunter/85efd826f038fd81910e800834c3d323.js"></script>
 

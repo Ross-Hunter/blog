@@ -5,13 +5,13 @@ layout: post
 tags: productivity
 id: 10
 ---
-I have been a (relatively) long time Sublime Text 2 user. Early 2011, I was running Ubuntu on my laptop and wasn't happy with any text editors I was finding. I gazed longingly at TextMate on my colleagues's Macbooks, but overall I was happy with my OS choice and wasn't ready to make that leap. Then I discovered Sublime, and fell in love. Over time I have learned some things, and developed some methods that have made Sublime and I the best of friends.
+I have been a (relatively) long time Sublime Text 2 user. Early 2011, I was running Ubuntu on my laptop and wasn't happy with any text editors I was finding. I gazed longingly at TextMate on my colleagues' MacBooks, but overall I was happy with my OS choice and wasn't ready to make that leap. Then I discovered Sublime, and fell in love. Over time I have learned some things, and developed some methods that have made Sublime and I the best of friends.
 
 ### Workflow
 
-My first piece of advice is to set up a command line alias for Sublime and open all projects using the terminal. Once you get used to this workflow you will be more efficient. Using the terminal along with an alias, one simply needs to cd into the project and open the folder using " slime . " - the folder is now open in sublime in it's own window.
+My first piece of advice is to set up a command line alias for Sublime and open all projects using the terminal. Once you get used to this workflow you will be more efficient. Using the terminal along with an alias, one simply needs to cd into the project and open the folder using " slime . " - the folder is now open in Sublime in its own window.
 
-OS X alias placed in profile (.bash\_profile, .zshrc, .bash\_rc)
+OS X alias placed in profile (.bash\_profile, .zshrc, .bashrc)
 
     alias slime='open -a "Sublime Text 2"'
 
@@ -25,14 +25,14 @@ OS X alias placed in profile (.bash\_profile, .zshrc, .bash\_rc)
 
 First I suggest figuring out a window management system that works for you. If you are on Windows 7 or Ubuntu, the built in window snapping works pretty well. The default window management on OS X is not great, so I like to use a program like Better Touch Tool to allow me to quickly maximize windows to the left, right, or full-screen. I then add to my Key Bindings - User file settings to quickly hide and expand the sidebar and gutter.
 
-    { "keys": ["ctrl+s"], "command": "toggle\_side\_bar" }, 
-    { "keys": ["ctrl+1"], "command": "toggle\_setting", "args": {"setting": "gutter"} },
+    { "keys": ["ctrl+s"], "command": "toggle_side_bar" }, 
+    { "keys": ["ctrl+1"], "command": "toggle_setting", "args": {"setting": "gutter"} },
 
 I use these combined with the side-by-side pane view ["super+alt+2"] in order to most efficiently use my screen real-estate.
 
 ### Sublime Settings
 
-You may want to spend some time perusing the Settings - Default file available from preferences. This will show you what settings are available. Do not make any changes to the defualt settings file, instead, add overrides to the Settings - User file.
+You may want to spend some time perusing the Settings - Default file available from preferences. This will show you what settings are available. Do not make any changes to the default settings file, instead, add overrides to the Settings - User file.
 
 Here are some settings that I suggest adding to the Settings - User file
 
@@ -45,7 +45,7 @@ Here are some settings that I suggest adding to the Settings - User file
 
 ### Install Packages
 
-First install Package Manager if you don't already have it. Then, use the command pallette ["super+shift+p"] and type "install package" to activate the Package Manager. Here are some suggestions:
+First install Package Control if you don't already have it. Then, use the command palette ["super+shift+p"] and type "install package" to activate Package Control. Here are some suggestions:
 
 <em>Languages</em> - Install any languages you use on a regular basis that are not included in vanilla Sublime. Some languages are just the syntax, others may add snippets, or even build environments.
 
@@ -67,16 +67,16 @@ First install Package Manager if you don't already have it. Then, use the comman
 
 Map caps lock to control - Why is caps lock a huge button right next to your pinky, but control is a tiny button down at the bottom? Google how to map keys for your OS.
 
-`["super+shift+v"]` is default the command for paste and indent. Some folks may want this to be the default behavior - simply add this to the Key Bindings - User file to swap the keybindings.
+`["super+shift+v"]` is the default command for paste and indent. Some folks may want this to be the default behavior - simply add this to the Key Bindings - User file to swap the keybindings.
 
     { "keys": ["super+v"], "command": "paste_and_indent" },
     { "keys": ["super+shift+v"], "command": "paste" },
 
 ### In conclusion
 
-Sublime Text is fast becoming one of the most popular text-editors among web developers and designers and it's cross-platform design and package manager give it a leg up over TextMate.
+Sublime Text is fast becoming one of the most popular text-editors among web developers and designers and its cross-platform design and package manager give it a leg up over TextMate.
 
-As a craftsmen it is important to understand and use our tools properly. Just as a painter needs to use the best paint and brushes - and understand how to use them - a developer should understand and use the best software tools available. For me, Sublime Text is the highest-quality brush available.
+As a craftsman it is important to understand and use our tools properly. Just as a painter needs to use the best paint and brushes - and understand how to use them - a developer should understand and use the best software tools available. For me, Sublime Text is the highest-quality brush available.
 
 ### Update
 

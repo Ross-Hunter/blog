@@ -17,8 +17,15 @@ OK, so we all know how much IE sucks. Well I just stumbled across a neat little 
 
 Instead of using Javascript and/or images, it uses a 28K .htc file which is loaded simply by uploading the PIE.htc file into your CSS folder and adding the following to your CSS on elements using any of the advanced CSS features
 
-<script src="http://pastebin.com/embed_js.php?i=af8f5GT5"></script>
 
-I had been searching for an easy way to do rounded corners in internet explorer for a while before I discovered sweet, glorious PIE. There are <a href="http://css3pie.com/documentation/product-comparison/">many methods</a> involving images and Javascript, and even a few other .htc file implementations, that create rounded corners, but in my opinion they are all junk compared to PIE. PIE has the added benefit that the PIE.htc file is only loaded in IE and only when called from the stylesheet; it doesn't increase the overhead on any of the good browsers!
+```css
+#myElement {
+    /*CSS3 such as border-radius*/
+    behavior: url(PIE.htc);
+}
+```
 
-PIE is an open source project <a href="https://github.com/lojjic/PIE">available on github.</a> So if you have the skills, please contribute and let's get all CSS3 behavior rolled into this thing.
+
+I had been searching for an easy way to do rounded corners in Internet Explorer for a while before I discovered sweet, glorious PIE. There are <a href="http://css3pie.com/documentation/product-comparison/">many methods</a> involving images and Javascript, and even a few other .htc file implementations, that create rounded corners, but in my opinion they are all junk compared to PIE. PIE has the added benefit that the PIE.htc file is only loaded in IE and only when called from the stylesheet; it doesn't increase the overhead on any of the good browsers!
+
+PIE is an open source project <a href="https://github.com/lojjic/PIE">available on GitHub.</a> So if you have the skills, please contribute and let's get all CSS3 behavior rolled into this thing.

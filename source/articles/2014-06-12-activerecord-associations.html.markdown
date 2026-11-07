@@ -17,7 +17,7 @@ __belongs\_to, has\_one__
 
 These are pretty straightforward and are 2 sides of the same relationship. The table of the `belongs_to` model contains a column with the foreign key of the `has_one` model. ActiveRecord expects only one `belongs_to` model to match up to the `has_one`. The `has_one` model should be the one that semantically makes more sense to own the other. For instance, it makes more sense for a profile to `belong_to` a user, rather than the other way around.
 
-Before 4.1, there was a peformance benefit from specifiying that the `has_one` and `belongs_to` were related, but now rails guesses the inverse based on hueristics. If you are on a version previous to 4.1 or your relationship uses a different class name, or other options, you may want to specify the `inverse_of` attribute. This will reduce the number of database calls since ActiveRecord will not go to the database if the object has already been loaded from another association.
+Before 4.1, there was a performance benefit from specifying that the `has_one` and `belongs_to` were related, but now rails guesses the inverse based on heuristics. If you are on a version previous to 4.1 or your relationship uses a different class name, or other options, you may want to specify the `inverse_of` attribute. This will reduce the number of database calls since ActiveRecord will not go to the database if the object has already been loaded from another association.
 
 <script src="https://gist.github.com/Ross-Hunter/f2539f3e2fd09ad4eb5c.js"></script>
 
@@ -40,7 +40,7 @@ Similar to `has_one :through`, this allows us to connect two models through a th
 
 <script src="https://gist.github.com/Ross-Hunter/d050da14afd00b5d06b7.js"></script>
 
-In some instances it will make sense to create a new connecting model to represent the relationship. For instance a `membership` might make sense to be its own model that can have methods and be queried more easily using activerecord.
+In some instances it will make sense to create a new connecting model to represent the relationship. For instance a `membership` might make sense to be its own model that can have methods and be queried more easily using ActiveRecord.
 
 <script src="https://gist.github.com/Ross-Hunter/ea122684a5cbd1795083.js"></script>
 
