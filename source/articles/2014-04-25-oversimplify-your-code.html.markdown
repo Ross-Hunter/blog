@@ -8,7 +8,7 @@ id: 15
 ---
 One of my eureka moments as a developer came when my programming pair suggested I separate some very simple math in the body of a method into another method. At the time it seemed like overkill to create an entirely new method when the operation was so simple. Wouldn't that make it *more* complicated? But I quickly realized the benefits outweighed the cost.
 
-The first benefit is code reuse. This is rather obvious; If we think we might need to do a thing more than once, we throw it into a method so we don't have to write it again.
+The first benefit is code reuse. This is rather obvious; if we think we might need to do a thing more than once, we throw it into a method so we don't have to write it again.
 
 The next benefit is that when the code needs to change, we can fix it in one place. Pretty straightforward stuff.
 

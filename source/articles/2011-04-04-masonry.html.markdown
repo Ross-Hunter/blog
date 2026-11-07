@@ -7,10 +7,60 @@ id: 2
 ---
 <a href="http://desandro.com/resources/jquery-masonry/">jQuery Masonry</a> is a sweet layout plugin for jQuery. They describe it as "The flip side of CSS floats". It aligns elements vertically then horizontally, minimizing the vertical gaps between elements of varying heights. I created my own sandbox for playing around with masonry.
 
-Like any layout, it has it's time and place. I would consider this primarily an alternative layout, only to be used when trying to be a little different. In terms of usability, one is generally better off sticking to a grid.
+Like any layout, it has its time and place. I would consider this primarily an alternative layout, only to be used when trying to be a little different. In terms of usability, one is generally better off sticking to a grid.
 
 If the content being displayed is meant to be "artsy", such as a list of varying sized portfolio pieces or photos, then it is actually really useful and can give your site an "edgy" feel.
 
-On my masonry sandbox page I am also playing around with some other ways to effect Drupal views. In the header of the view I have created buttons that correspond to toggling views field names. This can cause some overlap with the masonry layout that is applied that stacks content on top of other content. However, there is a simple fix; we just add masonry to the callback function of the slideToggle functions to re-mason the page only after the slideToggle has finished firing. The full JS for the page is below.
+On my masonry sandbox page I am also playing around with some other ways to affect Drupal views. In the header of the view I have created buttons that correspond to toggling views field names. This can cause some overlap with the masonry layout that is applied that stacks content on top of other content. However, there is a simple fix; we just add masonry to the callback function of the slideToggle functions to re-mason the page only after the slideToggle has finished firing. The full JS for the page is below.
 
-<script src="http://pastebin.com/embed_js.php?i=DCTAvLFV"></script>
+
+```javascript
+jQuery(document).ready(function(){
+var
+  speed = 600,  // animation speed
+  $wall = jQuery('#content').find('.tobemasoned .view-content')
+;
+
+$wall.masonry({
+  columnWidth: 172,
+  // only apply masonry layout to visible elements
+  itemSelector: '.views-row:not(.invis)',
+  animate: true,
+  animationOptions: {
+    duration: speed,
+    queue: false
+  }
+});
+
+jQuery('.view-header a').click(function(){
+  var colorClass = '.' + jQuery(this).attr('class');
+
+  if(colorClass=='.all') {
+    // show all hidden boxes
+    $wall.children('.invis')
+      .toggleClass('invis').fadeIn(speed);
+  } else {
+    // hide visible boxes
+    $wall.children().not(colorClass).not('.invis')
+      .toggleClass('invis').fadeOut(speed);
+    // show hidden boxes
+    $wall.children(colorClass+'.invis')
+      .toggleClass('invis').fadeIn(speed);
+  }
+  $wall.masonry();
+
+  return false;
+});
+
+jQuery('#titleButton').click(function(){
+   jQuery(".views-field-title").slideToggle(speed, function() { $wall.masonry(); });
+   return false;
+   });
+
+jQuery('#postDate').click(function(){
+   jQuery(".views-field-created").slideToggle(speed, function() { $wall.masonry(); });
+   return false;
+   });
+});
+```
+

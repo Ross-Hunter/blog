@@ -18,9 +18,9 @@ This was part of a string of tweets that was kicked off by seeing the following 
 
 <img src="/images/job_growth.png">
 
-I think the main thing to take away from that image is that if you are looking for a new career and you aren't involved computer science or mathematics, you should be, and I hope my post here encourages you to get involved, especially if math has been scaring you away. It also means we should be providing more and better training for these jobs - but that's another post entirely.
+I think the main thing to take away from that image is that if you are looking for a new career and you aren't involved in computer science or mathematics, you should be, and I hope my post here encourages you to get involved, especially if math has been scaring you away. It also means we should be providing more and better training for these jobs - but that's another post entirely.
 
-So here's my question about that chart, why are computer science and mathematics combined? Why are computer science and mathematics *always* combined? In my day-to-day as a developer I rarely do what I would call *math*. Now admittedly, computer science is different than software development, but I don't think laypeople know that. I don't think that high school kids who are deciding what do do with their lives know that. Our industry desperately needs more talented developers - and it turns out that the skills that make a good mathematician don't necessarily line up with the skills that make a good software developer.
+So here's my question about that chart, why are computer science and mathematics combined? Why are computer science and mathematics *always* combined? In my day-to-day as a developer I rarely do what I would call *math*. Now admittedly, computer science is different than software development, but I don't think laypeople know that. I don't think that high school kids who are deciding what to do with their lives know that. Our industry desperately needs more talented developers - and it turns out that the skills that make a good mathematician don't necessarily line up with the skills that make a good software developer.
 
 ### Logic > Math
 
@@ -28,13 +28,13 @@ People who are good at math are good at breaking problems down into parts, recog
 
 <blockquote>If you don't like math because it is repetitive and boring, look into software development!</blockquote>
 
-Modern tools have abstracted away (almost) all of the ugly 1s and 0s from software development. Modern developers can focus on crafting a solid system, and (for the most part) not have to worry about things like memory management, endianness and other computer science gobbeldy-gook. Sometimes it is fun to deal with low-level stuff like that - but you don't need to understand it to build a CRUD app.
+Modern tools have abstracted away (almost) all of the ugly 1s and 0s from software development. Modern developers can focus on crafting a solid system, and (for the most part) not have to worry about things like memory management, endianness and other computer science gobbledygook. Sometimes it is fun to deal with low-level stuff like that - but you don't need to understand it to build a CRUD app.
 
 Certain types of software development do require quite a bit of math: statistical/financial software, and games involving physics - for example. However, these require math because that is the *thing* that the software does, it's not simply a fact of building software. When we do need math, we have code libraries and computers to help us!
 
 <blockquote>The majority of code for something like Facebook or Twitter probably involves very little math.</blockquote>
 
-The math that we do use everyday in software development is called <a href="http://en.wikipedia.org/wiki/Mathematical_logic">Mathematical Logic</a>. In particular, software development involves a lot of <a href="http://en.wikipedia.org/wiki/Boolean_algebra">Boolean Algebra</a>. Known broadly as Discrete Math, it was one of my favorite classes in college, and I would recommend it to anyone, even if you aren't really a fan of numbers (also, take an Astronomy class!). I was blown away by this whole new type of thinking. If you are unfamiliar with discrete math, evaluating "`if true and false`" won't make any sense to you - but software developers deal with statements like this all the time.
+The math that we do use every day in software development is called <a href="http://en.wikipedia.org/wiki/Mathematical_logic">Mathematical Logic</a>. In particular, software development involves a lot of <a href="http://en.wikipedia.org/wiki/Boolean_algebra">Boolean Algebra</a>. Known broadly as Discrete Math, it was one of my favorite classes in college, and I would recommend it to anyone, even if you aren't really a fan of numbers (also, take an Astronomy class!). I was blown away by this whole new type of thinking. If you are unfamiliar with discrete math, evaluating "`if true and false`" won't make any sense to you - but software developers deal with statements like this all the time.
 
 ### Written Communication && Reading Comprehension
 

@@ -11,7 +11,19 @@ So I opened up my config and my PATH variable looked like a super long unintelli
 
 <strong>*Update*:</strong> I bought a new computer and cleaned out my PATH even more, getting rid of macports etc.
 
-<script src="http://pastebin.com/embed_js.php?i=0zq8Wn2R"></script>
+
+```bash
+PATH=/usr/local/bin
+PATH=${PATH}:/Users/vox/.rvm/bin
+PATH=${PATH}:/usr/local/Cellar/php54/5.4.5/bin
+PATH=${PATH}:/usr/bin
+PATH=${PATH}:/bin
+PATH=${PATH}:/usr/sbin
+PATH=${PATH}:/sbin
+
+export PATH
+```
+
 
 
 Let me know in comments if you have any questions, or suggestions for improvement.

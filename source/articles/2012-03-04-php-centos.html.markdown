@@ -1,5 +1,5 @@
 ---
-title: Installing PHP 5.4 on Centos 5.7
+title: Installing PHP 5.4 on CentOS 5.7
 date: 2012-03-04
 layout: post
 tags: devops
@@ -7,7 +7,7 @@ id: 7
 ---
 I am not what one would consider a sys admin. I do enjoy running my own VPS and mucking about with things like installing the newest version of PHP, but my knowledge doesn't extend very far past yum and rpm. So using only those 2 tools I set out and succeeded in installing PHP 5.4.
 
-After what seemed like too much time trying to find a Centos 5 compatible package I found <a href="http://rpms.famillecollet.com/enterprise/5/test/x86_64/repoview/">remi's repository</a> and installed the package
+After what seemed like too much time trying to find a CentOS 5 compatible package I found <a href="http://rpms.famillecollet.com/enterprise/5/test/x86_64/repoview/">remi's repository</a> and installed the package
 <code>
 rpm -Uvh http://rpms.famillecollet.com/enterprise/5/test/x86_64/php-5.4.0-1.el5.remi.x86_64.rpm
 </code>
@@ -23,4 +23,4 @@ The bad news is that along the way I had to rip out curl and install an updated 
 <code>
 rpm -Uvh http://rpms.famillecollet.com/enterprise/5/test/i386/libcurl-7.21.7-5.el5.remi.i386.rpm
 </code>
-and this resulted in <a href="http://www.modrails.com/">Phusion Passenger</a> as well as <a href="http://code.macournoyer.com/thin/">Thin</a> blowing up because of their reliance on libcurl.so.3. So I may just spin up another node on my VPS for rails-only (which I probably should be doing anyway). There may be other consequences as well - Drupal is throwing what appears to be benign errors, but who knows what other dangers are lurking. I sure wouldn't push this on any mission critical applications.
+and this resulted in <a href="http://www.modrails.com/">Phusion Passenger</a> as well as <a href="http://code.macournoyer.com/thin/">Thin</a> blowing up because of their reliance on libcurl.so.3. So I may just spin up another node on my VPS for rails-only (which I probably should be doing anyway). There may be other consequences as well - Drupal is throwing what appear to be benign errors, but who knows what other dangers are lurking. I sure wouldn't push this on any mission critical applications.

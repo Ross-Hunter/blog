@@ -24,7 +24,7 @@ Being the good little OO developer that I am, I was hyper focused on keeping the
 
 <script src="https://gist.github.com/Ross-Hunter/7433959.js"></script>
 
-Android uses the app identifier for both launching and finding the app in the Google Play store. iOS uses a <a href="https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/AdvancedAppTricks/AdvancedAppTricks.html#//apple_ref/doc/uid/TP40007072-CH7-SW50">custom url scheme</a>. for launching the native app, but in order to find it in the app store you need to know the app store url.
+Android uses the app identifier for both launching and finding the app in the Google Play store. iOS uses a <a href="https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/AdvancedAppTricks/AdvancedAppTricks.html#//apple_ref/doc/uid/TP40007072-CH7-SW50">custom url scheme</a> for launching the native app, but in order to find it in the app store you need to know the app store url.
 
 In order to cover our bases, we defined an app options object in our Environment object like so:
 

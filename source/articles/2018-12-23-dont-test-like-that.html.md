@@ -148,7 +148,7 @@ end
 
 ###Don't repeat yourself
 
-We must walk a fine line in our tests, where we keep them very plain and readable, so that we don't get lost in the complexity of the test themselves. However, we can still follow best practices and use variables to clean up tests and make them easier to read and write.
+We must walk a fine line in our tests, where we keep them very plain and readable, so that we don't get lost in the complexity of the tests themselves. However, we can still follow best practices and use variables to clean up tests and make them easier to read and write.
 
 __*Don't do this*__
 
@@ -186,7 +186,7 @@ describe('Criteria Selector', () => {
 
 - We use a variable to represent our input, and then we test that the new output is equal to our input.
 
-###Don't test the absensce of an error
+###Don't test the absence of an error
 
 Do not allow the absence of an error, or the presence of a success message to be your indicator of success. Test the actual result!
 
@@ -194,7 +194,7 @@ __*Don't do this*__
 
 ```ruby
 #RSpec
-Rspec.describe 'Admin Settings Page' do
+RSpec.describe 'Admin Settings Page' do
   it 'can update settings' do
     visit general_settings_path
 
@@ -210,12 +210,12 @@ __*Do something like this*__
 
 ```ruby
 #RSpec
-Rspec.describe 'Admin Settings Page' do
+RSpec.describe 'Admin Settings Page' do
   it 'can update settings' do
     conversion_rate = '0.75'
     visit general_settings_path
 
-    fill_in 'settings[conversion]', with: conversion_rate
+    fill_in 'settings[conversion_rate]', with: conversion_rate
     click_button 'update'
 
     # It's fine to test this message, but it's not a real indication that it worked how you expected
@@ -235,6 +235,6 @@ The theme here is to actually think about what you are testing and not just writ
 
 Even worse, when you write tests like this you might come to the conclusion that "testing sucks and is just a waste of time". Testing is awesome and possibly the single biggest "upgrade" you can apply to your software development skills.
 
-###To the listener
+###To the reader
 
 What are some common mistakes you see made in tests? There were a lot of "smelly" tests that almost made the cut for this post and perhaps I'll do a part 2 at some point. 
