@@ -22,12 +22,6 @@ cover: 'bg.png'
   .author-meta
     - if blog_author.location.present?
       %span.author-location.icon-location= blog_author.location
-    - if blog_author.website.present?
-      %span.author-link.icon-link
-        %a{href: blog_author.website}= blog_author.website
-    %span.author-stats
-      %i.icon-stats
-      %a{href: '/blog'}= pluralize(blog.articles.count, 'blog post')
 
 %main#content.content{role: :main}
   %main.content{role: :main}
