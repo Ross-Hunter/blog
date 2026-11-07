@@ -48,18 +48,18 @@
             %span.hidden Google+
 
         %section.comments
-          = partial(:disqus,
+          = partial('partials/disqus',
                       locals: { page_url: current_article.url,
                                 page_id: current_article.data.id })
 
   %aside.read-next
-    - if prev_article = current_article.previous_article
+    - if prev_article = current_article.article_previous
       - attributes = { href: prev_article.url }.merge(cover(prev_article))
       %a.read-next-story{attributes}
         %section.post
           %h2= prev_article.title
           %p #{read_next_summary(prev_article, 19)}&hellip;
-    - if next_article = current_article.next_article
+    - if next_article = current_article.article_next
       - attributes = { href: next_article.url }.merge(cover(next_article))
       %a.read-next-story.prev{attributes}
         %section.post
