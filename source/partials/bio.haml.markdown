@@ -6,7 +6,7 @@ I've done a lot with Rails, React and Serverless architectures. In the past I ha
 
 Once upon a time, I was host of <a target="_blank" href="https://thenewbestpractices.com">The New Best Practices</a>, a podcast about the process of creating software. We're on hiatus at the moment, but I think it would be cool if we did some more episodes before we all die.
 
-I live in Grand Rapids, MI where I have helped grow the local tech community. I am (or have been) an organizer for <a target="_blank" href="http://beercitycode.com">Beer City Code</a>, <a target="_blank" href="http://grwebdev.org">GRWebDev</a>, <a target="_blank" href="https://codeforgoodwm.org/">Code For Good</a>, <a target="_blank" href="http://barcampgr.org">BarCampGR</a> & <a target="_blank" href="http://meetup.com/mi-ruby">West Michigan Ruby</a>.
+I live in Grand Rapids, MI where I have helped grow the local tech community. I am (or have been) an organizer for <a target="_blank" href="https://www.beercitycode.com">Beer City Code</a>, <a target="_blank" href="https://grwebdev.org">GRWebDev</a>, <a target="_blank" href="https://codeforgoodwm.org/">Code For Good</a>, <a target="_blank" href="https://barcampgr.org">BarCampGR</a> & <a target="_blank" href="https://www.meetup.com/mi-ruby">West Michigan Ruby</a>.
 
 I'm happily married to my high school sweetheart & I love teaching my wonderful daughter about the nerdy games that daddy plays with his nerd friends. I'm a staunch progressive, avid frisbee thrower & I love making loud, rock 'n' roll shaped sounds.
 

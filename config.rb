@@ -31,7 +31,7 @@ end
 
 set :casper, {
   blog: {
-    url: 'http://www.ross-hunter.com',
+    url: 'https://ross-hunter.com',
     name: 'Ross-Hunter',
     description: 'Doing the whole "software" thing.',
     date_format: '%d %B %Y',
@@ -42,7 +42,7 @@ set :casper, {
     name: 'Ross Hunter',
     bio: 'Computer Philosopher',
     location: 'Grand Rapids, MI',
-    website: 'http://ross-hunter.com',
+    website: 'https://ross-hunter.com',
     gravatar_email: "ross-hunter@ross-hunter.com"
   },
   navigation: {
