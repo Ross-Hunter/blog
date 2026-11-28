@@ -6,8 +6,10 @@ on:
   pull_request:
   workflow_dispatch:
 
+# Read-only by default; only the build job below gets write, and only so
+# the deploy step can push to gh-pages.
 permissions:
-  contents: write
+  contents: read
 
 concurrency:
   group: pages
@@ -16,14 +18,21 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
-      - uses: actions/checkout@v4
+      # Actions are pinned to commit SHAs (tags can be moved); Dependabot bumps them.
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          # Don't leave the write token in .git/config where build steps
+          # (gems, ImageMagick) could read it. The deploy step passes it explicitly.
+          persist-credentials: false
 
       # favicon_maker shells out to ImageMagick's `convert`
       - name: Install ImageMagick
         run: sudo apt-get update && sudo apt-get install -y imagemagick
 
-      - uses: ruby/setup-ruby@v1
+      - uses: ruby/setup-ruby@145243922b4465b78e04dd66294782c7de45901f # v1.345.0
         with:
           # Newer runner images only ship the latest patch of each series, so
           # track 3.4.x here rather than the exact .ruby-version pin.
@@ -36,7 +45,7 @@ jobs:
       # Publishes ./build to the gh-pages branch (what GitHub Pages serves).
       - name: Deploy to gh-pages
         if: github.event_name != 'pull_request' && github.ref == 'refs/heads/master'
-        uses: peaceiris/actions-gh-pages@v4
+        uses: peaceiris/actions-gh-pages@84c30a85c19949d7eee79c4ff27748b70285e453 # v4.1.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build # includes CNAME from source/
