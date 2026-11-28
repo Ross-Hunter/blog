@@ -2,19 +2,19 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Ross-Hunter: team</title>
   <subtitle>Posts tagged with team</subtitle>
-  <id>http://www.ross-hunter.com</id>
-  <link href="http://www.ross-hunter.com"/>
-  <link href="http://www.ross-hunter.com/tag/team/feed.xml" rel="self"/>
+  <id>https://ross-hunter.com</id>
+  <link href="https://ross-hunter.com"/>
+  <link href="https://ross-hunter.com/tag/team/feed.xml" rel="self"/>
   <updated>2018-12-23T00:00:00+00:00</updated>
   <author>
     <name>Ross Hunter</name>
   </author>
   <entry>
     <title>Topic Based Retro</title>
-    <link rel="alternate" href="http://www.ross-hunter.com/2016/05/09/topic-based-retro/"/>
-    <id>http://www.ross-hunter.com/2016/05/09/topic-based-retro/</id>
+    <link rel="alternate" href="https://ross-hunter.com/2016/05/09/topic-based-retro/"/>
+    <id>https://ross-hunter.com/2016/05/09/topic-based-retro/</id>
     <published>2016-05-09T00:00:00+00:00</published>
-    <updated>2026-11-27T16:39:36+00:00</updated>
+    <updated>2026-11-28T00:45:01+00:00</updated>
     <author>
       <name>Ross Hunter</name>
     </author>

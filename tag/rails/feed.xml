@@ -2,19 +2,19 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Ross-Hunter: rails</title>
   <subtitle>Posts tagged with rails</subtitle>
-  <id>http://www.ross-hunter.com</id>
-  <link href="http://www.ross-hunter.com"/>
-  <link href="http://www.ross-hunter.com/tag/rails/feed.xml" rel="self"/>
+  <id>https://ross-hunter.com</id>
+  <link href="https://ross-hunter.com"/>
+  <link href="https://ross-hunter.com/tag/rails/feed.xml" rel="self"/>
   <updated>2018-12-23T00:00:00+00:00</updated>
   <author>
     <name>Ross Hunter</name>
   </author>
   <entry>
     <title>Don't Test Like That!</title>
-    <link rel="alternate" href="http://www.ross-hunter.com/2018/12/23/dont-test-like-that/"/>
-    <id>http://www.ross-hunter.com/2018/12/23/dont-test-like-that/</id>
+    <link rel="alternate" href="https://ross-hunter.com/2018/12/23/dont-test-like-that/"/>
+    <id>https://ross-hunter.com/2018/12/23/dont-test-like-that/</id>
     <published>2018-12-23T00:00:00+00:00</published>
-    <updated>2026-11-27T16:39:36+00:00</updated>
+    <updated>2026-11-28T00:45:01+00:00</updated>
     <author>
       <name>Ross Hunter</name>
     </author>
@@ -28,10 +28,10 @@ System</summary>
   </entry>
   <entry>
     <title>JSON API Helpers for API Testing in Rails using Airborne</title>
-    <link rel="alternate" href="http://www.ross-hunter.com/2017/01/16/json-api-airborne-expectation-helpers/"/>
-    <id>http://www.ross-hunter.com/2017/01/16/json-api-airborne-expectation-helpers/</id>
+    <link rel="alternate" href="https://ross-hunter.com/2017/01/16/json-api-airborne-expectation-helpers/"/>
+    <id>https://ross-hunter.com/2017/01/16/json-api-airborne-expectation-helpers/</id>
     <published>2017-01-16T00:00:00+00:00</published>
-    <updated>2026-11-27T16:39:36+00:00</updated>
+    <updated>2026-11-28T00:45:01+00:00</updated>
     <author>
       <name>Ross Hunter</name>
     </author>
@@ -51,10 +51,10 @@ body - The raw HTTP
   </entry>
   <entry>
     <title>Index Your Foreign Keys</title>
-    <link rel="alternate" href="http://www.ross-hunter.com/2014/06/13/index-foreign-keys/"/>
-    <id>http://www.ross-hunter.com/2014/06/13/index-foreign-keys/</id>
+    <link rel="alternate" href="https://ross-hunter.com/2014/06/13/index-foreign-keys/"/>
+    <id>https://ross-hunter.com/2014/06/13/index-foreign-keys/</id>
     <published>2014-06-13T00:00:00+00:00</published>
-    <updated>2026-11-27T16:39:36+00:00</updated>
+    <updated>2026-11-28T00:45:01+00:00</updated>
     <author>
       <name>Ross Hunter</name>
     </author>
@@ -62,10 +62,10 @@ body - The raw HTTP
   </entry>
   <entry>
     <title>ActiveRecord Associations &amp; You</title>
-    <link rel="alternate" href="http://www.ross-hunter.com/2014/06/12/activerecord-associations/"/>
-    <id>http://www.ross-hunter.com/2014/06/12/activerecord-associations/</id>
+    <link rel="alternate" href="https://ross-hunter.com/2014/06/12/activerecord-associations/"/>
+    <id>https://ross-hunter.com/2014/06/12/activerecord-associations/</id>
     <published>2014-06-12T00:00:00+00:00</published>
-    <updated>2026-11-27T16:39:36+00:00</updated>
+    <updated>2026-11-28T00:45:01+00:00</updated>
     <author>
       <name>Ross Hunter</name>
     </author>
@@ -75,10 +75,10 @@ However, understanding</summary>
   </entry>
   <entry>
     <title>Better Rails Debugging with better_errors and jazz_hands</title>
-    <link rel="alternate" href="http://www.ross-hunter.com/2013/05/17/rails-debugging/"/>
-    <id>http://www.ross-hunter.com/2013/05/17/rails-debugging/</id>
+    <link rel="alternate" href="https://ross-hunter.com/2013/05/17/rails-debugging/"/>
+    <id>https://ross-hunter.com/2013/05/17/rails-debugging/</id>
     <published>2013-05-17T00:00:00+00:00</published>
-    <updated>2026-11-27T16:39:36+00:00</updated>
+    <updated>2026-11-28T00:45:01+00:00</updated>
     <author>
       <name>Ross Hunter</name>
     </author>

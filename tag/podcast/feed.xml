@@ -2,19 +2,19 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Ross-Hunter: podcast</title>
   <subtitle>Posts tagged with podcast</subtitle>
-  <id>http://www.ross-hunter.com</id>
-  <link href="http://www.ross-hunter.com"/>
-  <link href="http://www.ross-hunter.com/tag/podcast/feed.xml" rel="self"/>
+  <id>https://ross-hunter.com</id>
+  <link href="https://ross-hunter.com"/>
+  <link href="https://ross-hunter.com/tag/podcast/feed.xml" rel="self"/>
   <updated>2018-12-23T00:00:00+00:00</updated>
   <author>
     <name>Ross Hunter</name>
   </author>
   <entry>
     <title>The New Best Practices Podcast</title>
-    <link rel="alternate" href="http://www.ross-hunter.com/2018/02/09/the-new-best-practices-podcast/"/>
-    <id>http://www.ross-hunter.com/2018/02/09/the-new-best-practices-podcast/</id>
+    <link rel="alternate" href="https://ross-hunter.com/2018/02/09/the-new-best-practices-podcast/"/>
+    <id>https://ross-hunter.com/2018/02/09/the-new-best-practices-podcast/</id>
     <published>2018-02-09T00:00:00+00:00</published>
-    <updated>2026-11-27T16:39:36+00:00</updated>
+    <updated>2026-11-28T00:45:01+00:00</updated>
     <author>
       <name>Ross Hunter</name>
     </author>

@@ -2,19 +2,19 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Ross-Hunter: code</title>
   <subtitle>Posts tagged with code</subtitle>
-  <id>http://www.ross-hunter.com</id>
-  <link href="http://www.ross-hunter.com"/>
-  <link href="http://www.ross-hunter.com/tag/code/feed.xml" rel="self"/>
+  <id>https://ross-hunter.com</id>
+  <link href="https://ross-hunter.com"/>
+  <link href="https://ross-hunter.com/tag/code/feed.xml" rel="self"/>
   <updated>2018-12-23T00:00:00+00:00</updated>
   <author>
     <name>Ross Hunter</name>
   </author>
   <entry>
     <title>Don't Test Like That!</title>
-    <link rel="alternate" href="http://www.ross-hunter.com/2018/12/23/dont-test-like-that/"/>
-    <id>http://www.ross-hunter.com/2018/12/23/dont-test-like-that/</id>
+    <link rel="alternate" href="https://ross-hunter.com/2018/12/23/dont-test-like-that/"/>
+    <id>https://ross-hunter.com/2018/12/23/dont-test-like-that/</id>
     <published>2018-12-23T00:00:00+00:00</published>
-    <updated>2026-11-27T16:39:36+00:00</updated>
+    <updated>2026-11-28T00:45:01+00:00</updated>
     <author>
       <name>Ross Hunter</name>
     </author>
@@ -28,10 +28,10 @@ System</summary>
   </entry>
   <entry>
     <title>Index Your Foreign Keys</title>
-    <link rel="alternate" href="http://www.ross-hunter.com/2014/06/13/index-foreign-keys/"/>
-    <id>http://www.ross-hunter.com/2014/06/13/index-foreign-keys/</id>
+    <link rel="alternate" href="https://ross-hunter.com/2014/06/13/index-foreign-keys/"/>
+    <id>https://ross-hunter.com/2014/06/13/index-foreign-keys/</id>
     <published>2014-06-13T00:00:00+00:00</published>
-    <updated>2026-11-27T16:39:36+00:00</updated>
+    <updated>2026-11-28T00:45:01+00:00</updated>
     <author>
       <name>Ross Hunter</name>
     </author>
@@ -39,10 +39,10 @@ System</summary>
   </entry>
   <entry>
     <title>ActiveRecord Associations &amp; You</title>
-    <link rel="alternate" href="http://www.ross-hunter.com/2014/06/12/activerecord-associations/"/>
-    <id>http://www.ross-hunter.com/2014/06/12/activerecord-associations/</id>
+    <link rel="alternate" href="https://ross-hunter.com/2014/06/12/activerecord-associations/"/>
+    <id>https://ross-hunter.com/2014/06/12/activerecord-associations/</id>
     <published>2014-06-12T00:00:00+00:00</published>
-    <updated>2026-11-27T16:39:36+00:00</updated>
+    <updated>2026-11-28T00:45:01+00:00</updated>
     <author>
       <name>Ross Hunter</name>
     </author>
@@ -52,10 +52,10 @@ However, understanding</summary>
   </entry>
   <entry>
     <title>(Over)simplify Your Code</title>
-    <link rel="alternate" href="http://www.ross-hunter.com/2014/04/25/oversimplify-your-code/"/>
-    <id>http://www.ross-hunter.com/2014/04/25/oversimplify-your-code/</id>
+    <link rel="alternate" href="https://ross-hunter.com/2014/04/25/oversimplify-your-code/"/>
+    <id>https://ross-hunter.com/2014/04/25/oversimplify-your-code/</id>
     <published>2014-04-25T00:00:00+00:00</published>
-    <updated>2026-11-27T16:39:36+00:00</updated>
+    <updated>2026-11-28T00:45:01+00:00</updated>
     <author>
       <name>Ross Hunter</name>
     </author>
@@ -65,10 +65,10 @@ The first benefit is code reuse. This is rather</summary>
   </entry>
   <entry>
     <title>Math Is Not Necessary for Software Development</title>
-    <link rel="alternate" href="http://www.ross-hunter.com/2014/01/14/math/"/>
-    <id>http://www.ross-hunter.com/2014/01/14/math/</id>
+    <link rel="alternate" href="https://ross-hunter.com/2014/01/14/math/"/>
+    <id>https://ross-hunter.com/2014/01/14/math/</id>
     <published>2014-01-14T00:00:00+00:00</published>
-    <updated>2026-11-27T16:39:36+00:00</updated>
+    <updated>2026-11-28T00:45:01+00:00</updated>
     <author>
       <name>Ross Hunter</name>
     </author>
@@ -85,10 +85,10 @@ This was part</summary>
   </entry>
   <entry>
     <title>Open + Download Native Apps with a PhoneGap/Cordova Plugin</title>
-    <link rel="alternate" href="http://www.ross-hunter.com/2013/11/12/open-native-apps-phonegap/"/>
-    <id>http://www.ross-hunter.com/2013/11/12/open-native-apps-phonegap/</id>
+    <link rel="alternate" href="https://ross-hunter.com/2013/11/12/open-native-apps-phonegap/"/>
+    <id>https://ross-hunter.com/2013/11/12/open-native-apps-phonegap/</id>
     <published>2013-11-12T00:00:00+00:00</published>
-    <updated>2026-11-27T16:39:36+00:00</updated>
+    <updated>2026-11-28T00:45:01+00:00</updated>
     <author>
       <name>Ross Hunter</name>
     </author>

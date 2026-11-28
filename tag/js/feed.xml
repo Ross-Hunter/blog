@@ -2,19 +2,19 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Ross-Hunter: js</title>
   <subtitle>Posts tagged with js</subtitle>
-  <id>http://www.ross-hunter.com</id>
-  <link href="http://www.ross-hunter.com"/>
-  <link href="http://www.ross-hunter.com/tag/js/feed.xml" rel="self"/>
+  <id>https://ross-hunter.com</id>
+  <link href="https://ross-hunter.com"/>
+  <link href="https://ross-hunter.com/tag/js/feed.xml" rel="self"/>
   <updated>2018-12-23T00:00:00+00:00</updated>
   <author>
     <name>Ross Hunter</name>
   </author>
   <entry>
     <title>CoffeeScript jQuery Animated Scrolling Sidebar</title>
-    <link rel="alternate" href="http://www.ross-hunter.com/2012/06/03/floating-coffee-bar/"/>
-    <id>http://www.ross-hunter.com/2012/06/03/floating-coffee-bar/</id>
+    <link rel="alternate" href="https://ross-hunter.com/2012/06/03/floating-coffee-bar/"/>
+    <id>https://ross-hunter.com/2012/06/03/floating-coffee-bar/</id>
     <published>2012-06-03T00:00:00+00:00</published>
-    <updated>2026-11-27T16:39:36+00:00</updated>
+    <updated>2026-11-28T00:45:01+00:00</updated>
     <author>
       <name>Ross Hunter</name>
     </author>
@@ -24,10 +24,10 @@ The basic concept is to create</summary>
   </entry>
   <entry>
     <title>Creating an Animated Floating Sidebar With jQuery</title>
-    <link rel="alternate" href="http://www.ross-hunter.com/2011/05/08/floating-jquery-bar/"/>
-    <id>http://www.ross-hunter.com/2011/05/08/floating-jquery-bar/</id>
+    <link rel="alternate" href="https://ross-hunter.com/2011/05/08/floating-jquery-bar/"/>
+    <id>https://ross-hunter.com/2011/05/08/floating-jquery-bar/</id>
     <published>2011-05-08T00:00:00+00:00</published>
-    <updated>2026-11-27T16:39:36+00:00</updated>
+    <updated>2026-11-28T00:45:01+00:00</updated>
     <author>
       <name>Ross Hunter</name>
     </author>
@@ -36,10 +36,10 @@ when the user scrolls down past the header, instead of being fixed over on the s
   </entry>
   <entry>
     <title>jQuery Masonry is Bad Ass</title>
-    <link rel="alternate" href="http://www.ross-hunter.com/2011/04/04/masonry/"/>
-    <id>http://www.ross-hunter.com/2011/04/04/masonry/</id>
+    <link rel="alternate" href="https://ross-hunter.com/2011/04/04/masonry/"/>
+    <id>https://ross-hunter.com/2011/04/04/masonry/</id>
     <published>2011-04-04T00:00:00+00:00</published>
-    <updated>2026-11-27T16:39:36+00:00</updated>
+    <updated>2026-11-28T00:45:01+00:00</updated>
     <author>
       <name>Ross Hunter</name>
     </author>
